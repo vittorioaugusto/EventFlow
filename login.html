@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="fundo_page">
+        
+        <div class="logo_eventflow"><img src="imagens/logo_fundo_removido.png" alt="Logo"></div>
+        <div class="imagem_evento"><img src="imagens/imagem_evento.jpg" alt="Imagem do Evento"></div>
+
+            <form class="form_login" action="autenticar.php" method="POST">
+                <h1>Login</h1>
+                <div class="email">
+                    <input type="text" placeholder="Email" name="email" required><br>
+                </div>
+                <div class="senha">
+                    <input type="password" placeholder="Senha" name="senha" required><br>
+                </div>
+                <div class="entrar">
+                   <button class="entrar" type="submit" name="enviar" value="Entrar">Entrar</button><br>
+                </div>
+                <div class="senha_e_conta">
+                    <a href="esqueci_senha.php">Esqueci a Senha</a><br>
+                    <a href="criar_conta.php">Criar Conta</a>
+                </div>
+            </form>  
+        </div>
+</body>
+</html>
+
