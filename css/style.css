@@ -15,7 +15,7 @@ body {
 
 .form_login {
     width: 40%;
-    height:80%;
+    height: 80%;
     background-color: #4e4e4e;
     border-radius: 1.5rem;
     display: flex;
@@ -24,118 +24,109 @@ body {
     align-items: center;
 }
 
-.email input {
+.login input {
     width: 30rem;
-    margin: 1rem;
+    margin: 0.5rem;
     height: 3.5rem;
     border-radius: 1rem;
     padding: 1rem;
     border: none;
 }
 
-    .entrar button {
-        height: 5rem;
-        width: 20rem;
-        margin: 2rem;
-        margin-bottom: 1rem;
-        border-radius: 2rem;
-        border: none;
-        font-size: 1.5rem;
-        background-color: rgb(39, 189, 189);
-        transition: 0.1s;
-        cursor: pointer;
-    }
+.logo_eventflow{
+    height: 7rem;
+    margin-top: auto;
+}
 
-    .entrar button:hover {
-        background-color: rgb(21, 109, 109);
-    }
+.entrar button {
+    height: 4rem;
+    width: 15rem;
+    margin: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: 0.8rem;
+    background-color: rgb(39, 189, 189);
+    transition: 0.1s;
+    cursor: pointer;
+    text-transform: uppercase;
+}
 
-    .senha_e_conta a {
-        text-decoration: none;
-        color: rgb(39, 189, 189);
-        text-align: center;
-        transition: color 0.3s ease;
-    }
-
-
-    /* Tipo de Usuario */
-/* .fundo_tipo_usuario {
-    background: rgba(74, 74, 74, 0.42);
-    border-radius: 25px;
-    position: absolute;
-    height: 540px;
-    width: 1050px;
-    left: 180px;
-    top: 40px;
+.entrar button:hover {
+    background-color: rgb(21, 109, 109);
 }
 
 
-#qual-user{
-    position: absolute;
-    font-family:Arial, Helvetica, sans-serif;
-    color: #FFFFFF;
-    margin-bottom: 200px;
-    width: 300px;
-    height: 100px;
-    left: 350px;
-    top: 10px;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 30px;
-    line-height: 40px;
-    font-weight: bold;
-}
-
-.logo_usuario{
-    position:absolute;
-    max-width: 100%;
-    border-radius: 25px 25px 25px 0px;
-    height: 1000px;
-    width: 334px;
-    left: 80px;
-    top: 90px; 
+.senha_e_conta a {
+    text-decoration: none;
+    color: rgb(39, 189, 189);
+    text-align: center;
+    transition: color 0.5s;
+    font-family: Arial;
+    margin: 1rem;
     
 }
 
+.senha_e_conta a:hover {
+    color: rgb(255, 255, 255);
+}
 
-.user-comum {
-    color: #50C7F6;
-    position: absolute;
-    top: 450px;
-    left: 95px;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-weight: 900;
-    width: 300px;
-    height: 100px;
-    left: 100px;
-    font-size: 30px;
-    text-decoration: none;
+
+
+    /* Esqueci a senha */
+.form_login_senha{
+    width: 40%;
+    height: 80%;
+    background-color: #4e4e4e;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_eventflow_senha{
+    height: 7rem;
     
 }
 
-.user-comum a {
-    font-family: sans-serif;
-    color: #50C7F6;
-    text-decoration: none;
-    transition: color 0.3s ease;
+#redefinir_senha{
+    font-family: Arial;
+    text-align: center;
+    width: 40rem;
+    height: 3.5rem;
     font-weight: bold;
 }
 
-.user-comum a:hover {
-    color: rgb(0, 0, 255);
+.login_senha input{
+    width: 30rem;
+    margin: 0.5rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: none;
+    
 }
 
-.user-empresarial {
-    font-family: sans-serif;
-    color: #50C7F6;
-    position: absolute;
-    top: 400px;
-    left: 650px;
-    width: 300px;
-    height: 100px;
-    font-weight: 900;
-    font-size: 30px;
-} */
+.concluir button {
+    height: 4rem;
+    width: 15rem;
+    margin: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: 0.8rem;
+    background-color: rgb(39, 189, 189);
+    transition: 0.1s;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.concluir button:hover {
+    background-color: rgb(21, 109, 109);
+}
+
+
+    /* Criar Conta */
 
 
