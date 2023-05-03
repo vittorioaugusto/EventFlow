@@ -1,141 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-    height: 605px;
-    width: 1166px;
-    left: 713px;
-    top: 30px;
-    border-radius: 0px;
-    background: linear-gradient(62.74deg, #171717 1.21%, #232323 39.95%, #4A4A4A 100%);
-}
-
-.fundo_page {
-    background: rgba(74, 74, 74, 0.42);
-    border-radius: 25px;
-    position: absolute;
-    height: 500px;
-    width: 730px;
-    left: 310px;
-    top: 60px;
-}
-
-.logo_eventflow img {
-    position: absolute;
-    height: 135px;
-    width: 310px;
-    left: 45px;
-    top: 180px;
-}
-
-.imagem_evento img {
-    position:absolute;
-    margin: 20px auto;
-    max-width: 100%;
-    border-radius: 0px 25px 25px 0px;
-    height: 500px;
-    width: 334px;
-    left: 401px;
-    top: -20px; 
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form_login {
-    margin-top: 90px;
-    position: absolute;
-    width: 275px;
-    height: 370px;
-    left: 430px;
-    top: -25px;
-    background: rgba(35, 35, 35, 0.87);
-    border-radius: 25px;
+    width: 40%;
+    height:80%;
+    background-color: #4e4e4e;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-h1 {
-    font-family:Arial, Helvetica, sans-serif;
-    color: #FFFFFF;
-    text-align:center;
-    margin-bottom: 200px;
-    position: absolute;
-    width: 50px;
-    height: 100px;
-    left: 67px;
-    top: -20px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 73px;
-    font-weight: bold;
-    
+.email input {
+    width: 30rem;
+    margin: 1rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: none;
 }
 
-input[type="text"]{
-    position: absolute;
-    width: 200px;
-    padding: 10px;
-    background: rgba(217, 217, 217, 1);
-    height: 20px;
-    left: 25px;
-    top: 110px;
-    border-radius: 25px;
-    font-weight: bold;
-}
+    .entrar button {
+        height: 5rem;
+        width: 20rem;
+        margin: 2rem;
+        margin-bottom: 1rem;
+        border-radius: 2rem;
+        border: none;
+        font-size: 1.5rem;
+        background-color: rgb(39, 189, 189);
+        transition: 0.1s;
+        cursor: pointer;
+    }
 
-input[type="password"]{
-    position: absolute;
-    width: 200px;
-    padding: 10px;
-    background: rgba(217, 217, 217, 1);
-    height: 20px;
-    left: 25px;
-    top: 160px;
-    border-radius: 25px;
-    font-weight: bold;
-}
+    .entrar button:hover {
+        background-color: rgb(21, 109, 109);
+    }
 
-button[type="submit"]{
-    position: absolute;
-    background: #50C7F6;
-    border-radius: 25px;
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    font-style: normal;
-    font-family: sans-serif;
-    width: 170px;
-    padding: 10px;
-    height: 42px;
-    left: 53px;
-    top: 230px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-weight: 800;
-}
+    .senha_e_conta a {
+        text-decoration: none;
+        color: rgb(39, 189, 189);
+        text-align: center;
+        transition: color 0.3s ease;
+    }
 
 
-.entrar button:hover {
-    background-color: rgb(0, 0, 255);
-    
-}
-
-.senha_e_conta {
-    position: absolute;
-    text-align: center;
-    margin-top: 10px;
-    top: 290px;
-    left: 75px;
-    font-family: sans-serif;
-    font-weight: bold;
-}
-
-.senha_e_conta a {
-    font-family: sans-serif;
-    color: #50C7F6;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-weight: bold;
-}
-
-.senha_e_conta a:hover {
-    color: rgb(0, 0, 255);
-}
-
-.fundo_tipo_usuario {
+    /* Tipo de Usuario */
+/* .fundo_tipo_usuario {
     background: rgba(74, 74, 74, 0.42);
     border-radius: 25px;
     position: absolute;
@@ -212,6 +136,6 @@ button[type="submit"]{
     height: 100px;
     font-weight: 900;
     font-size: 30px;
-}
+} */
 
 

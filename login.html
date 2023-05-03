@@ -7,32 +7,25 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="fundo_page">
-        
-        <div class="logo_eventflow">
-            <img src="imagens/logo_fundo_removido.png" alt="Logo">
-        </div>
-        <div class="imagem_evento">
-            <img src="imagens/imagem_evento.jpg" alt="Imagem do Evento">
-        </div>
 
             <form class="form_login" action="autenticar.php" method="POST">
-                <h1>Login</h1>
+
+                <div class="logo_eventflow">
+                    <img src="imagens/logo_fundo_removido.png" alt="Logo">
+                </div>
+
                 <div class="email">
                     <input type="text" placeholder="Email" name="email" required><br>
-                </div>
-                <div class="senha">
                     <input type="password" placeholder="Senha" name="senha" required><br>
                 </div>
                 <div class="entrar">
-                   <button class="entrar" type="submit" name="enviar" value="Entrar">Entrar</button><br>
+                   <button class="entrar" type="submit" name="enviar" value="Entrar"><h1>Entrar</h1></button><br>
                 </div>
                 <div class="senha_e_conta">
-                    <a href="esqueci_senha.php">Esqueci a Senha</a><br>
-                    <a href="tipo_de_usuario.php">Criar Conta</a>
+                    <a href="esqueci_senha.php"><h2>Esqueci a senha</h2></a><br>
+                    <a href="tipo_de_usuario.php"><h2>Criar Conta</h2></a>
                 </div>
-            </form>  
-    </div>
+            </form>
+
 </body>
 </html>
-
