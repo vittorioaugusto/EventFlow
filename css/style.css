@@ -35,13 +35,14 @@ body {
 }
 
 .logo_login{
-    height: 7rem;
-    margin-top: auto;
+    position: relative;
+    height: 8rem;
+    top: 3%;
 }
 
 .entrar_login button {
     height: 4rem;
-    width: 15rem;
+    width: 13rem;
     margin: 2rem;
     margin-bottom: 1rem;
     border-radius: 2rem;
@@ -63,7 +64,7 @@ body {
     text-align: center;
     transition: color 0.5s;
     font-family: Arial;
-    margin: 1rem;
+    margin: 2rem;
 }
 
 .senha_e_conta a:hover {
@@ -118,7 +119,6 @@ body {
     border-radius: 1rem;
     padding: 1rem;
     border: none;
-    
 }
 
 .concluir button {
@@ -229,11 +229,11 @@ body {
 .voltar_user_comum{
     position: absolute;
     width: 4%;
-    height: 8.5%;
+    height: 8.6%;
     top: 8%;
     left: 32%;
     background: #50C7F6;
-    border-radius: 50%;
+    border-radius: 90%;
     flex-direction: column;
     justify-content: center;
     display: flex;
@@ -247,7 +247,7 @@ body {
     font-weight: bold;
     margin-bottom: 5rem;
     position: relative;
-    top: 15%;
+    top: 17%;
 }
 
 .login_cadastro_comum input{
