@@ -47,7 +47,7 @@ body {
     margin-bottom: 1rem;
     border-radius: 2rem;
     border: none;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     background-color: rgb(39, 189, 189);
     transition: 0.1s;
     cursor: pointer;
@@ -123,12 +123,12 @@ body {
 
 .concluir button {
     height: 4rem;
-    width: 15rem;
+    width: 14rem;
     margin: 2rem;
     margin-bottom: 1rem;
     border-radius: 2rem;
     border: none;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     background-color: rgb(39, 189, 189);
     transition: 0.1s;
     cursor: pointer;
@@ -161,7 +161,7 @@ body {
     top: 15%; 
 }
 
-.user a {
+.tipo_de_usuario a {
     font-family: Arial;
     text-decoration: none;
     text-align: center;
@@ -182,7 +182,7 @@ body {
     position: relative;
 }
 
-.user a:hover {
+.tipo_de_usuario a:hover {
     color: rgb(255, 255, 255);
     transition: color 0.5s;
 }
@@ -239,7 +239,7 @@ body {
     display: flex;
 }
 
-#user_comum{
+#user_comum {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     width: 40rem;
@@ -257,7 +257,6 @@ body {
     border-radius: 1rem;
     padding: 1rem;
     border: none;
-    
 }
 
 .concluir_user_comum button {
@@ -278,3 +277,77 @@ body {
     background-color: rgb(21, 109, 109);
 }
 
+
+
+/* User Empresarial */
+
+.form_cadastro_empresarial {
+    width: 40%;
+    height: 97%;
+    background-color: #4e4e4e;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #50C7F6;
+}
+
+.logo_cadastro_empresarial{
+    position: absolute;
+    height: 2rem;
+    top: 1%;
+}
+
+.voltar_user_empresarial{
+    position: absolute;
+    width: 4%;
+    height: 8.6%;
+    top: 6%;
+    left: 32%;
+    background: #50C7F6;
+    border-radius: 90%;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+}
+
+#user_empresarial{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    width: 40rem;
+    height: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+    position: relative;
+    top: 14%;
+}
+
+.login_cadastro_empresarial input{
+    width: 30rem;
+    margin: 0.5rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: none; 
+}
+
+.concluir_user_empresarial button {
+    height: 2rem;
+    width: 9rem;
+    margin: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: 0.6rem;
+    background-color: rgb(39, 189, 189);
+    transition: 0.1s;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    top: -5px;
+}
+
+.concluir_user_empresarial button:hover {
+    background-color: rgb(21, 109, 109);
+}
