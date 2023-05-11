@@ -1,12 +1,3 @@
-<?php
-
-session_start();
-
-include('valida_usuario.php');
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

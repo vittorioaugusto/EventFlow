@@ -7,8 +7,9 @@ include('valida_usuario.php');
 
 $id_usuario = $_SESSION['id_usuario'];
 
-$select =  "SELECT nome FROM cadastro 
+$select =  "SELECT email FROM senha
 			WHERE id_usuario = '$id_usuario'";
+
 $query = mysqli_query($conexao, $select);
 $dado = mysqli_fetch_row($query);
 
@@ -23,6 +24,11 @@ $dado = mysqli_fetch_row($query);
     <title>Menu</title>
 </head>
 <body>
+
     <h1>Menu principal</h1>
+
+    <nav>
+    <button>Eventos</button><br>
+    </nav>
 </body>
 </html>
