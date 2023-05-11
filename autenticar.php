@@ -18,7 +18,7 @@ $dado = mysqli_fetch_row($query);
 
 if ($email == isset($dado[1]) && $senha == isset($dado[2])) {
 	session_start();
-	$_SESSION['matricula'] = $dado[0];
+	$_SESSION['email'] = $dado[0];
 	header ("location: menu.php");
 }
 else {
