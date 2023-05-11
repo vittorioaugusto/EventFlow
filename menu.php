@@ -7,8 +7,8 @@ include('valida_usuario.php');
 
 $id_usuario = $_SESSION['id_usuario'];
 
-$select =  "SELECT * FROM usuarios WHERE tipo_usuario IN ('comum', 'empresarial')";
-;
+$select =  "SELECT email FROM senha WHERE tipo_usuario IN ('comum', 'empresarial')";
+
 
 $query = mysqli_query($conexao, $select);
 $dado = mysqli_fetch_row($query);
