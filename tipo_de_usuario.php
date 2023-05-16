@@ -7,7 +7,7 @@ include('valida_usuario.php');
 
 $id_usuario = $_SESSION['id_usuario'];
 
-$select =  "SELECT email FROM senha WHERE tipo_usuario ";
+$select =  "SELECT tipo_usuario FROM usuarios";
 
 $query = mysqli_query($conexao, $select);
 $dado = mysqli_fetch_row($query);
