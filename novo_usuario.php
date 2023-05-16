@@ -6,7 +6,7 @@ include('conexao.php');
 include('valida_usuario.php');
 
 $id_usuario = isset($_POST['id_usuario']) ? $_POST['id_usuario'] : '';
-$login = isset($_POST['login']) ? $_POST['login'] : '';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
 $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
 
 $insert = "INSERT INTO login (id_usuario, login, senha)
