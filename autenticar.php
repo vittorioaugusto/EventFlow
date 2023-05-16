@@ -22,7 +22,7 @@ if ($email == isset($dado[1]) && $senha == isset($dado[2])) {
 	header ("location: principal.php");
 }
 else {
-	header ("location: index.php");
+	header ("location: login.php");
 }
 
 ?>
