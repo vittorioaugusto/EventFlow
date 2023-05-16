@@ -1,3 +1,20 @@
+<?php 
+
+session_start();
+
+include('conexao.php');
+include('valida_usuario.php');
+
+$id_usuario = $_SESSION['id_usuario'];
+
+$select =  "SELECT email FROM senha WHERE tipo_usuario ";
+
+$query = mysqli_query($conexao, $select);
+$dado = mysqli_fetch_row($query);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
