@@ -20,8 +20,10 @@
             <button type="submit" name="enviar" value="Entrar"><h1>Entrar</h1></button><br>
         </div>
         <div class="senha_e_conta">
-            <a href="esqueci_senha.html"><h2>Esqueci a senha</h2></a>
-            <a href="tipo_de_usuario.html"><h2>Criar Conta</h2></a>
+            <?php
+                echo '<a href="esqueci_senha.php"><h2>Esqueci a senha</h2></a>';
+                echo '<a href="tipo_de_usuario.php"><h2>Criar Conta</h2></a>';
+            ?>
         </div>
         
     </form>

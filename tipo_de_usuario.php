@@ -1,19 +1,3 @@
-<?php 
-
-session_start();
-
-include('conexao.php');
-include('valida_usuario.php');
-
-$id_funcao = $_SESSION['id_funcao'];
-$select =  "SELECT tipo_usuario FROM usuarios";
-
-$query = mysqli_query($conexao, $select);
-$dado = mysqli_fetch_row($query);
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
