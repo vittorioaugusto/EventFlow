@@ -12,7 +12,7 @@
     <form class="form_login_senha" action="autenticar.php" method="POST">
 
         <div class="logo_senha">
-            <img src="imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+            <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
         </div>
 
         <h1 id="redefinir_senha">Redefinir Senha</h1>
@@ -28,7 +28,7 @@
 
          <div class="voltar_senha">
             <?php
-                echo '<a href="login.php"><img src="imagens/seta-voltar.png"></a>';
+                echo '<a href="login.php"><img src="assets/imagens/seta-voltar.png"></a>';
             ?>
          </div>
 

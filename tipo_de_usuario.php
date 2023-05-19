@@ -12,7 +12,7 @@
     <div class="fundo_tipo_cadastro">
         
             <div class="logo_usuario">
-                <img src="imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+                <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
             </div>
             
             <div class="tipo_de_usuario">

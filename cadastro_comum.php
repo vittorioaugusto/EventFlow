@@ -11,7 +11,7 @@
     <form class="form_cadastro_comum" action="autenticar.php" method="POST">
 
         <div class="logo_cadastro_comum">
-            <img src="imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+            <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
         </div>
 
         <h1 id="user_comum">User Comum</h1>
@@ -29,7 +29,7 @@
 
         <div class="voltar_user_comum">
             <?php
-                echo '<a href="tipo_de_usuario.php"><img src="imagens/seta-voltar.png"></a>';
+                echo '<a href="tipo_de_usuario.php"><img src="assets/imagens/seta-voltar.png"></a>';
             ?>
 
          </div>

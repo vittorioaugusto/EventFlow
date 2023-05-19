@@ -11,7 +11,7 @@
     <form class="form_cadastro_empresarial" action="autenticar.php" method="POST">
 
         <div class="logo_cadastro_empresarial">
-            <img src="imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+            <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
         </div>
 
         <h1 id="user_empresarial">User Empresarial</h1>
@@ -30,7 +30,7 @@
 
         <div class="voltar_user_empresarial">
             <?php
-                echo '<a href="login.html"><img src="imagens/seta-voltar.png"></a>';
+                echo '<a href="login.html"><img src="assets/imagens/seta-voltar.png"></a>';
             ?>
          </div>
 

@@ -11,7 +11,7 @@
     <form class="form_login" action="autenticar.php" method="POST">
 
         <div class="logo_login">
-            <img src="imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+            <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
         </div>
         <div class="login">
             <input type="text" placeholder="Email" name="email" required><br>
