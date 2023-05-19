@@ -6,13 +6,13 @@ include('valida_usuario.php');
 $email = isset($_POST['email']) ? $_POST['email'] : '';
 $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
 
-$select = "SELECT * FROM login WHERE email = '$email' AND senha = '$senha'";
+$select = "SELECT email FROM login WHERE email = '$email' AND senha = '$senha'";
 $query = mysqli_query($conexao, $select);
 $dado = mysqli_fetch_row($query);
 
 if ($email == isset($dado[1]) && $senha == isset($dado[2])) {
 	session_start();
-	$_SESSION['id_usuario'] = $dado[0];
+	$_SESSION['id_funcao'] = $dado[0];
 	header ("location: principal.php");
 }
 else {
