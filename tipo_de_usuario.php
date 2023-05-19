@@ -23,8 +23,8 @@
 
             <div class="voltar_usuario">
                 <?php
-                    echo '<a href="login.php"><h1>Voltar</h1></a>';         
-                ?>
+                    echo '<a href="login.php"><h1>Voltar</h1></a>';
+                ?>     
             </div>
     </div>
 </body>
