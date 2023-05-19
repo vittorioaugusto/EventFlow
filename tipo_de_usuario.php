@@ -15,12 +15,16 @@
             </div>
             
             <div class="tipo_de_usuario">
-                <a href="cadastro_comum.html"><h1>Cadastro Comum</h1></a>
-                <a href="cadastro_empresarial.html"><h1>Cadastro Empresarial</h1></a><br>
+                <?php
+                    echo '<a href="cadastro_comum.php"><h1>Cadastro Comum</h1></a>';
+                    echo '<a href="cadastro_empresarial.php"><h1>Cadastro Empresarial</h1></a><br>';
+                ?>
             </div>
 
             <div class="voltar_usuario">
-                <a href="login.html"><h1>Voltar</h1></a>
+                <?php
+                    echo '<a href="login.php"><h1>Voltar</h1></a>';         
+                ?>
             </div>
     </div>
 </body>

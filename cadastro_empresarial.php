@@ -29,7 +29,9 @@
         </div>
 
         <div class="voltar_user_empresarial">
-            <a href="login.html"><img src="imagens/seta-voltar.png"></a>
+            <?php
+                echo '<a href="login.html"><img src="imagens/seta-voltar.png"></a>';
+            ?>
          </div>
 
     </form>

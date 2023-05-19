@@ -26,7 +26,9 @@
          </div>
 
          <div class="voltar_senha">
-            <a href="login.html"><img src="imagens/seta-voltar.png"></a>
+            <?php
+                echo '<a href="login.php"><img src="imagens/seta-voltar.png"></a>';
+            ?>
          </div>
 
     </form>

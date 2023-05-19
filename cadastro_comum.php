@@ -28,7 +28,9 @@
         </div>
 
         <div class="voltar_user_comum">
-            <a href="tipo_de_usuario.html"><img src="imagens/seta-voltar.png"></a>
+            <?php
+                echo '<a href="tipo_de_usuario.php"><img src="imagens/seta-voltar.png"></a>';
+            ?>
          </div>
 
     </form>
