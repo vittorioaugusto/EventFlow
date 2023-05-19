@@ -5,8 +5,7 @@ session_start();
 include('conexao.php');
 include('valida_usuario.php');
 
-$id_usuario = $_SESSION['id_usuario'];
-
+$id_funcao = $_SESSION['id_funcao'];
 $select =  "SELECT tipo_usuario FROM usuarios";
 
 $query = mysqli_query($conexao, $select);
