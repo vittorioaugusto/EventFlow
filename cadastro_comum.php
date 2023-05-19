@@ -31,6 +31,7 @@
             <?php
                 echo '<a href="tipo_de_usuario.php"><img src="imagens/seta-voltar.png"></a>';
             ?>
+
          </div>
 
     </form>
