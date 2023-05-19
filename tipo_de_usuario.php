@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <style>
+        .tipo_de_usuario a{
+            color: rgb(0, 0, 0);
+        }
+
+        .tipo_de_usuario a:hover {
+        color: blue;
+        transition: color 0.5s;
+    }
+    </style>
     <div class="fundo_tipo_cadastro">
         
             <div class="logo_usuario">
