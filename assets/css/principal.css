@@ -68,7 +68,7 @@ body {
 }
 
 .cartao{
-    background-color: #fff;
+    background-color: #ffff;
     width: 70%;
     box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
@@ -116,12 +116,12 @@ body {
 /* Evento de Basquete */
 
 #imagem2{
-    width: 190px;
-    height: 173px;
+    width: 180px;
+    height: 175px;
 }
 
 .cartao2{
-    background-color: #fff;
+    background-color: #ffff;
     width: 70%;
     box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
