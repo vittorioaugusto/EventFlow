@@ -33,7 +33,7 @@
                     <span>Evento de Games</span>
                     <h1>BGS - 2023</h1>
                     <h3>Venha fazer parte dessa aventura!</h3>
-                    <a href="evento_bgs.php">Editar Evento</a>
+                    <a href="editar_evento_bgs.php">Editar Evento</a>
                 </div>
                 <div class="cartao_direito">
                     <img id="imagem" src="assets/imagens/evento_bgs.png" alt="Evento BGS">
@@ -45,7 +45,7 @@
                     <span>Evento de Basquete</span>
                     <h1>BasquetBol 2023</h1>
                     <h3>Venha fazer parte dessa aventura!</h3>
-                    <a href="evento_bgs.php">Editar Evento</a>
+                    <a href="editar_evento_basquete.php">Editar Evento</a>
                 </div>
                 <div class="cartao_direito2">
                     <img id="imagem2" src="assets/imagens/evento_basquete.png" alt="Evento Basquete">
