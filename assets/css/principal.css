@@ -61,7 +61,71 @@ body {
 
 
 
+/* tela principal */
+
+.evento_destaque h1{
+    margin-top: 100px;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    left: 1rem;
+}
+
+
+#imagem_caixa{
+    top: 1px;
+    width: 650px;
+    height: 381px;
+    left: 1px;
+    position: absolute;
+}
+
+.caixa_evento{
+    box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
+    margin-top: 50px;
+    position: absolute;
+    top: 150px;
+    left: 15%;
+    height: 692%;
+    width: 70%;
+    background-color: #4e4e4e;
+    border: 3px solid #50C7F6;
+    padding: 50px;
+}
+
+#caixa_nome{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 70%;
+    font-size: 30px;
+    color: #000000;
+}
+
+.caixa_botao a{
+    position: absolute;
+    left: 720px;
+    top: 80%;
+    background-color: #50C7F6; 
+    color: white;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    font-size: 18px;
+    text-decoration: none; 
+}
+
+.caixa_botao a:hover {
+    color: blue;
+    transition: color 0.5s;
+}
+
+
+
     /* Evento BGS */
+
+
 #imagem{
     width: 327px;
     height: 173px;
