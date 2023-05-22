@@ -21,7 +21,7 @@
             <input type="number" placeholder="CNPJ" name="cnpj" required><br>
             <input type="number" placeholder="Contato" name="contato" required><br>
             <input type="text" placeholder="Empresa" name="empresa" required><br>
-            <input type="text" placeholder="Email" name="email" required><br>
+            <input type="email" placeholder="Email" name="email" required><br>
             <input type="password" placeholder="Senha" name="senha" required><br>
         </div>
         <div class="concluir_user_empresarial">
@@ -30,7 +30,7 @@
 
         <div class="voltar_user_empresarial">
             <?php
-                echo '<a href="login.html"><img src="assets/imagens/seta-voltar.png"></a>';
+                echo '<a href="login.php"><img src="assets/imagens/seta-voltar.png"></a>';
             ?>
          </div>
 

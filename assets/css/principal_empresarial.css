@@ -1,0 +1,256 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(62.74deg, #171717 1.21%, #232323 39.95%, #4A4A4A 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cabecalho{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background-color: #4e4e4e;
+    border-radius: none;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #50C7F6;
+    top: -45%;
+    justify-content: space-between;
+}
+
+.logo_principal{
+    position: relative;
+    height: 100%;
+    width: 10px;
+    display: flex;
+}
+
+.botoes{
+    position: absolute;
+    left: 50%;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;
+    
+}
+
+.botoes a{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 150px;
+}
+
+.botoes a:hover {
+    color: #50C7F6;
+    transition: color 0.5s;
+}
+
+
+
+/* eventos_empresarial */
+
+
+.criar_evento a{
+    position: absolute;
+    left: 600px;
+    top: 150%;
+    background-color: #50C7F6; 
+    color: white;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    font-size: 30px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.criar_evento a:hover {
+    color: blue;
+    transition: color 0.5s;
+}
+
+.evento_destaque h1{
+    position: absolute;
+    margin-top: 90px;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    left: 5%;
+    
+}
+
+#imagem_caixa{
+    top: 1px;
+    width: 650px;
+    height: 380px;
+    left: 1px;
+    position: absolute;
+}
+
+.caixa_evento{
+    box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
+    margin-top: 50px;
+    position: absolute;
+    top: 150px;
+    left: 15%;
+    height: 692%;
+    width: 70%;
+    background-color: #4e4e4e;
+    border: 3px solid #50C7F6;
+    padding: 50px;
+}
+
+#caixa_nome{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 70%;
+    font-size: 30px;
+    color: #000000;
+}
+
+.caixa_botao a{
+    position: absolute;
+    left: 720px;
+    top: 80%;
+    background-color: #50C7F6; 
+    color: white;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    font-size: 18px;
+    text-decoration: none; 
+}
+
+.caixa_botao a:hover {
+    color: blue;
+    transition: color 0.5s;
+}
+
+
+#todos_os_eventos{
+    position: absolute;
+    left: 40%;
+    top: 80px;
+    color: #fff;
+}    
+
+#imagem{
+    width: 327px;
+    height: 173px;
+}
+
+.cartao{
+    background-color: #ffff;
+    width: 70%;
+    box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 300%;
+    left: 15%;
+}
+
+.cartao_esquerdo{
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.cartao_esquerdo > span{
+    font-weight: 500;
+}
+
+.cartao_esquerdo > h1{
+    margin-top: 10px;
+    font-size: 60px;
+    color: black;
+    font-weight: bold;
+}
+
+.cartao_esquerdo > h3{
+    margin-top: 5px;
+    font-size: 20px;
+    color: black;
+    font-weight: bolder
+}
+
+.cartao_esquerdo > a{
+    text-decoration: none;
+}
+
+#imagem2{
+    width: 180px;
+    height: 175px;
+}
+
+.cartao2{
+    background-color: #ffff;
+    width: 70%;
+    box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 700%;
+    left: 15%;
+}
+
+
+.cartao_esquerdo2{
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.cartao_esquerdo2 > span{
+    font-weight: 500;
+}
+
+.cartao_esquerdo2 > h1{
+    margin-top: 10px;
+    font-size: 60px;
+    color: black;
+    font-weight: bold;
+}
+
+.cartao_esquerdo2 > h3{
+    margin-top: 5px;
+    font-size: 20px;
+    color: black;
+    font-weight: bolder
+}
+
+.cartao_esquerdo2 > a{
+    text-decoration: none;
+}
+
+
+
+
+

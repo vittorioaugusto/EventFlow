@@ -20,7 +20,7 @@
             <input type="text" placeholder="Nome" name="nome" required><br>
             <input type="number" placeholder="Telefone" name="telefone" required><br>
             <input type="number" placeholder="CPF" name="cpf" required><br>
-            <input type="text" placeholder="Email" name="email" required><br>
+            <input type="email" placeholder="Email" name="email" required><br>
             <input type="password" placeholder="Senha" name="senha" required><br>
         </div>
         <div class="concluir_user_comum">
