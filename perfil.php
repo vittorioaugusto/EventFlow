@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento BGS</title>
+    <title>Perfil</title>
     <link rel="stylesheet" href="assets/css/principal_comum.css">
 </head>
 <body>
@@ -20,15 +20,10 @@
             <a href="perfil.php"> <label>Perfil</label></a>       
         </nav>
 
-
-        <h1 id="brasil_game_show">Brasil Game Show</h1>
         <div>
-            <img id="imagem_bgs" src="assets/imagens/evento_bgs.png" alt="Evento BGS">
-        </div>
-
-        <div>
+            <h1 id="perfil_de_Usuário">Perfil de Usuário</h1>
 
         </div>
-
+    
 </body>
 </html>

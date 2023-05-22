@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Principal | Usuário Comum</title>
-    <link rel="stylesheet" href="assets/css/principal.css">
+    <link rel="stylesheet" href="assets/css/principal_comum.css">
 
 </head>
 <body>
@@ -16,13 +16,13 @@
     
         <nav class="botoes">
             <a href="principal_comum.php"> <label>Inicio</label></a>
-            <a href="eventos.html"> <label>Eventos</label></a>
+            <a href="eventos.php"> <label>Eventos</label></a>
             <a href="ingressos.php"> <label>Ingressos</label></a>
             <a href="perfil.php"> <label>Perfil</label></a>       
         </nav>
 
         <div class="evento_destaque">
-            <h1>Eventos em destaque no EventFlow</h1>
+            <h1>Evento em destaque no EventFlow</h1>
         </div>
 
         <div class="caixa_evento">

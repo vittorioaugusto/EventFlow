@@ -64,13 +64,14 @@ body {
 /* tela principal */
 
 .evento_destaque h1{
+    position: absolute;
     margin-top: 100px;
     font-size: 30px;
     color: #fff;
     font-weight: bold;
-    left: 1rem;
+    left: 5%;
+    
 }
-
 
 #imagem_caixa{
     top: 1px;
@@ -123,8 +124,15 @@ body {
 
 
 
-    /* Evento BGS */
+    /* Eventos */
 
+
+#todos_os_eventos{
+    position: absolute;
+    left: 40%;
+    top: 80px;
+    color: #fff;
+}    
 
 #imagem{
     width: 327px;
@@ -141,10 +149,9 @@ body {
     flex-direction: row;
     justify-content: space-between;
     position: absolute;
-    top: 300%;
+    top: 240%;
     left: 15%;
 }
-
 
 .cartao_esquerdo{
     color: #000000;
@@ -176,9 +183,6 @@ body {
     text-decoration: none;
 }
 
-
-/* Evento de Basquete */
-
 #imagem2{
     width: 180px;
     height: 175px;
@@ -194,7 +198,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     position: absolute;
-    top: 700%;
+    top: 650%;
     left: 15%;
 }
 
@@ -228,6 +232,33 @@ body {
 .cartao_esquerdo2 > a{
     text-decoration: none;
 }
+
+
+/* Evento BGS */
+
+
+#brasil_game_show{
+    position: absolute;
+    top: 100px;
+    color: #fff;
+    left: 4%;
+}
+
+
+#imagem_bgs{
+    top: 100px;
+    width: 650px;
+    height: 380px;
+    left: 50px;
+    position: relative;
+    border: 5px solid #50C7F6;
+}
+
+
+
+
+
+
 
 
 
