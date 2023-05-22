@@ -20,14 +20,13 @@
             <a href="perfil.php"> <label>Perfil</label></a>       
         </nav>
 
-
         <h1 id="brasil_game_show">Brasil Game Show</h1>
         <div>
             <img id="imagem_bgs" src="assets/imagens/evento_bgs.png" alt="Evento BGS">
         </div>
 
         <div>
-
+            
         </div>
 
 </body>
