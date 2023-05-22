@@ -29,7 +29,9 @@
             <img id="imagem_caixa" src="assets/imagens/evento_bgs.png" alt="Evento BGS">
             <h1 id="caixa_nome">Brasil Game Show</h1>
             <div class="caixa_botao">
-                <a href="evento_bgs.html">Ver Detalhes</a>
+                <?php
+                    echo '<a href="evento_bgs.php">Ver Detalhes</a>';
+                ?>
             </div>
         </div>
 
