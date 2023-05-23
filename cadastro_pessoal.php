@@ -14,7 +14,7 @@
             <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
         </div>
 
-        <h1 id="user_comum">User Comum</h1>
+        <h1 id="user_comum">Usuário Pessoal</h1>
 
         <div class="login_cadastro_comum">
             <input type="text" placeholder="Nome" name="nome" required><br>

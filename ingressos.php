@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingressos</title>
-    <link rel="stylesheet" href="assets/css/principal_comum.css">
+    <link rel="stylesheet" href="assets/css/principal_pessoal.css">
 </head>
 <body>
 <div class="cabecalho">
@@ -14,9 +14,8 @@
         </div>
     
         <nav class="botoes">
-            <a href="principal_comum.php"> <label>Inicio</label></a>
-            <a href="eventos_comum.php"> <label>Eventos</label></a>
-            <a href="ingressos.php"> <label>Ingressos</label></a>
+        <a href="principal_comum.php"> <label>Eventos</label></a>
+            <a href="eventos_comum.php"> <label>Meus Eventos</label></a>
             <a href="perfil_comum.php"> <label>Perfil</label></a>       
         </nav>
 

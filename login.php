@@ -22,6 +22,10 @@
         </div>
         <div class="senha_e_conta">
             <?php
+                if (isset($_SESSION['login_erro'])) {
+                    echo '<p class="erro">' . $_SESSION['login_erro'] . '</p>';
+                    unset($_SESSION['login_erro']);
+                }
                 echo '<a href="esqueci_senha.php"><h2>Esqueci a senha</h2></a>';
                 echo '<a href="tipo_de_usuario.php"><h2>Criar Conta</h2></a>';
             ?>

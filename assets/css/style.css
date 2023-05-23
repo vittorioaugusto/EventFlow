@@ -41,6 +41,7 @@ body {
 }
 
 .entrar_login button {
+    color: black;
     height: 4rem;
     width: 13rem;
     margin: 2rem;
@@ -51,11 +52,11 @@ body {
     background-color: rgb(39, 189, 189);
     transition: 0.1s;
     cursor: pointer;
-    text-transform: uppercase;
+    font-size: larger;
 }
 
 .entrar_login button:hover {
-    background-color: rgb(21, 109, 109);
+    background-color: grey;
 }
 
 .senha_e_conta a {
@@ -136,7 +137,7 @@ body {
 }
 
 .concluir button:hover {
-    background-color: rgb(21, 109, 109);
+    background-color: rgb(30, 21, 109);
 }
 
 

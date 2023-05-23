@@ -17,14 +17,14 @@
             
             <div class="tipo_de_usuario">
                 <?php
-                    echo '<a href="cadastro_comum.php"><h1>Cadastro Comum</h1></a>';
+                    echo '<a href="cadastro_pessoal.php"><h1>Cadastro Pessoal</h1></a>';
                     echo '<a href="cadastro_empresarial.php"><h1>Cadastro Empresarial</h1></a><br>';
                 ?>
             </div>
 
             <div class="voltar_usuario">
                 <?php
-                    echo '<a href="login.php"><h1>Voltar</h1></a>';
+                    echo '<a href="login.php"><h1>voltar</h1></a>';
                 ?>     
             </div>
     </div>
