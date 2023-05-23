@@ -1,22 +1,27 @@
 <?php
 
-include('conexao.php'); 
+include('conexao.php');
 include('valida_usuario.php');
 
 $email = isset($_POST['email']) ? $_POST['email'] : '';
 $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
 
-$select = "SELECT email FROM login WHERE email = '$email' AND senha = '$senha'";
+$select = "SELECT idusuario, tipo_user FROM usuario JOIN login ON usuario.idusuario = login.idusuario WHERE email = '$email' AND senha = '$senha'";
 $query = mysqli_query($conexao, $select);
-$dado = mysqli_fetch_row($query);
+$dado = mysqli_fetch_assoc($query);
 
-if ($email == isset($dado[1]) && $senha == isset($dado[2])) {
-	session_start();
-	$_SESSION['id_funcao'] = $dado[0];
-	header ("location: principal.php");
-}
-else {
-	header ("location: login.php");
+if ($dado) {
+    session_start();
+    $_SESSION['idusuario'] = $dado['idusuario'];
+    $_SESSION['tipo_user'] = $dado['tipo_user'];
+    
+    if ($dado['tipo_user'] == 1) {
+        header("location: principal_comum.php");
+    } elseif ($dado['tipo_user'] == 2) {
+        header("location: principal_empresarial.php");
+    }
+} else {
+    header("location: login.php");
 }
 
 ?>

@@ -30,7 +30,7 @@
 
         <div class="voltar_user_empresarial">
             <?php
-                echo '<a href="login.php"><img src="assets/imagens/seta-voltar.png"></a>';
+                echo '<a href="tipo_de_usuario.php"><img src="assets/imagens/seta-voltar.png"></a>';
             ?>
          </div>
 

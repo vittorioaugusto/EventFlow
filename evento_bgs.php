@@ -16,7 +16,6 @@
         <nav class="botoes">
             <a href="principal_comum.php"> <label>Inicio</label></a>
             <a href="eventos.php"> <label>Eventos</label></a>
-            <a href="ingressos.php"> <label>Ingressos</label></a>
             <a href="perfil.php"> <label>Perfil</label></a>       
         </nav>
 
