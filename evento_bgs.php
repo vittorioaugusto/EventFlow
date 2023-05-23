@@ -14,9 +14,9 @@
         </div>
     
         <nav class="botoes">
-            <a href="principal_comum.php"> <label>Inicio</label></a>
-            <a href="eventos.php"> <label>Eventos</label></a>
-            <a href="perfil.php"> <label>Perfil</label></a>       
+            <a href="principal_pessoal.php"> <label>Eventos</label></a>
+            <a href="eventos_pessoal.php"> <label>Meus Eventos</label></a>
+            <a href="perfil_pessoal.php"> <label>Perfil</label></a>       
         </nav>
 
         <h1 id="brasil_game_show">Brasil Game Show</h1>

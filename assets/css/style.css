@@ -167,7 +167,7 @@ body {
     text-decoration: none;
     text-align: center;
     background-color: #50C7F6;
-    color: rgb(0, 0, 0);
+    color: white;
     border-radius: 15px;
     margin-bottom: 15px;
     padding-bottom: 3px;
@@ -183,7 +183,7 @@ body {
 }
 
 .tipo_de_usuario a:hover {
-    color: blue;
+    color: grey;
     transition: color 0.5s;
 }
 
@@ -199,7 +199,7 @@ body {
 }
 
 .voltar_usuario a:hover{
-    color: blue;
+    color: #50C7F6;
     transition: color 0.5s;
 }
 
@@ -260,6 +260,7 @@ body {
 }
 
 .concluir_user_comum button {
+    color: white;
     height: 3rem;
     width: 10rem;
     margin: 1rem;
@@ -270,11 +271,11 @@ body {
     background-color: rgb(39, 189, 189);
     transition: 0.1s;
     cursor: pointer;
-    text-transform: uppercase;
+    font-size: 15px;
 }
 
 .concluir_user_comum button:hover {
-    background-color: rgb(21, 109, 109);
+    background-color: grey;
 }
 
 
@@ -333,8 +334,9 @@ body {
 }
 
 .concluir_user_empresarial button {
+    color: white;
     height: 2rem;
-    width: 9rem;
+    width: 8rem;
     margin: 1rem;
     margin-bottom: 1rem;
     border-radius: 2rem;
@@ -343,11 +345,11 @@ body {
     background-color: rgb(39, 189, 189);
     transition: 0.1s;
     cursor: pointer;
-    text-transform: uppercase;
+    font-size: 12px;
     position: relative;
-    top: -5px;
+    top: -7px;
 }
 
 .concluir_user_empresarial button:hover {
-    background-color: rgb(21, 109, 109);
+    background-color: grey;
 }
