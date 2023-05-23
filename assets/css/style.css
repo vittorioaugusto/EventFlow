@@ -14,7 +14,7 @@ body {
 }
 
 .form_login {
-    width: 40%;
+    width: 100%;
     height: 80%;
     background-color: #4e4e4e;
     border-radius: 1.5rem;
@@ -36,8 +36,7 @@ body {
 
 .logo_login{
     position: relative;
-    height: 8rem;
-    top: 3%;
+    height: 7rem;
 }
 
 .entrar_login button {
@@ -72,6 +71,26 @@ body {
     color: rgb(255, 255, 255);
 }
 
+@media (max-width: 768px) {
+    .form_login {
+        width: 80%;
+    }
+
+    .login input {
+        width: 100%;
+    }
+
+    .entrar_login button {
+        width: 100%;
+        
+    }
+}
+
+@media (max-width: 480px) {
+    .form_login {
+        width: 90%;
+    }
+}
 
 
     /* Esqueci a senha */
@@ -133,11 +152,60 @@ body {
     background-color: rgb(39, 189, 189);
     transition: 0.1s;
     cursor: pointer;
-    text-transform: uppercase;
+    font-size: medium;
 }
 
 .concluir button:hover {
-    background-color: rgb(30, 21, 109);
+    background-color: grey;
+}
+
+
+@media (max-width: 768px) {
+    .form_login_senha {
+        width: 80%;
+        height: 65%;
+    }
+
+    .voltar_senha{
+        height: 60px;
+        position: absolute;
+        left: 7%;
+        top: 19%;
+    }
+
+    #redefinir_senha {
+        width: 30rem;
+    }
+
+    .login_senha input {
+        width: 25rem;
+    }
+
+    .concluir button {
+        width: 12rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form_login_senha {
+        width: 90%;
+    }
+
+    .voltar_senha{
+        width: 4rem;
+    }
+
+    #redefinir_senha {
+        width: 20rem;
+    }
+
+    .login_senha input {
+        width: 18rem;
+    }
+
+    .concluir button {
+        width: 10rem;
+    }
 }
 
 
@@ -203,11 +271,36 @@ body {
     transition: color 0.5s;
 }
 
+@media (max-width: 768px) {
+    .fundo_tipo_cadastro {
+        width: 80%;
+        height: 60%;
+
+    }
+
+    .logo_usuario{
+        position: absolute;
+        top: 25%;
+    }
+
+    .voltar_usuario a {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fundo_tipo_cadastro {
+        width: 90%;
+    }
+}
 
 
-    /* User Comum */
 
-.form_cadastro_comum{
+    /* Usuário Pessoal */
+
+.form_cadastro_pessoal{
     width: 40%;
     height: 95%;
     background-color: #4e4e4e;
@@ -220,10 +313,49 @@ body {
 }
 
 
-.logo_cadastro_comum{
+.logo_cadastro_pessoal{
     position: absolute;
     height: 3rem;
     top: 5%;
+}
+
+#usuario_pessoal {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    width: 40rem;
+    height: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+    position: relative;
+    top: 17%;
+}
+
+.login_cadastro_pessoal input{
+    width: 30rem;
+    margin: 0.5rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: none;
+}
+
+.concluir_usuario_pessoal button {
+    color: white;
+    height: 3rem;
+    width: 10rem;
+    margin: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: 0.8rem;
+    background-color: rgb(39, 189, 189);
+    transition: 0.1s;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.concluir_usuario_pessoal button:hover {
+    background-color: grey;
 }
 
 .voltar_user_comum{
@@ -239,48 +371,60 @@ body {
     display: flex;
 }
 
-#user_comum {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    width: 40rem;
-    height: 3.5rem;
-    font-weight: bold;
-    margin-bottom: 5rem;
-    position: relative;
-    top: 17%;
+@media only screen and (max-width: 768px) {
+    .form_cadastro_pessoal {
+        width: 80%;
+        height: 70%;
+    }
+    
+    .logo_cadastro_pessoal{
+        top: 15%;
+    }
+
+    #usuario_pessoal {
+        width: 80%;
+        top: 12%;
+    }
+
+    .login_cadastro_pessoal input {
+        width: 100%;
+    }
+
+    .concluir_usuario_pessoal button {
+        width: 100%;
+    }
 }
 
-.login_cadastro_comum input{
-    width: 30rem;
-    margin: 0.5rem;
-    height: 3.5rem;
-    border-radius: 1rem;
-    padding: 1rem;
-    border: none;
+@media only screen and (max-width: 480px) {
+    .form_cadastro_pessoal {
+        width: 90%;
+    }
+    
+    #usuario_pessoal {
+        width: 100%;
+        font-size: 24px;
+        margin-bottom: 3rem;
+    }
+
+    .login_cadastro_pessoal input {
+        width: 100%;
+    }
+
+    .concluir_usuario_pessoal button {
+        width: 100%;
+    }
+    
+    .voltar_usuario_pessoal {
+        width: 6%;
+        height: 12%;
+        top: 5%;
+        left: 3%;
+    }
 }
 
-.concluir_user_comum button {
-    color: white;
-    height: 3rem;
-    width: 10rem;
-    margin: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 2rem;
-    border: none;
-    font-size: 0.8rem;
-    background-color: rgb(39, 189, 189);
-    transition: 0.1s;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-.concluir_user_comum button:hover {
-    background-color: grey;
-}
 
 
-
-/* User Empresarial */
+/* Usuário Empresarial */
 
 .form_cadastro_empresarial {
     width: 40%;
@@ -353,3 +497,65 @@ body {
 .concluir_user_empresarial button:hover {
     background-color: grey;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .form_cadastro_empresarial {
+      width: 80%;
+    }
+    
+    #user_empresarial {
+      width: 100%;
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+    }
+  
+    .login_cadastro_empresarial input {
+      width: 100%;
+    }
+  
+    .concluir_user_empresarial button {
+      width: 100%;
+      font-size: 1rem;
+      height: 2.5rem;
+      top: -5px;
+    }
+  
+    .voltar_user_empresarial {
+      width: 6%;
+      height: 12%;
+      top: 4%;
+      left: 3%;
+    }
+  }
+  
+  /* Responsividade para dispositivos com largura máxima de 480px */
+  @media only screen and (max-width: 480px) {
+    .form_cadastro_empresarial {
+      width: 90%;
+    }
+    
+    #user_empresarial {
+      width: 100%;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+  
+    .login_cadastro_empresarial input {
+      width: 100%;
+    }
+  
+    .concluir_user_empresarial button {
+      width: 100%;
+      font-size: 0.8rem;
+      height: 2rem;
+      top: -3px;
+    }
+  
+    .voltar_user_empresarial {
+      width: 8%;
+      height: 16%;
+      top: 3%;
+      left: 2%;
+    }
+  }

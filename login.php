@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
+    <center>
     <form class="form_login" action="autenticar.php" method="POST">
 
         <div class="logo_login">
@@ -32,5 +32,7 @@
         </div>
         
     </form>
+    </center>
+    
 </body>
 </html>
