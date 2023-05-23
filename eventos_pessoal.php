@@ -23,16 +23,26 @@
         <h1 id="todos_os_eventos3">Meus Eventos</h1>
 
         <div class="cartao3">
-                <div class="cartao_esquerdo">
+                <div class="cartao_esquerdo3">
                     <span>Evento de Games</span>
                     <h1>BGS - 2023</h1>
                     <h3>Venha fazer parte dessa aventura!</h3>
-                    <a href="evento_bgs.php">Clique aqui para saber mais!</a>
+                    <div class="caixa_botao3">
+                    <a href="evento_bgs.php">Ver Evento</a>
+                    </div>
+                    
                 </div>
                 <div class="cartao_direito3">
                     <img id="imagem3" src="assets/imagens/evento_bgs.png" alt="Evento BGS">
                 </div>
             </div>
+
+
+            <!-- <div class="caixa_botao3">
+                    <?php
+                        echo '<a href="evento_bgs.php">Ver Evento</a>';
+                    ?>
+                    </div> -->
 
     </div>
 </body>

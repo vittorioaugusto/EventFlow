@@ -273,8 +273,8 @@ body {
 
 
 #imagem3{
-    width: 180px;
-    height: 175px;
+    width: 327px;
+    height: 173px;
 }
 
 .cartao3{
@@ -289,8 +289,8 @@ body {
     position: absolute;
     top: 270%;
     left: 15%;
+    
 }
-
 
 .cartao_esquerdo3{
     color: #000000;
@@ -298,6 +298,7 @@ body {
     flex-direction: column;
     justify-content: center;
     padding-left: 10px;
+    margin-top: -40px;
 }
 
 .cartao_esquerdo3 > span{
@@ -323,6 +324,21 @@ body {
 }
 
 
+.caixa_botao3 a{
+    position: absolute;
+    left: 10px;
+    top: 135px;
+    background-color: #50C7F6; 
+    color: white;
+    padding: 10px 20px; 
+    border-radius: 4px; 
+    font-size: 15px;
+    text-decoration: none;
+}
 
+.caixa_botao3 a:hover {
+    color: blue;
+    transition: color 0.5s;
+}
 
 
