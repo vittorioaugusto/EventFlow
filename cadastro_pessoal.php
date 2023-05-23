@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
     <form class="form_cadastro_pessoal" action="autenticar.php" method="POST">
 
         <div class="logo_cadastro_pessoal">

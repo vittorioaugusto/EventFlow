@@ -14,9 +14,9 @@
             <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
         </div>
 
-        <h1 id="user_empresarial">Usuário Empresarial</h1>
+        <h1 id="usuario_empresarial">Usuário Empresarial</h1>
 
-        <div class="login_cadastro_comum">
+        <div class="login_cadastro_empresarial">
             <input type="text" placeholder="Nome" name="nome" required><br>
             <input type="number" placeholder="CNPJ" name="cnpj" required><br>
             <input type="number" placeholder="Contato" name="contato" required><br>
@@ -24,11 +24,11 @@
             <input type="email" placeholder="Email" name="email" required><br>
             <input type="password" placeholder="Senha" name="senha" required><br>
         </div>
-        <div class="concluir_user_empresarial">
+        <div class="concluir_usuario_empresarial">
            <button type="submit" name="enviar" value="Entrar"><h1>Concluir</h1></button><br>
         </div>
 
-        <div class="voltar_user_empresarial">
+        <div class="voltar_usuario_empresarial">
             <?php
                 echo '<a href="tipo_de_usuario.php"><img src="assets/imagens/seta-voltar.png"></a>';
             ?>
