@@ -306,8 +306,8 @@ body {
 }
 
 .cartao_esquerdo3 > h1{
-    margin-top: 10px;
-    font-size: 60px;
+    margin-top: 5px;
+    font-size: 50px;
     color: black;
     font-weight: bold;
 }
@@ -327,12 +327,12 @@ body {
 .caixa_botao3 a{
     position: absolute;
     left: 10px;
-    top: 135px;
+    top: 130px;
     background-color: #50C7F6; 
     color: white;
     padding: 10px 20px; 
     border-radius: 4px; 
-    font-size: 15px;
+    font-size: 18px;
     text-decoration: none;
 }
 

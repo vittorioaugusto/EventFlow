@@ -28,7 +28,9 @@
                     <h1>BGS - 2023</h1>
                     <h3>Venha fazer parte dessa aventura!</h3>
                     <div class="caixa_botao3">
-                    <a href="evento_bgs.php">Ver Evento</a>
+                        <?php
+                            echo '<a href="evento_bgs.php">Ver Evento</a>';
+                        ?>
                     </div>
                     
                 </div>
@@ -36,13 +38,6 @@
                     <img id="imagem3" src="assets/imagens/evento_bgs.png" alt="Evento BGS">
                 </div>
             </div>
-
-
-            <!-- <div class="caixa_botao3">
-                    <?php
-                        echo '<a href="evento_bgs.php">Ver Evento</a>';
-                    ?>
-                    </div> -->
 
     </div>
 </body>
