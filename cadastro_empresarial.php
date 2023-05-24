@@ -29,7 +29,7 @@
         </div>
         <div class="voltar_cadastro_empresarial">
             <?php
-            echo '<a href="login.html"><img src="assets/imagens/seta-voltar.png"></a>';
+            echo '<a href="login.php"><img src="assets/imagens/seta-voltar.png"></a>';
             ?>
         </div>
     </form>

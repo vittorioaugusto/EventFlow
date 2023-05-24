@@ -28,7 +28,7 @@
         </div>
         <div class="voltar_cadastro_pessoal">
             <?php
-            echo '<a href="tipo_de_usuario.php"><img src="assets/imagens/seta-voltar.png"></a>';
+            echo '<a href="login.php"><img src="assets/imagens/seta-voltar.png"></a>';
             ?>
         </div>
     </form>
