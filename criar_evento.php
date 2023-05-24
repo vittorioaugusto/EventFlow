@@ -30,6 +30,7 @@
                     <input type="text" placeholder="Local" name="local" required><br>
                     <input type="date" placeholder="Data" name="data" required><br>
                     <input type="time" placeholder="Hora" name="hora" required><br>
+                    <input type="number" placeholder="Ingresso" name="ingresso" required><br>
                 </div>
 
             
