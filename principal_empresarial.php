@@ -22,24 +22,22 @@
         </nav>
 
         <div class="caixa">
-    
+
             <div class="cartao">
                 <div class="cartao_esquerdo">
                     <span>Evento de Games</span>
                     <h1>BGS - 2023</h1>
                     <h3>Venha fazer parte dessa aventura!</h3>
-                    
                 </div>
-                <div class="cartao_direito">
-                    <a href="editar_evento_bgs.php">Editar Evento</a>
-                </div>
-            </div>
 
+                <div class="cartao_direito">
+                    <a href="editar_evento.php">Editar Evento</a>
+                </div>
+
+            </div>
+            
         </div>
         
-
-        
-    
     </div>
 </body>
 </html>
