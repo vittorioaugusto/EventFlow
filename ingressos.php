@@ -13,12 +13,6 @@
             <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
         </div>
     
-        <nav class="botoes">
-        <a href="principal_comum.php"> <label>Eventos</label></a>
-            <a href="eventos_comum.php"> <label>Meus Eventos</label></a>
-            <a href="perfil_comum.php"> <label>Perfil</label></a>       
-        </nav>
-
-        
+    
 </body>
 </html>
