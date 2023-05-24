@@ -20,7 +20,7 @@
             <a href="criar_evento.php"> <label>Criar Evento</label></a>
             <a href="perfil_empresarial.php"> <label>Perfil</label></a>        
         </nav>
-
+        <center>
         <div class="caixa">
 
             <div class="cartao">
@@ -34,9 +34,8 @@
                     <a href="editar_evento.php">Editar Evento</a>
                 </div>
 
-            </div>
-            
-        </div>
+        </center>
+        
         
     </div>
 </body>

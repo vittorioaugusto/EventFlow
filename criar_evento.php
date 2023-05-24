@@ -20,19 +20,22 @@
             <a href="perfil_empresarial.php"> <label>Perfil</label></a>       
         </nav>
 
-        <form action="">
-            <h1 id="">Crie seu Evento!</h1>
+        <center>
+            <form class="form_criar_evento" action="autenticar.php" method="POST">
+                <h1 id="crie_seu_evento">Crie seu Evento!</h1>
 
-            <div>
-                <input type="text" placeholder="Nome" name="nome" required><br>
-                <input type="text" placeholder="Descrição" name="descrição" required><br>
-                <input type="text" placeholder="Local" name="local" required><br>
-                <input type="date" placeholder="Data" name="data" required><br>
-                <input type="time" placeholder="Hora" name="hora" required><br>
-            </div>
+                <div>
+                    <input type="text" placeholder="Nome" name="nome" required><br>
+                    <input type="text" placeholder="Descrição" name="descrição" required><br>
+                    <input type="text" placeholder="Local" name="local" required><br>
+                    <input type="date" placeholder="Data" name="data" required><br>
+                    <input type="time" placeholder="Hora" name="hora" required><br>
+                </div>
 
-           
-        </form>
+            
+            </form>
+        </center>
+        
 
     </div>
 

@@ -18,7 +18,7 @@
             <a href="criar_evento.php"> <label>Criar Evento</label></a>
             <a href="perfil_empresarial.php"> <label>Perfil</label></a>       
         </nav>
-
+        <center>
         <form action="">
             <h1 id="">Edite seu Evento!</h1>
 
@@ -31,6 +31,7 @@
             </div>
 
         </form>
-
+        </center>
+        
 </body>
 </html>

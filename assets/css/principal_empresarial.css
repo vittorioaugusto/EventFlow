@@ -64,79 +64,6 @@ body {
 
 /* principal_empresarial */
 
-
-.caixa_evento{
-    box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
-    margin-top: 50px;
-    position: absolute;
-    top: 150px;
-    left: 15%;
-    height: 692%;
-    width: 50%;
-    background-color: #4e4e4e;
-    border: 3px solid #50C7F6;
-    padding: 50px;
-}
-
-#caixa_nome{
-    font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
-    left: 70%;
-    font-size: 30px;
-    color: black;
-}
-
-.caixa_botao a{
-    position: absolute;
-    left: 720px;
-    top: 80%;
-    background-color: #50C7F6; 
-    color: white;
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 4px; 
-    font-size: 20px;
-    text-decoration: none; 
-}
-
-.caixa_botao a:hover {
-    color: blue;
-    transition: color 0.5s;
-}
-
-
-#todos_os_eventos{
-    position: absolute;
-    left: 40%;
-    top: 80px;
-    color: #fff;
-}    
-
-
-/* eventos_empresarial */
-
-
-.criar_evento a{
-    position: absolute;
-    left: 600px;
-    top: 200%;
-    background-color: #50C7F6; 
-    color: white;
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 4px; 
-    font-size: 30px;
-    text-decoration: none;
-    font-family: sans-serif;
-}
-
-.criar_evento a:hover {
-    color: blue;
-    transition: color 0.5s;
-}
-
 .cartao{
     background-color: #ffff;
     width: 50%;
@@ -200,6 +127,13 @@ body {
     color: blue;
     transition: color 0.5s;
 }
+
+
+
+/* criar_evento */
+
+
+
 
 
 
