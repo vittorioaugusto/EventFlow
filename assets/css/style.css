@@ -323,7 +323,7 @@ body {
     top: 3%;
 }
 
-#usuario_pessoal {
+#cadastro_pessoal {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     width: 40rem;
@@ -343,7 +343,7 @@ body {
     border: none;
 }
 
-.concluir_usuario_pessoal button {
+.concluir_cadastro_pessoal button {
     color: white;
     height: 3rem;
     width: 10rem;
@@ -358,11 +358,11 @@ body {
     font-size: 15px;
 }
 
-.concluir_usuario_pessoal button:hover {
+.concluir_cadastro_pessoal button:hover {
     background-color: grey;
 }
 
-.voltar_usuario_pessoal{
+.voltar_cadastro_pessoal{
     position: absolute;
     width: 4%;
     height: 8.6%;
@@ -422,7 +422,7 @@ body {
     top: 1%;
 }
 
-#usuario_empresarial{
+#cadastro_empresarial{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     width: 40rem;
@@ -442,7 +442,7 @@ body {
     border: none; 
 }
 
-.concluir_usuario_empresarial button {
+.concluir_cadastro_empresarial button {
     color: white;
     height: 2rem;
     width: 8rem;
@@ -459,11 +459,11 @@ body {
     top: -7px;
 }
 
-.concluir_usuario_empresarial button:hover {
+.concluir_cadastro_empresarial button:hover {
     background-color: grey;
 }
 
-.voltar_usuario_empresarial{
+.voltar_cadastro_empresarial{
     position: absolute;
     width: 4%;
     height: 8.6%;

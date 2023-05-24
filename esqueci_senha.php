@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <form class="form_login_senha" action="autenticar.php" method="POST">
+    <form class="form_login_senha" action="resetar_senha.php" method="POST">
 
         <div class="logo_senha">
             <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
@@ -19,7 +19,7 @@
 
         <div class="login_senha">
             <input type="text" placeholder="Email" name="email" required><br>
-            <input type="password" placeholder="Nova Senha" name="nova senha" required><br>
+            <input type="password" placeholder="Nova Senha" name="nova_senha" required><br>
         </div>
 
         <div class="concluir">

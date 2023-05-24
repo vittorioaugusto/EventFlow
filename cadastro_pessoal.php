@@ -8,34 +8,29 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-    <form class="form_cadastro_pessoal" action="autenticar.php" method="POST">
-
+    <form class="form_cadastro_pessoal" action="processa_cadastro.php" method="POST">
         <div class="logo_cadastro_pessoal">
             <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
         </div>
-
-        <h1 id="usuario_pessoal">Usuário Pessoal</h1>
-
+        <h1 id="cadastro_pessoal">Cadastro Pessoal</h1>
         <div class="login_cadastro_pessoal">
             <input type="text" placeholder="Nome" name="nome" required><br>
-            <input type="number" placeholder="Telefone" name="telefone" required><br>
-            <input type="number" placeholder="CPF" name="cpf" required><br>
-            <input type="email" placeholder="Email" name="email" required><br>
+            <input type="text" placeholder="Telefone" name="telefone" required><br>
+            <input type="text" placeholder="CPF" name="cpf_cnpj" required><br>
+            <input type="text" placeholder="Email" name="email" required><br>
             <input type="password" placeholder="Senha" name="senha" required><br>
+            <input type="hidden" name="tipo_user" value="1">
         </div>
-
-        <div class="concluir_usuario_pessoal">
-           <button type="submit" name="enviar" value="Entrar"><h1>Concluir</h1></button><br>
+        <div class="concluir_cadastro_pessoal">
+            <button type="submit" name="enviar" value="Entrar">
+                <h1>Concluir</h1>
+            </button><br>
         </div>
-
-        <div class="voltar_usuario_pessoal">
+        <div class="voltar_cadastro_pessoal">
             <?php
-                echo '<a href="tipo_de_usuario.php"><img src="assets/imagens/seta-voltar.png"></a>';
+            echo '<a href="tipo_de_usuario.php"><img src="assets/imagens/seta-voltar.png"></a>';
             ?>
-
-         </div>
-
+        </div>
     </form>
 </body>
 </html>
