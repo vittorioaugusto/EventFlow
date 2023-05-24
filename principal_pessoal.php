@@ -48,18 +48,7 @@
                 </div>
             </div>
 
-            <!-- <div class="cartao2">
-                <div class="cartao_esquerdo2">
-                    <span>Evento de Basquete</span>
-                    <h1>BasquetBol 2023</h1>
-                    <h3>Venha fazer parte dessa aventura!</h3>
-                    <a href="evento_basquete.php">Clique aqui para saber mais!</a>
-                </div>
-                <div class="cartao_direito2">
-                    <img id="imagem2" src="assets/imagens/evento_basquete.png" alt="Evento Basquete">
-                </div>
-            </div> -->
-
+            
     </div>   
 </body>
 </html>
