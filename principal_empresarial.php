@@ -21,19 +21,9 @@
             <a href="perfil_empresarial.php"> <label>Perfil</label></a>       
         </nav>
 
-        <div class="evento_destaque">
-            <h1>Evento em destaque no EventFlow</h1>
-        </div>
 
-        <div class="caixa_evento">
-            <img id="imagem_caixa" src="assets/imagens/evento_bgs.png" alt="Evento BGS">
-            <h1 id="caixa_nome">Brasil Game Show</h1>
-            <div class="caixa_botao">
-                <?php
-                    echo '<a href="editar_evento_bgs.php">Editar Evento</a>';
-                ?>
-            </div>
-        </div>
+
+        
     
     </div>
 </body>
