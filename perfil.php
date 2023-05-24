@@ -34,15 +34,12 @@ $empresaUsuario = $dadosUsuario['empresa'];
 <html>
 <head>
     <title>Perfil</title>
-    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <link rel="stylesheet" href="assets/css/cabecalho.css">
 </head>
 <body>
     <div class="container">
         <div class="cabecalho">
-            <div class="nome_usuario">
-                <p>Bem-vindo(a), <?php echo $nomeUsuario; ?>!</p>
-            </div>
-
+            
             <nav class="botoes">
             <?php if ($tipoUsuario == 1) { ?>
                     <a href="eventos.php"><label>Eventos</label></a>
@@ -58,6 +55,11 @@ $empresaUsuario = $dadosUsuario['empresa'];
                 <?php } ?>
             </nav>
         </div>
+
+        <center>
+        <div class="nome_usuario">
+                <p>Bem-vindo(a), <?php echo $nomeUsuario; ?>!</p>
+            </div>
 
         <div class="informacoes_perfil">
             <h2>Informações do Perfil</h2>
@@ -94,6 +96,8 @@ $empresaUsuario = $dadosUsuario['empresa'];
 
             <a href="editar_perfil.php">Editar Informações</a>
         </div>
-    </div>
+    </div>            
+        </center>
+        
 </body>
 </html>

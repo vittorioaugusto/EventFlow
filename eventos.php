@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos</title>
+    <link rel="stylesheet" href="assets/css/principal_empresarial.css">
 </head>
 <body>
     <div class="cabecalho">
@@ -12,6 +13,8 @@
             <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
         </div>
 
+        
+        
         <?php
         // Incluir o arquivo de conexão com o banco de dados
         require_once "conexao.php";
@@ -50,6 +53,11 @@
             ?>
         </nav>
 
+        <center>
+        <div class="nome_usuario">
+            <p>Bem-vindo, <?php echo $nome_usuario; ?></p>
+        </div>
+
         <div class="caixa">
             <h1 id="todos_os_eventos">Todos os Eventos</h1>
 
@@ -84,9 +92,9 @@
 
         </div>
     </div>
+        </center>
+        
 
-    <div class="nome_usuario">
-        <p>Bem-vindo, <?php echo $nome_usuario; ?></p>
-    </div>
+    
 </body>
 </html>
