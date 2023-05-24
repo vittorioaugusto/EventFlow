@@ -60,6 +60,18 @@ body {
     transition: color 0.5s;
 }
 
+.nome_usuario{
+    position: relative;
+    top: 50%;
+}
+
+.caixa{
+    position: relative;
+    top: 100%;
+}
+
+
+
 
 
 /* principal_empresarial */

@@ -9,11 +9,11 @@
 </head>
 <body>
     <div class="cabecalho">
+        
         <div class="logo_principal">
             <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
         </div>
 
-        
         
         <?php
         // Incluir o arquivo de conexão com o banco de dados
