@@ -42,8 +42,7 @@ body {
     display: flex;
     align-items: center;
     height: 100%;
-    font-size: 20px;
-    
+    font-size: 20px; 
 }
 
 .botoes a{
@@ -61,87 +60,19 @@ body {
 
 
 
-/* tela principal */
+/* eventos_pessoal */
 
-
-.evento_destaque h1{
-    position: absolute;
-    margin-top: 90px;
-    font-size: 30px;
-    color: #fff;
-    font-weight: bold;
-    left: 5%;
-    
-}
-
-#imagem_caixa{
-    top: 1px;
-    width: 650px;
-    height: 380px;
-    left: 1px;
-    position: absolute;
-}
-
-.caixa_evento{
-    box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
-    margin-top: 50px;
-    position: absolute;
-    top: 150px;
-    left: 15%;
-    height: 692%;
-    width: 70%;
-    background-color: #4e4e4e;
-    border: 3px solid #50C7F6;
-    padding: 50px;
-}
-
-#caixa_nome{
-    font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
-    left: 70%;
-    font-size: 30px;
-    color: #000000;
-}
-
-.caixa_botao a{
-    position: absolute;
-    left: 720px;
-    top: 80%;
-    background-color: #50C7F6; 
-    color: white;
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 4px; 
-    font-size: 20px;
-    text-decoration: none; 
-}
-
-.caixa_botao a:hover {
-    color: blue;
-    transition: color 0.5s;
-}
-
-
-
-/* evento bgs */
 
 #todos_os_eventos{
     position: absolute;
     left: 40%;
-    top: 650px;
+    top: 100px;
     color: #fff;
 }    
    
-#imagem{
-    width: 327px;
-    height: 173px;
-}
-
 .cartao{
     background-color: #ffff;
-    width: 70%;
+    width: 50%;
     box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
@@ -149,8 +80,9 @@ body {
     flex-direction: row;
     justify-content: space-between;
     position: absolute;
-    top: 1300%;
-    left: 15%;
+    top: 350%;
+    left: 25%;
+    height: 300%;
 }
 
 .cartao_esquerdo{
@@ -183,33 +115,30 @@ body {
     text-decoration: none;
 }
 
-
-
-
-/* Evento BGS */
-
-
-#brasil_game_show{
+.cartao_direito a{
     position: absolute;
-    top: 100px;
-    color: #fff;
-    left: 4%;
+    left: 500px;
+    top: 40%;
+    background-color: #50C7F6; 
+    color: white;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    font-size: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+    
+.cartao_direito a:hover {
+    color: blue;
+    transition: color 0.5s;
 }
 
-
-#imagem_bgs{
-    top: 100px;
-    width: 650px;
-    height: 380px;
-    left: 50px;
-    position: relative;
-    border: 5px solid #50C7F6;
-}
 
 
 /* Meus Eventos */
 
-#todos_os_eventos2{
+#meus_eventos{
     position: absolute;
     left: 40%;
     top: 90px;
@@ -217,14 +146,9 @@ body {
 }
 
 
-#imagem2{
-    width: 327px;
-    height: 173px;
-}
-
 .cartao2{
     background-color: #ffff;
-    width: 70%;
+    width: 50%;
     box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(80,199,246,0.75);
@@ -232,9 +156,9 @@ body {
     flex-direction: row;
     justify-content: space-between;
     position: absolute;
-    top: 270%;
-    left: 15%;
-    
+    top: 350%;
+    left: 25%;
+    height: 300%;
 }
 
 .cartao_esquerdo2{
@@ -243,16 +167,15 @@ body {
     flex-direction: column;
     justify-content: center;
     padding-left: 10px;
-    margin-top: -40px;
 }
 
 .cartao_esquerdo2 > span{
     font-weight: 500;
 }
 
-.cartao_esquerdo3 > h1{
-    margin-top: 5px;
-    font-size: 50px;
+.cartao_esquerdo2 > h1{
+    margin-top: 10px;
+    font-size: 60px;
     color: black;
     font-weight: bold;
 }
@@ -268,20 +191,21 @@ body {
     text-decoration: none;
 }
 
-
-.caixa_botao2 a{
+.cartao_direito2 a{
     position: absolute;
-    left: 10px;
-    top: 130px;
+    left: 500px;
+    top: 40%;
     background-color: #50C7F6; 
     color: white;
     padding: 10px 20px; 
+    border: none; 
     border-radius: 4px; 
-    font-size: 18px;
+    font-size: 20px;
     text-decoration: none;
+    font-family: sans-serif;
 }
-
-.caixa_botao2 a:hover {
+    
+.cartao_direito2 a:hover {
     color: blue;
     transition: color 0.5s;
 }

@@ -20,20 +20,6 @@
             <a href="perfil_pessoal.php"> <label>Perfil</label></a>       
         </nav>
 
-        <div class="evento_destaque">
-            <h1>Evento em destaque no EventFlow</h1>
-        </div>
-
-        <div class="caixa_evento">
-            <img id="imagem_caixa" src="assets/imagens/evento_bgs.png" alt="Evento BGS">
-            <h1 id="caixa_nome">Brasil Game Show</h1>
-            <div class="caixa_botao">
-                <?php
-                    echo '<a href="evento_bgs.php">Ver Detalhes</a>';
-                ?>
-            </div>
-        </div>
-
         <h1 id="todos_os_eventos">Todos os Eventos</h1>
         
         <div class="cartao">
@@ -41,10 +27,10 @@
                     <span>Evento de Games</span>
                     <h1>BGS - 2023</h1>
                     <h3>Venha fazer parte dessa aventura!</h3>
-                    <a href="evento_bgs.php">Clique aqui para saber mais!</a>
                 </div>
+
                 <div class="cartao_direito">
-                    <img id="imagem" src="assets/imagens/evento_bgs.png" alt="Evento BGS">
+                    <a href="eventos.php">Saiba mais!</a>
                 </div>
             </div>
 
