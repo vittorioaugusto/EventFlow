@@ -19,8 +19,20 @@
             <a href="perfil_empresarial.php"> <label>Perfil</label></a>        
         </nav>
 
-        <div>
+        <center>
+
+		<div>
             <h1 id="perfil_de_Usuário">Perfil de Usuário</h1>
         </div>
+			
+
+
+
+
+	    </center>
+
+
+
+
 </body>
 </html>

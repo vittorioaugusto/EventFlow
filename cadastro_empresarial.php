@@ -19,7 +19,7 @@
         <div class="login_cadastro_empresarial">
             <input type="text" placeholder="Nome" name="nome" required><br>
             <input type="number" placeholder="CNPJ" name="cnpj" required><br>
-            <input type="number" placeholder="Contato" name="contato" required><br>
+            <input type="number" placeholder="Telefone" name="telefone" required><br>
             <input type="text" placeholder="Empresa" name="empresa" required><br>
             <input type="email" placeholder="Email" name="email" required><br>
             <input type="password" placeholder="Senha" name="senha" required><br>
