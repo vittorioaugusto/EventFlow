@@ -16,12 +16,27 @@
         </div>
     
         <nav class="botoes">
-            <a href="principal_empresarial.php"> <label>Inicio</label></a>
-            <a href="eventos_empresarial.php"> <label>Criar Evento</label></a>
-            <a href="perfil_empresarial.php"> <label>Perfil</label></a>       
+            <a href="principal_empresarial.php"> <label>Eventos</label></a>
+            <a href="criar_evento.php"> <label>Criar Evento</label></a>
+            <a href="perfil_empresarial.php"> <label>Perfil</label></a>        
         </nav>
 
+        <div class="caixa">
+    
+            <div class="cartao">
+                <div class="cartao_esquerdo">
+                    <span>Evento de Games</span>
+                    <h1>BGS - 2023</h1>
+                    <h3>Venha fazer parte dessa aventura!</h3>
+                    
+                </div>
+                <div class="cartao_direito">
+                    <a href="editar_evento_bgs.php">Editar Evento</a>
+                </div>
+            </div>
 
+        </div>
+        
 
         
     

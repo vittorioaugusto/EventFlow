@@ -14,9 +14,11 @@
         </div>
     
         <nav class="botoes">
-            <a href="principal_empresarial.php"> <label>Inicio</label></a>
-            <a href="eventos_empresarial.php"> <label>Criar Evento</label></a>
+            <a href="principal_empresarial.php"> <label>Eventos</label></a>
+            <a href="criar_evento.php"> <label>Criar Evento</label></a>
             <a href="perfil_empresarial.php"> <label>Perfil</label></a>       
         </nav>
+
+        
 </body>
 </html>
