@@ -5,16 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos</title>
-    <link rel="stylesheet" href="assets/css/principal_empresarial.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
 </head>
 <body>
-    <div class="cabecalho">
+    <div class="cabecalho_eventos">
         
         <div class="logo_principal">
             <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
         </div>
 
-        
         <?php
         // Incluir o arquivo de conexão com o banco de dados
         require_once "conexao.php";
@@ -40,25 +39,25 @@
         $tipo_usuario = $row_tipo_usuario['tipo_user'];
         ?>
 
-        <nav class="botoes">
+        <nav class="botoes_eventos">
             <a href="eventos.php"> <label>Eventos</label></a>
-            <a href="perfil.php"> <label>Perfil</label></a>
-            <a href="login.php"> <label>Logout</label></a>
-            
             <?php
             // Verificar se o usuário é empresarial para exibir o botão de subir evento
             if ($tipo_usuario == 2) {
                 echo '<a href="criar_evento.php"> <label>Criar Evento</label></a>';
             }
             ?>
+            <a href="perfil.php"> <label>Perfil</label></a>
+            <a href="login.php"> <label>Logout</label></a>
         </nav>
 
         <center>
-        <div class="nome_usuario">
-            <p>Bem-vindo, <?php echo $nome_usuario; ?></p>
+        <div class="nome_usuario_eventos">
+            <h1>Bem-vindo(a), <?php echo $nome_usuario; ?></h1>
         </div>
 
-        <div class="caixa">
+        <div class="caixa_eventos">
+        
             <h1 id="todos_os_eventos">Todos os Eventos</h1>
 
             <?php
@@ -70,6 +69,7 @@
             if (mysqli_num_rows($resultado) > 0) {
                 // Exibir os eventos
                 while ($row = mysqli_fetch_assoc($resultado)) {
+                    echo '<a href="info_evento.php?id=' . $row["id_evento"] . '" class="caixa_evento">';
                     echo '<div class="cartao">';
                     echo '<div class="cartao_esquerdo">';
                     echo '<span>' . $row["nome_evento"] . '</span>';
@@ -81,6 +81,7 @@
                     echo '<img id="imagem" src="' . $row["imagem"] . '" alt="Evento">';
                     echo '</div>';
                     echo '</div>';
+                    echo '</a>';
                 }
             } else {
                 echo '<p>Nenhum evento encontrado.</p>';

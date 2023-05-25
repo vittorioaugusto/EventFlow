@@ -9,8 +9,9 @@ if (!isset($_SESSION['idusuario'])) {
 
 $idUsuario = $_SESSION['idusuario'];
 
-$query = "SELECT u.nome, u.cpf_cnpj, u.telefone, tu.id_funcao, u.empresa FROM usuario u
+$query = "SELECT u.nome, u.cpf_cnpj, u.telefone, tu.id_funcao, u.empresa, l.email FROM usuario u
           INNER JOIN tipo_usuario tu ON u.tipo_user = tu.id_funcao
+          INNER JOIN login l ON u.idusuario = l.idusuario
           WHERE u.idusuario = ?";
 $stmt = $conexao->prepare($query);
 $stmt->bind_param('i', $idUsuario);
@@ -28,25 +29,28 @@ $tipoUsuario = $dadosUsuario['id_funcao'];
 $cpfCnpjUsuario = $dadosUsuario['cpf_cnpj'];
 $telefoneUsuario = $dadosUsuario['telefone'];
 $empresaUsuario = $dadosUsuario['empresa'];
+$emailUsuario = $dadosUsuario['email'];
 
-// Verificar se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Obter os dados do formulário
+    // Receber os dados do formulário
     $nome = $_POST['nome'];
+    $cpfCnpj = $_POST['cpf_cnpj'];
     $telefone = $_POST['telefone'];
+    $empresa = $_POST['empresa'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
 
-    // Verificar o tipo de usuário e obter o valor do campo CPF/CNPJ
-    if ($tipoUsuario == 1) {
-        $cpfCnpj = $_POST['cpf_cnpj'];
-    } elseif ($tipoUsuario == 2) {
-        $cpfCnpj = $_POST['cpf_cnpj'];
-    }
+    // Atualizar os dados do usuário no banco de dados
+    $query = "UPDATE usuario SET nome = ?, cpf_cnpj = ?, telefone = ?, empresa = ? WHERE idusuario = ?";
+    $stmt = $conexao->prepare($query);
+    $stmt->bind_param('ssssi', $nome, $cpfCnpj, $telefone, $empresa, $idUsuario);
+    $stmt->execute();
 
-    // Atualizar as informações no banco de dados
-    $queryAtualizar = "UPDATE usuario SET nome = ?, telefone = ?, cpf_cnpj = ? WHERE idusuario = ?";
-    $stmtAtualizar = $conexao->prepare($queryAtualizar);
-    $stmtAtualizar->bind_param('sssi', $nome, $telefone, $cpfCnpj, $idUsuario);
-    $stmtAtualizar->execute();
+     // Atualizar o email e a senha do usuário na tabela de login
+     $query = "UPDATE login SET email = ?, senha = ? WHERE idusuario = ?";
+     $stmt = $conexao->prepare($query);
+     $stmt->bind_param('ssi', $email, $senha, $idUsuario);
+     $stmt->execute();
 
     // Redirecionar para a página de perfil após a atualização
     header('Location: perfil.php');
@@ -58,59 +62,94 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <title>Editar Perfil</title>
-    <link rel="stylesheet" href="assets/css/cabecalho.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container_editar">
         <div class="cabecalho">
-            <div class="nome_usuario">
-                <p>Bem-vindo(a), <?php echo $nomeUsuario; ?>!</p>
-            </div>
-            <nav class="botoes">
+
+        <div class="logo_perfil">
+            <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+        </div>
+            <nav class="botoes_editar">
                 <?php if ($tipoUsuario == 1) { ?>
                     <a href="eventos.php"><label>Eventos</label></a>
                     <a href="meus_eventos.php"><label>Meus Eventos</label></a>
                     <a href="carrinho.php"><label>Carrinho</label></a>
+                    <a href="login.php"><label>Logout</label></a>
                 <?php } elseif ($tipoUsuario == 2) { ?>
                     <a href="eventos.php"><label>Eventos</label></a>
                     <a href="eventos_criados.php"><label>Eventos Criados</label></a>
-                    <a href="lojas_eventos.php"><label>Lojas de Eventos</label></a>
                     <a href="criar_eventos.php"><label>Criar Evento</label></a>
+                    <a href="login.php"><label>Logout</label></a>
                 <?php } ?>
-                <a href="login.php"><label>Logout</label></a>
             </nav>
         </div>
 
-        <div class="informacoes_perfil">
-            <h2>Editar Informações</h2>
+        <div class="container_editar_2">
+            <div class="informacoes_editar">
+                <h2>Editar Informações do Perfil</h2>
 
-            <form method="POST">
-                <div>
-                    <label>Nome:</label>
-                    <input type="text" name="nome" value="<?php echo $nomeUsuario; ?>">
-                </div>
+                <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                
+                    <div class="informacoes_editar_2">
+                    
+                    </div>
+                    
+                    <div>
+                        <label>Nome:</label>
+                        <input type="text" name="nome" value="<?php echo $nomeUsuario; ?>" required>
+                    </div>
 
-                <div>
-                    <label>Telefone:</label>
-                    <input type="text" name="telefone" value="<?php echo $telefoneUsuario; ?>">
-                </div>
+                    <div>
+                        <label>
+                            <?php
+                            if ($tipoUsuario == 1) {
+                                echo "CPF:";
+                            } elseif ($tipoUsuario == 2) {
+                                echo "CNPJ:";
+                            }
+                            ?>
+                        </label>
+                        <input type="number" name="cpf_cnpj" value="<?php echo $cpfCnpjUsuario; ?>" required>
+                    </div>
 
-                <?php if ($tipoUsuario == 1) { ?>
-                <div>
-                    <label>CPF:</label>
-                    <input type="text" name="cpf_cnpj" value="<?php echo $cpfCnpjUsuario; ?>">
-                </div>
-                <?php } elseif ($tipoUsuario == 2) { ?>
-                <div>
-                    <label>CNPJ:</label>
-                    <input type="text" name="cpf_cnpj" value="<?php echo $cpfCnpjUsuario; ?>">
-                </div>
-                <?php } ?>
+                    <div>
+                        <label>Telefone:</label>
+                        <input type="number" name="telefone" value="<?php echo $telefoneUsuario; ?>" required>
+                    </div>
+                    
+                    <?php if ($tipoUsuario == 2) { ?>
+                    <div>
+                        <label>Empresa:</label>
+                        <input type="text" name="empresa" value="<?php echo $empresaUsuario; ?>" required>
+                    </div>
+                    <?php } ?>
 
-                <button type="submit">Salvar</button>
-            </form>
+                    <div>
+                        <label>Email:</label>
+                        <input type="email" name="email" value="<?php echo $emailUsuario; ?>" required>
+                    </div>
+
+                    <div>
+                        <label>Senha:</label>
+                        <input type="password" name="senha" required>
+                    </div>    
+
+                    <div class="salvar_editar">
+                        <button type="submit">Salvar</button>
+                    </div>
+                
+                </form>
+
+                <div class="volta_editar">
+                    <a href="perfil.php">Voltar</a>
+                </div>
+            </div>
         </div>
+        
     </div>
-    <a href="perfil.php">Voltar</a>
 </body>
 </html>
+
+

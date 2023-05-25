@@ -13,7 +13,7 @@
             <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
         </div>
         <h1 id="cadastro_empresarial">Cadastro Empresarial</h1>
-        <div class="login_cadastro_pessoal">
+        <div class="login_cadastro_empresarial">
             <input type="text" placeholder="Nome" name="nome" required><br>
             <input type="text" placeholder="CNPJ" name="cpf_cnpj" required><br>
             <input type="text" placeholder="Telefone" name="telefone" required><br>
