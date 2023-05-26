@@ -152,7 +152,7 @@ body {
     border-radius: 2rem;
     border: none;
     font-size: 0.9rem;
-    background-color: rgb(39, 189, 189);
+    background-color: #50C7F6;
     transition: 0.1s;
     cursor: pointer;
     font-size: medium;
@@ -352,7 +352,7 @@ body {
     border-radius: 2rem;
     border: none;
     font-size: 0.8rem;
-    background-color: rgb(39, 189, 189);
+    background-color: #50C7F6;
     transition: 0.1s;
     cursor: pointer;
     font-size: 15px;
@@ -451,7 +451,7 @@ body {
     border-radius: 2rem;
     border: none;
     font-size: 0.6rem;
-    background-color: rgb(39, 189, 189);
+    background-color: #50C7F6;
     transition: 0.1s;
     cursor: pointer;
     font-size: 12px;
