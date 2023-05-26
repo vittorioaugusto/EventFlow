@@ -64,14 +64,11 @@ $empresaUsuario = $dadosUsuario['empresa'];
         <center>
         <div class="container_perfil_2">
             <div class="informacoes_perfil">
-                <h2 class="nome_informações_do_perfil">Informações do Perfil</h2>
+                <h2 id="nome_informacoes_do_perfil">Informações do Perfil</h2>
             
-                <div class="nome_perfil">
-                    <label>Nome:</label>
-                    <span><?php echo $nomeUsuario; ?></span>
-                </div>
-
-                <div class="cnpj_cpf_perfil">
+                <div class="dados_perfil">
+                    <label>Nome: </label>
+                    <span><?php echo $nomeUsuario; ?></span><br>
                     <label>
                         <?php
                         if ($tipoUsuario == 1) {
@@ -81,30 +78,24 @@ $empresaUsuario = $dadosUsuario['empresa'];
                         }
                         ?>
                     </label>
-                    <span><?php echo $cpfCnpjUsuario; ?></span>
-                </div>
+                    <span><?php echo $cpfCnpjUsuario; ?></span><br>
 
-                <div class="telefone_perfil">
-                    <label>Telefone:</label>
-                    <span><?php echo $telefoneUsuario; ?></span>
-                </div>
+                    <label>Telefone: </label>
+                    <span><?php echo $telefoneUsuario; ?></span><br>
 
-                <div class="email_perfil">
-                    <label>Email:</label>
-                    <span><?php echo $emailUsuario; ?></span>
-                </div>
-                
-                <?php if ($tipoUsuario == 2) { ?>
-                <div class="empresa_perfil">
-                    <label>Empresa:</label>
+                    <label>Email: </label>
+                    <span><?php echo $emailUsuario; ?></span><br>
+
+                    <?php if ($tipoUsuario == 2) { ?>
+                        <label>Empresa: </label>
                     <span><?php echo $empresaUsuario; ?></span>
-                </div>
-                <?php } ?>
-                
-                <div class="editar_informações">
-                    <a href="editar_perfil.php">Editar Informações</a>
-                </div>
+                    <?php } ?>
 
+                    <div class="editar_informações">
+                        <a href="editar_perfil.php">Editar Informações</a>
+                    </div>
+
+                </div>
             </div>
         </div>
         

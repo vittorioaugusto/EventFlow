@@ -88,20 +88,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="container_editar_2">
             <div class="informacoes_editar">
-                <h2>Editar Informações do Perfil</h2>
-
+                
                 <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 
-                    <div class="informacoes_editar_2">
-                    
-                    </div>
-                    
-                    <div>
+                    <div class="editar_informacoes_perfil">
+                    <h2 id="nome_editar_informacoes_perfil">Editar Informações do Perfil</h2>
                         <label>Nome:</label>
-                        <input type="text" name="nome" value="<?php echo $nomeUsuario; ?>" required>
-                    </div>
-
-                    <div>
+                        <input type="text" name="nome" value="<?php echo $nomeUsuario; ?>" required><br>
                         <label>
                             <?php
                             if ($tipoUsuario == 1) {
@@ -111,40 +104,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             }
                             ?>
                         </label>
-                        <input type="number" name="cpf_cnpj" value="<?php echo $cpfCnpjUsuario; ?>" required>
-                    </div>
-
-                    <div>
+                        <input type="number" name="cpf_cnpj" value="<?php echo $cpfCnpjUsuario; ?>" required><br>
                         <label>Telefone:</label>
-                        <input type="number" name="telefone" value="<?php echo $telefoneUsuario; ?>" required>
+                        <input type="number" name="telefone" value="<?php echo $telefoneUsuario; ?>" required><br>
+                        <?php if ($tipoUsuario == 2) { ?>
+                        <label>Empresa:</label>
+                        <input type="text" name="empresa" value="<?php echo $empresaUsuario; ?>" required><br>
+                        <?php } ?>
+                        <label>Email:</label>
+                        <input type="email" name="email" value="<?php echo $emailUsuario; ?>" required><br>
+                        <label>Senha:</label>
+                        <input type="password" name="senha" required><br>
                     </div>
                     
-                    <?php if ($tipoUsuario == 2) { ?>
-                    <div>
-                        <label>Empresa:</label>
-                        <input type="text" name="empresa" value="<?php echo $empresaUsuario; ?>" required>
-                    </div>
-                    <?php } ?>
-
-                    <div>
-                        <label>Email:</label>
-                        <input type="email" name="email" value="<?php echo $emailUsuario; ?>" required>
-                    </div>
-
-                    <div>
-                        <label>Senha:</label>
-                        <input type="password" name="senha" required>
-                    </div>    
-
-                    <div class="salvar_editar">
+                    <div class="salvar_voltar">
                         <button type="submit">Salvar</button>
+                        <a href="perfil.php">
+                        <button type="button">Voltar</button>    
+                        </a>
                     </div>
                 
                 </form>
 
-                <div class="volta_editar">
-                    <a href="perfil.php">Voltar</a>
-                </div>
+                
             </div>
         </div>
         

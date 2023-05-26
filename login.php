@@ -9,30 +9,30 @@
 </head>
 <body>
     <center>
-    <form class="form_login" action="autenticar.php" method="POST">
+        <form class="form_login" action="autenticar.php" method="POST">
 
-        <div class="logo_login">
-            <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
-        </div>
-        <div class="login">
-            <input type="text" placeholder="Email" name="email" required><br>
-            <input type="password" placeholder="Senha" name="senha" required><br>
-        </div>
-        <div class="entrar_login">
-            <button type="submit" name="enviar" value="Entrar"><h1>Entrar</h1></button><br>
-        </div>
-        <div class="senha_e_conta">
-            <?php
-                if (isset($_SESSION['login_erro'])) {
-                    echo '<p class="erro">' . $_SESSION['login_erro'] . '</p>';
-                    unset($_SESSION['login_erro']);
-                }
-                echo '<a href="esqueci_senha.php"><h2>Esqueci a senha</h2></a>';
-                echo '<a href="tipo_de_usuario.php"><h2>Criar Conta</h2></a>';
-            ?>
-        </div>
-        
-    </form>
+            <div class="logo_login">
+                <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+            </div>
+            <div class="login">
+                <input type="text" placeholder="Email" name="email" required><br>
+                <input type="password" placeholder="Senha" name="senha" required><br>
+            </div>
+            <div class="entrar_login">
+                <button type="submit" name="enviar" value="Entrar"><h1>Entrar</h1></button><br>
+            </div>
+            <div class="senha_e_conta">
+                <?php
+                    if (isset($_SESSION['login_erro'])) {
+                        echo '<p class="erro">' . $_SESSION['login_erro'] . '</p>';
+                        unset($_SESSION['login_erro']);
+                    }
+                    echo '<a href="esqueci_senha.php"><h2>Esqueci a senha</h2></a>';
+                    echo '<a href="tipo_de_usuario.php"><h2>Criar Conta</h2></a>';
+                ?>
+            </div>
+            
+        </form>
     </center>
     
 </body>

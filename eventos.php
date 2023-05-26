@@ -44,7 +44,7 @@
             <?php
             // Verificar se o usuário é empresarial para exibir o botão de subir evento
             if ($tipo_usuario == 2) {
-                echo '<a href="criar_evento.php"> <label>Criar Evento</label></a>';
+                echo '<a href="criar_evento.php"><label>Criar Evento</label></a>';
             }
             ?>
             <a href="perfil.php"> <label>Perfil</label></a>
@@ -53,7 +53,7 @@
 
         <center>
         <div class="nome_usuario_eventos">
-            <h1>Bem-vindo(a), <?php echo $nome_usuario; ?></h1>
+            <h2>Bem-vindo(a), <?php echo $nome_usuario; ?></h2>
         </div>
 
         <div class="caixa_eventos">
