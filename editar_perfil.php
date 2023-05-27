@@ -65,67 +65,68 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="assets/css/style2.css">
 </head>
 <body>
-    <div class="container_editar">
+    <div class="container_editar_perfil">
         <div class="cabecalho">
 
-        <div class="logo_perfil">
-            <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
-        </div>
-            <nav class="botoes_editar">
-                <?php if ($tipoUsuario == 1) { ?>
-                    <a href="eventos.php"><label>Eventos</label></a>
-                    <a href="meus_eventos.php"><label>Meus Eventos</label></a>
-                    <a href="carrinho.php"><label>Carrinho</label></a>
-                    <a href="login.php"><label>Logout</label></a>
-                <?php } elseif ($tipoUsuario == 2) { ?>
-                    <a href="eventos.php"><label>Eventos</label></a>
-                    <a href="eventos_criados.php"><label>Eventos Criados</label></a>
-                    <a href="criar_eventos.php"><label>Criar Evento</label></a>
-                    <a href="login.php"><label>Logout</label></a>
-                <?php } ?>
-            </nav>
-        </div>
+            <div class="logo_perfil">
+                <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+            </div>
+                <nav class="botoes_editar_perfil">
+                    <?php if ($tipoUsuario == 1) { ?>
+                        <a href="eventos.php"><label>Eventos</label></a>
+                        <a href="meus_eventos.php"><label>Meus Eventos</label></a>
+                        <a href="carrinho.php"><label>Carrinho</label></a>
+                        <a href="login.php"><label>Logout</label></a>
+                    <?php } elseif ($tipoUsuario == 2) { ?>
+                        <a href="eventos.php"><label>Eventos</label></a>
+                        <a href="eventos_criados.php"><label>Eventos Criados</label></a>
+                        <a href="criar_eventos.php"><label>Criar Evento</label></a>
+                        <a href="login.php"><label>Logout</label></a>
+                    <?php } ?>
+                </nav>
+            </div>
 
-        <div class="container_editar_2">
-            <div class="informacoes_editar">
-                
-                <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                
-                    <div class="editar_informacoes_perfil">
-                    <h2 id="nome_editar_informacoes_perfil">Editar Informações do Perfil</h2>
-                        <label>Nome:</label>
-                        <input type="text" name="nome" value="<?php echo $nomeUsuario; ?>" required><br>
-                        <label>
-                            <?php
-                            if ($tipoUsuario == 1) {
-                                echo "CPF:";
-                            } elseif ($tipoUsuario == 2) {
-                                echo "CNPJ:";
-                            }
-                            ?>
-                        </label>
-                        <input type="number" name="cpf_cnpj" value="<?php echo $cpfCnpjUsuario; ?>" required><br>
-                        <label>Telefone:</label>
-                        <input type="number" name="telefone" value="<?php echo $telefoneUsuario; ?>" required><br>
-                        <?php if ($tipoUsuario == 2) { ?>
-                        <label>Empresa:</label>
-                        <input type="text" name="empresa" value="<?php echo $empresaUsuario; ?>" required><br>
-                        <?php } ?>
-                        <label>Email:</label>
-                        <input type="email" name="email" value="<?php echo $emailUsuario; ?>" required><br>
-                        <label>Senha:</label>
-                        <input type="password" name="senha" required><br>
-                    </div>
+            <div class="container_editar_2">
+                <div class="caixa_editar_perfil">
+                    <center>
+                    <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                     
-                    <div class="salvar_voltar">
-                        <button type="submit">Salvar</button>
-                        <a href="perfil.php">
-                        <button type="button">Voltar</button>    
-                        </a>
-                    </div>
-                
-                </form>
+                        <div class="editar_informacoes_perfil">
 
+                            <h2 id="nome_editar_informacoes_perfil">Editar Informações do Perfil</h2>
+                            <label>Nome:</label>
+                            <input type="text" name="nome" value="<?php echo $nomeUsuario; ?>" required><br>
+                            <label>
+                                <?php
+                                if ($tipoUsuario == 1) {
+                                    echo "CPF:";
+                                } elseif ($tipoUsuario == 2) {
+                                    echo "CNPJ:";
+                                }
+                                ?>
+                            </label>
+                            <input type="number" name="cpf_cnpj" value="<?php echo $cpfCnpjUsuario; ?>" required><br>
+                            <label>Telefone:</label>
+                            <input type="number" name="telefone" value="<?php echo $telefoneUsuario; ?>" required><br>
+                            <?php if ($tipoUsuario == 2) { ?>
+                            <label>Empresa:</label>
+                            <input type="text" name="empresa" value="<?php echo $empresaUsuario; ?>" required><br>
+                            <?php } ?>
+                            <label>Email:</label>
+                            <input type="email" name="email" value="<?php echo $emailUsuario; ?>" required><br>
+                            <label>Senha:</label>
+                            <input type="password" name="senha" required><br>
+                        </div>
+                        
+                        <div class="salvar_voltar">
+                            <button type="submit">Salvar</button>
+                            <a href="perfil.php">
+                            <button type="button">Voltar</button>    
+                            </a>
+                        </div>
+                    
+                    </form>
+                </center>
                 
             </div>
         </div>

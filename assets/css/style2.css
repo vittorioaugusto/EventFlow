@@ -133,7 +133,7 @@ body {
 
 .informacoes_perfil{
     color: white;
-    font-size: larger;
+    font-size: x-large;
     background-color: #4A4A4A;
     padding: 20px;
     border-radius: 10px;
@@ -142,8 +142,8 @@ body {
     -moz-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
 }
 
-.nome_informacoes_do_perfil{
-    padding: 50px;
+#nome_informacoes_do_perfil{
+    padding: 10px;
     
 }
 
@@ -173,10 +173,112 @@ body {
 }
 
 
+/* criar_eventos.php */
+
+.cabecalho_criar_eventos{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background-color: #4e4e4e;
+    border-radius: none;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #50C7F6;
+    top: -45%;
+    justify-content: space-between;
+}
+
+.logo_perfil{
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    display: flex;
+}
+
+.botoes_criar_evento{
+    position: absolute;
+    left: 35%;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 20px; 
+}
+
+.botoes_criar_evento a{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 150px;
+}
+
+.botoes_criar_evento a:hover {
+    color: #50C7F6;
+    transition: color 0.5s;
+}
+
+.cabecalho_criar_eventos_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    top: 50%; 
+}
+
+.caixa_criar_eventos{
+    color: white;
+    font-size: medium;
+    background-color: #4A4A4A;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    -moz-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+}
+
+.informacoes_criar_eventos input{
+    width: 15rem;
+    margin: 0.1rem;
+    height: 2rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: none;
+}
+
+#nome_criar_evento{
+    padding: 10px;
+    font-size: 250%;
+}
+
+.botao_criar_evento{
+    text-align: center;
+    margin-top: 10px;
+    font-family: Helvetica, sans-serif;
+}
+
+.botao_criar_evento button{
+    display: inline-block;
+    background-color: #50C7F6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: medium;
+    text-decoration: none;
+}
+    
+.botao_criar_evento button:hover {
+    color: blue;
+    transition: color 0.5s;
+}
+
+
 
 /* editar_perfil.php */
 
-.container_editar{
+.container_editar_perfil{
     position: relative;
     width: 100%;
     height: 10%;
@@ -189,7 +291,7 @@ body {
     justify-content: space-between; 
 }
 
-.botoes_editar{
+.botoes_editar_perfil{
     position: absolute;
     left: 30%;
     flex-direction: row;
@@ -200,7 +302,7 @@ body {
     font-size: 20px;   
 }
 
-.botoes_editar a{
+.botoes_editar_perfil a{
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -208,7 +310,7 @@ body {
     margin-right: 150px;
 }
 
-.botoes_editar a:hover {
+.botoes_editar_perfil a:hover {
     color: #50C7F6;
     transition: color 0.5s;
 }
@@ -234,49 +336,29 @@ body {
     transition: color 0.5s;
 }
 
-/* .volta_editar{
-    text-align: center;
-    margin-top: 20px;
-}
-
-.volta_editar a{
-    display: inline-block;
-    background-color: #50C7F6;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: medium;
-    text-decoration: none;
-    font-family: sans-serif;
-}
-    
-.volta_editar a:hover {
-    color: blue;
-    transition: color 0.5s;
-} */
-
-#nome_editar_informacoes_perfil{
-    top: 10px;
-}
-
 .container_editar_2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150vh;
+    height: 100vh;
     position: relative;
     top: 200%;
 }
 
-.informacoes_editar{
+.caixa_editar_perfil{
     color: white;
-    font-size: larger;
+    font-size: x-large;
     background-color: #4A4A4A;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
     -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
     -moz-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+}
+
+#nome_editar_informacoes_perfil{
+    padding: 10px;
+    
 }
 
 .editar_informacoes_perfil input{
