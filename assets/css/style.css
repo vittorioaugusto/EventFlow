@@ -18,6 +18,8 @@ body {
     border: 0;
 }
 
+
+
 /* login.php */
 
 .container_login {
@@ -130,6 +132,7 @@ body {
 }
 
 
+
 @media (max-width: 768px) {
     .form_login {
         width: 80%;
@@ -154,7 +157,7 @@ body {
 
 
 
-    /* esqueci_senha.php */
+/* esqueci_senha.php */
 
 .container_senha {
     background-color: #4e4e4e;
@@ -163,12 +166,7 @@ body {
     width: 500px;
     max-width: 100%;
 }
-    
-/* .logo_senha{
-    position: relative;
-    top: 20%;
-} */
-    
+  
 .nome_senha {
     padding: 10px 20px;
 }
@@ -263,7 +261,6 @@ body {
 }
       
 
-
 @media (max-width: 768px) {
     .form_login_senha {
         width: 80%;
@@ -315,7 +312,7 @@ body {
 
 
 
-    /* tipo_de_usuario.php */
+/* tipo_de_usuario.php */
 
 .container_usuario {
     background-color: #4e4e4e;
@@ -407,7 +404,7 @@ body {
 
 
 
-    /* cadastro_empresarial.php */
+/* cadastro_empresarial.php */
 
 .container_empresarial {
     background-color: #4e4e4e;
@@ -485,7 +482,6 @@ body {
 }
 
 
-
 @media (max-width: 768px) {
     .form_cadastro_pessoal {
       width: 90%;
@@ -510,6 +506,7 @@ body {
       height: 6%;
     }
   }
+
 
 
 
@@ -589,7 +586,6 @@ body {
     margin-top: 10px;
     margin-left: 10px;
 }
-
 
 
 @media (max-width: 768px) {
