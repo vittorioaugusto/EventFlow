@@ -47,13 +47,13 @@ body {
     padding: 0 40px 20px;
 }
 
-.form-control {
+.form-control_login {
     margin-bottom: 5px;
     padding-bottom: 10px;
     position: relative;
 }
 
-.form-control input {
+.form-control_login input {
     border: 2px solid #50C7F6;
     border-radius: 5px;
     outline: 0;
@@ -64,35 +64,35 @@ body {
     border-radius: 10px;
 }
 
-.form-control.success input {
+.form-control_login.success input {
     border: 3px solid #4ECA64;
 }
 
-.form-control.error input {
+.form-control_login.error input {
     border: 3px solid #DB5A5A;
 }
 
-.form-control.error i.img-error {
+.form-control_login.error i.img-error {
     visibility: visible;
 }
 
-.form-control.success i.img-success {
+.form-control_login.success i.img-success {
     visibility: visible;
 }
 
-.form-control.error small{
+.form-control_login.error small{
     color: #DB5A5A;
     visibility: visible;
 }
 
-.form-control i {
+.form-control_login i {
     position: absolute;
     top: 45px;
     right: 10px;
     visibility: hidden;
 }
 
-.form-control small {
+.form-control_login small {
     visibility: hidden;
     position: relative;
     margin-top: 5px;
@@ -118,14 +118,14 @@ body {
     transition: 0.3s;
 }
 
-.form-control a {
+.senha_e_conta a {
     text-decoration: none;
     color: #50C7F6;
     text-align: center;
     transition: color 0.5s;  
 }
 
-.form-control a:hover {
+.senha_e_conta a:hover {
     color: white;
 }
 
@@ -154,6 +154,117 @@ body {
 
     /* Esqueci a senha */
 
+.container_senha {
+    background-color: #4e4e4e;
+    border-radius: 10px;
+    border: 3px solid #50C7F6;
+    width: 400px;
+    max-width: 100%;
+}
+    
+.logo_senha{
+    position: relative;
+    top: 20%;
+}
+    
+.nome_senha {
+    padding: 10px 20px;
+}
+    
+.nome_senha h2 {
+    font-weight: 800;
+    color: #50C7F6;
+    font-size: 30px;
+}
+    
+.form_senha {
+    padding: 0 40px 20px;
+}
+    
+.form-control_senha {
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    position: relative;
+}
+    
+.form-control_senha input {
+    border: 2px solid #50C7F6;
+    border-radius: 5px;
+    outline: 0;
+    display: block;
+    font-size: 15px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+}
+    
+.form-control_senha.success input {
+    border: 3px solid #4ECA64;
+}
+    
+.form-control_senha.error input {
+    border: 3px solid #DB5A5A;
+}
+    
+.form-control_senha.error i.img-error {
+    visibility: visible;
+}
+    
+.form-control_senha.success i.img-success {
+    visibility: visible;
+}
+    
+.form-control_senha.error small{
+    color: #DB5A5A;
+    visibility: visible;
+}
+    
+.form-control_senha i {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    visibility: hidden;
+}
+    
+.form-control_senha small {
+    visibility: hidden;
+    position: relative;
+    margin-top: 5px;
+    font-size: 15px;   
+}
+    
+.form_senha button {
+    background-color: #50C7F6;
+    border-radius: 5px;
+    color: #fff;
+    padding: 15px;
+    font-size: larger;
+    font-weight: 800;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+    
+.form_senha button:hover {
+    background-color: grey;
+    transition: 0.3s;
+}
+    
+.voltar_senha a {
+    text-decoration: none;
+    color: #50C7F6;
+    text-align: center;
+    transition: color 0.5s;  
+}
+    
+.voltar_senha a:hover {
+    color: white;
+}
+    
+
+
 .form_login_senha{
     width: 40%;
     height: 80%;
@@ -166,7 +277,7 @@ body {
     border: 3px solid #50C7F6;
 }
 
-.voltar_senha{
+/* .voltar_senha{
     position: absolute;
     width: 4%;
     height: 8.5%;
@@ -177,7 +288,7 @@ body {
     flex-direction: column;
     justify-content: center;
     display: flex;
-}
+} */
 
 .logo_senha{
     height: 7rem;
