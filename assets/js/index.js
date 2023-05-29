@@ -36,12 +36,12 @@ function setErrorFor(input, message) {
     const small = formControl.querySelector('small');
 
     small.innerText = message;
-    formControl.className = 'form-control error';
+    formControl.className = 'form-control_login error';
 }
 
 function setSuccessFor(input) {
     const formControl = input.parentElement;
-    formControl.className = 'form-control success';
+    formControl.className = 'form-control_login success';
 }
 
 function isEmail(email) {

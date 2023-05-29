@@ -39,7 +39,7 @@ body {
 
 .nome_login h2 {
     font-weight: 800;
-    color: #50C7F6;
+    color: white;
     font-size: 30px;
 }
 
@@ -152,6 +152,7 @@ body {
 }
 
 
+
     /* Esqueci a senha */
 
 .container_senha {
@@ -173,7 +174,7 @@ body {
     
 .nome_senha h2 {
     font-weight: 800;
-    color: #50C7F6;
+    color: white;
     font-size: 30px;
 }
     
@@ -255,80 +256,13 @@ body {
 .voltar_senha a {
     text-decoration: none;
     color: #50C7F6;
-    text-align: center;
-    transition: color 0.5s;  
+    transition: color 0.5s;
 }
     
 .voltar_senha a:hover {
     color: white;
 }
     
-
-
-.form_login_senha{
-    width: 40%;
-    height: 80%;
-    background-color: #4e4e4e;
-    border-radius: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid #50C7F6;
-}
-
-/* .voltar_senha{
-    position: absolute;
-    width: 4%;
-    height: 8.5%;
-    top: 15%;
-    left: 32%;
-    background: #50C7F6;
-    border-radius: 50%;
-    flex-direction: column;
-    justify-content: center;
-    display: flex;
-} */
-
-.logo_senha{
-    height: 7rem;
-}
-
-#redefinir_senha{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    width: 40rem;
-    height: 3.5rem;
-    font-weight: bold;
-}
-
-.login_senha input{
-    width: 30rem;
-    margin: 0.5rem;
-    height: 3.5rem;
-    border-radius: 1rem;
-    padding: 1rem;
-    border: none;
-}
-
-.concluir button {
-    height: 4rem;
-    width: 14rem;
-    margin: 2rem;
-    margin-bottom: 1rem;
-    border-radius: 2rem;
-    border: none;
-    font-size: 0.9rem;
-    background-color: #50C7F6;
-    transition: 0.1s;
-    cursor: pointer;
-    font-size: medium;
-}
-
-.concluir button:hover {
-    background-color: grey;
-}
-
 
 @media (max-width: 768px) {
     .form_login_senha {
