@@ -160,14 +160,14 @@ body {
     background-color: #4e4e4e;
     border-radius: 10px;
     border: 3px solid #50C7F6;
-    width: 400px;
+    width: 500px;
     max-width: 100%;
 }
     
-.logo_senha{
+/* .logo_senha{
     position: relative;
     top: 20%;
-}
+} */
     
 .nome_senha {
     padding: 10px 20px;
@@ -255,15 +255,14 @@ body {
 }
     
 .voltar_senha a {
-    text-decoration: none;
-    color: #50C7F6;
-    transition: color 0.5s;
+    background-color: #50C7F6;
+    position: absolute;
+    border-radius: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
 }
-    
-.voltar_senha a:hover {
-    color: white;
-}
-    
+      
+
 
 @media (max-width: 768px) {
     .form_login_senha {
@@ -332,7 +331,7 @@ body {
 }
     
 .nome_usuario {
-    padding: 20px 30px;
+    padding: 20px 30px;  
 }
     
 .nome_usuario h2 {
@@ -410,79 +409,82 @@ body {
 
     /* cadastro_empresarial.php */
 
-    
-
-
-.form_cadastro_pessoal{
-    width: 40%;
-    height: 95%;
+.container_empresarial {
     background-color: #4e4e4e;
-    border-radius: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    border-radius: 10px;
     border: 3px solid #50C7F6;
+    width: 500px;
+    max-width: 50%;
+    max-height: 100%;
 }
 
-
-.logo_cadastro_pessoal{
-    position: absolute;
-    height: 3rem;
-    top: 3%;
+.nome_empresarial {
+    padding: 30px 40px;
 }
 
-#cadastro_pessoal {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    width: 40rem;
-    height: 3.5rem;
-    font-weight: bold;
-    margin-bottom: 5rem;
-    position: relative;
-    top: 15%;
-}
-
-.login_cadastro_pessoal input{
-    width: 30rem;
-    margin: 0.5rem;
-    height: 3.5rem;
-    border-radius: 1rem;
-    padding: 1rem;
-    border: none;
-}
-
-.concluir_cadastro_pessoal button {
+.nome_empresarial h2 {
+    font-weight: 800;
     color: white;
-    height: 3rem;
-    width: 10rem;
-    margin: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 2rem;
-    border: none;
-    font-size: 0.8rem;
-    background-color: #50C7F6;
-    transition: 0.1s;
-    cursor: pointer;
+    font-size: 30px;
+}
+
+.form_empresarial {
+    padding: 0 20px 5px;
+}
+
+.form_control_empresarial {
+    margin-bottom: 1px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.form_control_empresarial input {
+    border: 2px solid #50C7F6;
+    border-radius: 5px;
+    outline: 0;
+    display: block;
     font-size: 15px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
-.concluir_cadastro_pessoal button:hover {
-    background-color: grey;
-}
-
-.voltar_cadastro_pessoal{
+.form_control_empresarial i {
     position: absolute;
-    width: 4%;
-    height: 8.6%;
-    top: 8%;
-    left: 32%;
-    background: #50C7F6;
-    border-radius: 90%;
-    flex-direction: column;
-    justify-content: center;
-    display: flex;
+    top: 45px;
+    right: 10px;
+    visibility: hidden;
 }
+
+.form_empresarial button {
+    background-color: #50C7F6;
+    border-radius: 5px;
+    color: #fff;
+    padding: 15px;
+    font-size: larger;
+    font-weight: 800;
+    width: 50%;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.form_empresarial button:hover {
+    background-color: grey;
+    transition: 0.3s;
+}
+
+.voltar_empresarial a {
+    background-color: #50C7F6;
+    position: absolute;
+    border-radius: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
 
 @media (max-width: 768px) {
     .form_cadastro_pessoal {
@@ -511,79 +513,83 @@ body {
 
 
 
-/* Usuário Empresarial */
+/* cadastro_pessoal.php */
 
-.form_cadastro_empresarial {
-    width: 40%;
-    height: 97%;
+.container_pessoal {
     background-color: #4e4e4e;
-    border-radius: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    border-radius: 10px;
     border: 3px solid #50C7F6;
+    width: 500px;
+    max-width: 50%;
+    max-height: 100%;
 }
 
-.logo_cadastro_empresarial{
-    position: absolute;
-    height: 2rem;
-    top: 1%;
+.nome_pessoal {
+    padding: 40px 50px;
 }
 
-#cadastro_empresarial{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    width: 40rem;
-    height: 3.5rem;
-    font-weight: bold;
-    margin-bottom: 5rem;
-    position: relative;
-    top: 14%;
-}
-
-.login_cadastro_empresarial input{
-    width: 30rem;
-    margin: 0.5rem;
-    height: 3.5rem;
-    border-radius: 1rem;
-    padding: 1rem;
-    border: none; 
-}
-
-.concluir_cadastro_empresarial button {
+.nome_pessoal h2 {
+    font-weight: 800;
     color: white;
-    height: 2rem;
-    width: 8rem;
-    margin: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 2rem;
-    border: none;
-    font-size: 0.6rem;
-    background-color: #50C7F6;
-    transition: 0.1s;
-    cursor: pointer;
-    font-size: 12px;
+    font-size: 30px;
+}
+
+.form_pessoal {
+    padding: 0 20px 5px;
+}
+
+.form_control_pessoal {
+    margin-bottom: 1px;
+    padding-bottom: 5px;
     position: relative;
-    top: -7px;
 }
 
-.concluir_cadastro_empresarial button:hover {
-    background-color: grey;
+.form_control_pessoal input {
+    border: 2px solid #50C7F6;
+    border-radius: 5px;
+    outline: 0;
+    display: block;
+    font-size: 15px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: -10px;
 }
 
-.voltar_cadastro_empresarial{
+.form_control_pessoal i {
     position: absolute;
-    width: 4%;
-    height: 8.6%;
-    top: 6%;
-    left: 32%;
-    background: #50C7F6;
-    border-radius: 90%;
-    flex-direction: column;
-    justify-content: center;
-    display: flex;
+    top: 45px;
+    right: 10px;
+    visibility: hidden;
 }
+
+.form_pessoal button {
+    background-color: #50C7F6;
+    border-radius: 5px;
+    color: #fff;
+    padding: 15px;
+    font-size: larger;
+    font-weight: 800;
+    width: 50%;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.form_pessoal button:hover {
+    background-color: grey;
+    transition: 0.3s;
+}
+
+.voltar_pessoal a {
+    background-color: #50C7F6;
+    position: absolute;
+    border-radius: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
 
 
 @media (max-width: 768px) {
@@ -623,5 +629,3 @@ body {
       height: 6%;
     }
   }
-
-

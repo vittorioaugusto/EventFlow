@@ -6,35 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Empresarial</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    
 </head>
 <body>
-    <form class="form_cadastro_empresarial" action="processa_cadastro.php" method="POST">
-        <div class="logo_cadastro_empresarial">
-            <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
-        </div>
-
-        <h1 id="cadastro_empresarial">Cadastro Empresarial</h1>
-
-        <div class="login_cadastro_empresarial">
-            <input type="text" placeholder="Nome" name="nome" required><br>
-            <input type="text" placeholder="CNPJ" name="cpf_cnpj" required><br>
-            <input type="text" placeholder="Telefone" name="telefone" required><br>
-            <input type="text" placeholder="Empresa" name="empresa" required><br>
-            <input type="email" placeholder="Email" name="email" required><br>
-            <input type="password" placeholder="Senha" name="senha" required><br>
-            <input type="hidden" name="tipo_user" value="2">
-        </div>
-        
-        <div class="concluir_cadastro_empresarial">
-            <button type="submit" name="enviar" value="Entrar">
-                <h1>Concluir</h1>
-            </button><br>
-        </div>
-        <div class="voltar_cadastro_empresarial">
+    
+    <div class="container_empresarial">
+        <div class="voltar_empresarial">
             <?php
             echo '<a href="login.php"><img src="assets/imagens/seta-voltar.png"></a>';
             ?>
         </div>
-    </form>
+        <center>
+
+            <div class="nome_empresarial">
+                <h2>Usuário Empresarial</h2>
+            </div>
+        
+        <form class="form_empresarial" id="form" action="autenticar.php" method="POST">
+
+            <div class="form_control_empresarial">
+
+                <input type="text" placeholder="Nome" name="nome" required>
+                <input type="number" placeholder="CNPJ" name="cpf_cnpj" required>
+                <input type="number" placeholder="Telefone" name="telefone" required>
+                <input type="text" placeholder="Empresa" name="empresa" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="password" placeholder="Senha" name="senha" required>
+                <input type="hidden" name="tipo_user" value="2"><br>
+                
+            </div>
+
+            <button type="submit">Concluir</button>
+        </form>
+        </center>
+    </div>
+
+    <script src="assets/js/index.js"></script>
+    
 </body>
 </html>
