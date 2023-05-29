@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,9 +27,9 @@ session_start();
             
         <form class="form_senha" id="form" action="autenticar.php" method="POST">
 
-            <div class="form-control_senha">
+            <div class="form_control_senha">
 
-                <input type="email" placeholder="Email" name="email" required><br>
+                <input type="email" id="email" placeholder="Email" name="email" required>
                 <i class="img-success" ><img src="assets/imagens/success-icon.svg" alt=""></i>
                 <i class="img-error" ><img src="assets/imagens/error-icon.svg" alt=""></i>
 
@@ -41,9 +37,9 @@ session_start();
 
             </div>
 
-            <div class="form-control_senha">
+            <div class="form_control_senha">
 
-                <input type="password" placeholder="Nova Senha" name="nova_senha" required><br>
+                <input type="password" id="password" placeholder="Nova Senha" name="nova_senha" required>
                 <i class="img-success" ><img src="assets/imagens/success-icon.svg" alt=""></i>
                 <i class="img-error" ><img src="assets/imagens/error-icon.svg" alt=""></i>
 
@@ -57,7 +53,7 @@ session_start();
         
     </div>
 
-    
+    <script src="assets/js/index.js"></script>
     
 </body>
 </html>

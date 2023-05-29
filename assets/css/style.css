@@ -47,13 +47,13 @@ body {
     padding: 0 40px 20px;
 }
 
-.form-control_login {
+.form_control_login {
     margin-bottom: 5px;
     padding-bottom: 10px;
     position: relative;
 }
 
-.form-control_login input {
+.form_control_login input {
     border: 2px solid #50C7F6;
     border-radius: 5px;
     outline: 0;
@@ -64,35 +64,35 @@ body {
     border-radius: 10px;
 }
 
-.form-control_login.success input {
+.form_control_login.success input {
     border: 3px solid #4ECA64;
 }
 
-.form-control_login.error input {
+.form_control_login.error input {
     border: 3px solid #DB5A5A;
 }
 
-.form-control_login.error i.img-error {
+.form_control_login.error i.img-error {
     visibility: visible;
 }
 
-.form-control_login.success i.img-success {
+.form_control_login.success i.img-success {
     visibility: visible;
 }
 
-.form-control_login.error small{
+.form_control_login.error small{
     color: #DB5A5A;
     visibility: visible;
 }
 
-.form-control_login i {
+.form_control_login i {
     position: absolute;
     top: 45px;
     right: 10px;
     visibility: hidden;
 }
 
-.form-control_login small {
+.form_control_login small {
     visibility: hidden;
     position: relative;
     margin-top: 5px;
@@ -183,13 +183,13 @@ body {
     padding: 0 40px 20px;
 }
     
-.form-control_senha {
+.form_control_senha {
     margin-bottom: 5px;
     padding-bottom: 10px;
     position: relative;
 }
     
-.form-control_senha input {
+.form_control_senha input {
     border: 2px solid #50C7F6;
     border-radius: 5px;
     outline: 0;
@@ -200,35 +200,35 @@ body {
     border-radius: 10px;
 }
     
-.form-control_senha.success input {
+.form_control_senha.success input {
     border: 3px solid #4ECA64;
 }
     
-.form-control_senha.error input {
+.form_control_senha.error input {
     border: 3px solid #DB5A5A;
 }
     
-.form-control_senha.error i.img-error {
+.form_control_senha.error i.img-error {
     visibility: visible;
 }
     
-.form-control_senha.success i.img-success {
+.form_control_senha.success i.img-success {
     visibility: visible;
 }
     
-.form-control_senha.error small{
+.form_control_senha.error small{
     color: #DB5A5A;
     visibility: visible;
 }
     
-.form-control_senha i {
+.form_control_senha i {
     position: absolute;
     top: 45px;
     right: 10px;
     visibility: hidden;
 }
     
-.form-control_senha small {
+.form_control_senha small {
     visibility: hidden;
     position: relative;
     margin-top: 5px;
@@ -318,62 +318,64 @@ body {
 
     /* tipo_de_usuario.php */
 
-.fundo_tipo_cadastro{
-    width: 40%;
-    height: 80%;
+.container_usuario {
     background-color: #4e4e4e;
-    border-radius: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    border-radius: 10px;
     border: 3px solid #50C7F6;
+    width: 500px;
+    max-width: 100%;
 }
-
+    
 .logo_usuario{
-    position: absolute;
-    height: 3rem;
-    top: 15%; 
+    position: relative;
+    top: 20%;
 }
-
-.tipo_de_usuario a {
-    font-family: Arial;
-    text-decoration: none;
-    text-align: center;
-    background-color: #50C7F6;
+    
+.nome_usuario {
+    padding: 20px 30px;
+}
+    
+.nome_usuario h2 {
+    font-weight: 800;
     color: white;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    padding-bottom: 3px;
-    display: grid;
-    margin-top: 15%;
-    width: 90%;
-    height: 30%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    left: 17px;
+    font-size: 30px;
+}
+    
+.control_usuario {
+    margin-bottom: 5px;
+    padding-bottom: 20px;
     position: relative;
 }
+    
+.control_usuario a {
+    border: 2px solid #50C7F6;
+    border-radius: 5px;
+    outline: 0;
+    display: block;
+    font-size: 15px;
+    width: 90%;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #50C7F6;
+    color: white;
+    padding-bottom: 10px;
+    margin-top: 30px; 
+}
 
-.tipo_de_usuario a:hover {
+.control_usuario a:hover {
     color: grey;
     transition: color 0.5s;
 }
-
+     
 .voltar_usuario a {
-    position: absolute;
-    font-family: Arial;
-    font-weight: bold;
     text-decoration: none;
-    font-style: normal;
-    color: #FFFFFF;
-    left: 47%;
-    margin-top: 50px;
-}
-
-.voltar_usuario a:hover{
     color: #50C7F6;
+    padding: 10px;
+}
+    
+.voltar_usuario a:hover {
+    color: white;
     transition: color 0.5s;
 }
 
@@ -405,7 +407,11 @@ body {
 
 
 
-    /* Usuário Pessoal */
+
+    /* cadastro_empresarial.php */
+
+    
+
 
 .form_cadastro_pessoal{
     width: 40%;

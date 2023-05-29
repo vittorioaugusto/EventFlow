@@ -12,16 +12,19 @@
         <div class="logo_cadastro_empresarial">
             <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
         </div>
+
         <h1 id="cadastro_empresarial">Cadastro Empresarial</h1>
+
         <div class="login_cadastro_empresarial">
             <input type="text" placeholder="Nome" name="nome" required><br>
             <input type="text" placeholder="CNPJ" name="cpf_cnpj" required><br>
             <input type="text" placeholder="Telefone" name="telefone" required><br>
             <input type="text" placeholder="Empresa" name="empresa" required><br>
-            <input type="text" placeholder="Email" name="email" required><br>
+            <input type="email" placeholder="Email" name="email" required><br>
             <input type="password" placeholder="Senha" name="senha" required><br>
             <input type="hidden" name="tipo_user" value="2">
         </div>
+        
         <div class="concluir_cadastro_empresarial">
             <button type="submit" name="enviar" value="Entrar">
                 <h1>Concluir</h1>

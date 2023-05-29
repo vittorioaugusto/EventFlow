@@ -26,7 +26,7 @@ session_start();
             
         <form class="form_login" id="form" action="autenticar.php" method="POST">
 
-            <div class="form-control_login">
+            <div class="form_control_login">
 
                 <input type="email" id="email" placeholder="Email" name="email" required>
                 <i class="img-success" ><img src="assets/imagens/success-icon.svg" alt=""></i>
@@ -36,7 +36,7 @@ session_start();
 
             </div>
 
-            <div class="form-control_login">
+            <div class="form_control_login">
 
                 <input type="password"  id="password" placeholder="Senha" name="senha" required>
                 <i class="img-success" ><img src="assets/imagens/success-icon.svg" alt=""></i>
