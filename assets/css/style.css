@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -11,68 +13,122 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Poppins;
+    min-height: 100vh;
+    border: 0;
 }
 
+/* login.php */
 
-/* login */
-
-.form_login {
-    width: 105%;
-    height: 80%;
+.container_login {
     background-color: #4e4e4e;
-    border-radius: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    border-radius: 10px;
     border: 3px solid #50C7F6;
-}
-
-.login input {
-    width: 30rem;
-    margin: 0.5rem;
-    height: 3.5rem;
-    border-radius: 1rem;
-    padding: 1rem;
-    border: none;
+    width: 400px;
+    max-width: 100%;
 }
 
 .logo_login{
     position: relative;
-    height: 7rem;
+    top: 20%;
 }
 
-.entrar_login button {
-    color: black;
-    height: 4rem;
-    width: 13rem;
-    margin: 2rem;
-    margin-bottom: 1rem;
-    border-radius: 2rem;
-    border: none;
-    font-size: 0.9rem;
+.nome_login {
+    padding: 10px 20px;
+}
+
+.nome_login h2 {
+    font-weight: 800;
+    color: #50C7F6;
+    font-size: 30px;
+}
+
+.form_login {
+    padding: 0 40px 20px;
+}
+
+.form-control {
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.form-control input {
+    border: 2px solid #50C7F6;
+    border-radius: 5px;
+    outline: 0;
+    display: block;
+    font-size: 15px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.form-control.success input {
+    border: 3px solid #4ECA64;
+}
+
+.form-control.error input {
+    border: 3px solid #DB5A5A;
+}
+
+.form-control.error i.img-error {
+    visibility: visible;
+}
+
+.form-control.success i.img-success {
+    visibility: visible;
+}
+
+.form-control.error small{
+    color: #DB5A5A;
+    visibility: visible;
+}
+
+.form-control i {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control small {
+    visibility: hidden;
+    position: relative;
+    margin-top: 5px;
+    font-size: 15px;   
+}
+
+.form_login button {
     background-color: #50C7F6;
-    transition: 0.1s;
-    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    padding: 15px;
     font-size: larger;
+    font-weight: 800;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.entrar_login button:hover {
+.form_login button:hover {
     background-color: grey;
+    transition: 0.3s;
 }
 
-.senha_e_conta a {
+.form-control a {
     text-decoration: none;
-    color: rgb(39, 189, 189);
+    color: #50C7F6;
     text-align: center;
-    transition: color 0.5s;
-    font-family: Arial;
-    margin: 2rem;
+    transition: color 0.5s;  
 }
 
-.senha_e_conta a:hover {
-    color: rgb(255, 255, 255);
+.form-control a:hover {
+    color: white;
 }
+
 
 @media (max-width: 768px) {
     .form_login {
@@ -514,3 +570,5 @@ body {
       height: 6%;
     }
   }
+
+

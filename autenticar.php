@@ -7,8 +7,8 @@ $email = isset($_POST['email']) ? $_POST['email'] : '';
 $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
 
 if ($email == '' && $senha == '') {
-    echo "<script>alert('O campo email e senha são obrigatórios')</script>";
-    echo "<script>window.location.href='login.php'</script>";
+    echo "<script>alert('Email e Senha com Sucesso')</script>";
+    echo "<script>window.location.href='eventos.php'</script>";
 }else{
 
 $query = "SELECT usuario.idusuario, usuario.tipo_user FROM login INNER JOIN usuario ON login.idusuario = usuario.idusuario WHERE login.email = '$email' AND login.senha = '$senha'";
