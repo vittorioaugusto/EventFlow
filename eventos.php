@@ -15,24 +15,24 @@
             </div>
 
             <?php
-            // Incluir o arquivo de conexão com o banco de dados
-            require_once "conexao.php";
+        // Incluir o arquivo de conexão com o banco de dados
+        require_once "conexao.php";
 
-            // Verificar se o usuário está logado
-            session_start();
-            if (!isset($_SESSION['idusuario'])) {
-                header("location: login.php");
-                exit();
-            }
+        // Verificar se o usuário está logado
+        session_start();
+        if (!isset($_SESSION['idusuario'])) {
+            header("location: login.php");
+            exit();
+        }
 
-            // Obter informações do usuário logado
-            $idusuario = $_SESSION['idusuario'];
-            $query_usuario = "SELECT nome, tipo_user FROM usuario WHERE idusuario = $idusuario";
-            $resultado_usuario = mysqli_query($conexao, $query_usuario);
-            $row_usuario = mysqli_fetch_assoc($resultado_usuario);
-            $nome_usuario = $row_usuario['nome'];
-            $tipo_usuario = $row_usuario['tipo_user'];
-            ?>
+        // Obter informações do usuário logado
+        $idusuario = $_SESSION['idusuario'];
+        $query_usuario = "SELECT nome, tipo_user FROM usuario WHERE idusuario = $idusuario";
+        $resultado_usuario = mysqli_query($conexao, $query_usuario);
+        $row_usuario = mysqli_fetch_assoc($resultado_usuario);
+        $nome_usuario = $row_usuario['nome'];
+        $tipo_usuario = $row_usuario['tipo_user'];
+        ?>
             
             <nav class="botoes_eventos">
                 <?php if ($tipo_usuario == 1) { ?>
