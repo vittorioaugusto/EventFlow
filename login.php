@@ -38,7 +38,7 @@ session_start();
 
             <div class="form_control_login">
 
-                <input type="password"  id="password" placeholder="Senha" name="senha" required>
+                <input type="password" id="password" placeholder="Senha" name="senha" required>
                 <i class="img-success" ><img src="assets/imagens/success-icon.svg" alt=""></i>
                 <i class="img-error" ><img src="assets/imagens/error-icon.svg" alt=""></i>
 
