@@ -37,18 +37,11 @@ body {
     justify-content: space-between;
 }
 
-.nome_usuario_eventos{
-    position: relative;
-    top: 10%;
-    color: white;
-    font-size: small;
-}
-
-.caixa_eventos{
-    position: relative;
-    top: 100%;
-    color: white;
-    font-size: larger;
+.logo_eventos{
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    display: flex;
 }
 
 .botoes_eventos{
@@ -59,7 +52,8 @@ body {
     display: flex;
     align-items: center;
     height: 100%;
-    font-size: 20px;  
+    font-size: 20px;
+    
 }
 
 .botoes_eventos a{
@@ -74,6 +68,146 @@ body {
     color: #50C7F6;
     transition: color 0.5s;
 }
+
+.container_eventos_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.caixa_eventos a{
+    color: white;
+    font-size: larger;
+    background-color: #616363;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    -moz-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    display: inline-block;
+    padding: 20px 100px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.caixa_eventos a:hover {
+    color: black;
+    transition: color 0.5s;
+}
+
+#nome_usuario_eventos{
+    color: white;
+    padding: 60px;
+    font-size: large;
+}
+
+#todos_os_eventos{
+    color: white;
+    padding: 20px;
+    
+}
+
+
+
+
+/* info_evento.php */
+
+.container_info_evento{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background-color: #4e4e4e;
+    border-radius: none;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #50C7F6;
+    top: -45%;
+    justify-content: space-between;
+}
+
+.logo_info_evento{
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    display: flex;
+}
+
+.botoes_info_evento{
+    position: absolute;
+    left: 30%;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;
+    
+}
+
+.botoes_info_evento a{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 150px;
+}
+
+.botoes_info_evento a:hover {
+    color: #50C7F6;
+    transition: color 0.5s;
+}
+
+.container_info_evento_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.info_evento{
+    color: white;
+    font-size: x-large;
+    background-color: #4A4A4A;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    -moz-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+}
+
+#nome_informacoes_do_perfil{
+    padding: 10px;
+    
+}
+
+.dados_perfil{
+    padding: 10px;
+}
+
+.editar_info_evento{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.editar_info_evento a{
+    display: inline-block;
+    background-color: #50C7F6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+    
+.editar_info_evento a:hover {
+    color: blue;
+    transition: color 0.5s;
+}
+
 
 
 
@@ -171,6 +305,65 @@ body {
     color: blue;
     transition: color 0.5s;
 }
+
+
+
+
+/* eventos_criados.php */
+
+.cabecalho_eventos{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background-color: #4e4e4e;
+    border-radius: none;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #50C7F6;
+    top: -45%;
+    justify-content: space-between;
+}
+
+.nome_usuario_eventos{
+    position: relative;
+    top: 10%;
+    color: white;
+    font-size: small;
+}
+
+.caixa_eventos{
+    position: relative;
+    top: 70%;
+    color: white;
+    font-size: larger;
+    
+}
+
+.botoes_eventos{
+    position: absolute;
+    left: 30%;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;  
+}
+
+.botoes_eventos a{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 150px;
+}
+
+.botoes_eventos a:hover {
+    color: #50C7F6;
+    transition: color 0.5s;
+}
+
+
 
 
 /* criar_eventos.php */

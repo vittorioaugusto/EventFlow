@@ -133,29 +133,6 @@ body {
 
 
 
-@media (max-width: 768px) {
-    .form_login {
-        width: 80%;
-    }
-
-    .login input {
-        width: 100%;
-    }
-
-    .entrar_login button {
-        width: 100%;
-        
-    }
-}
-
-@media (max-width: 480px) {
-    .form_login {
-        width: 90%;
-    }
-}
-
-
-
 
 /* esqueci_senha.php */
 
