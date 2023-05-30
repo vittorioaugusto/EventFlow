@@ -46,7 +46,7 @@ session_start();
 
             </div>
 
-            <button type="submit">Entrar</button>
+            <button type="submit" name="enviar" value="Entrar">Entrar</button>
             <div class="senha_e_conta">
                 <?php
                     if (isset($_SESSION['login_erro'])) {

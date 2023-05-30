@@ -24,7 +24,7 @@ function checkPassword() {
 
     if (passwordValue === '') {
         setErrorFor(password, 'Preencha esse campo');
-    } else if (passwordValue.length < 3) {
+    } else if (passwordValue.length < 4) {
         setErrorFor(password, 'Preencha esse campo');
     } else {
         setSuccessFor(password);

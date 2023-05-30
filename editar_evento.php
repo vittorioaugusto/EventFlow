@@ -31,14 +31,18 @@
             $nomeEvento = $_POST['nome_evento'];
             $endereco = $_POST['endereco'];
             $descricao = $_POST['descricao'];
-            $dataEvento = $_POST['data_evento'];
-            $horario = $_POST['horario'];
+            $dataInicioEvento = $_POST['data_inicio_evento'];
+            $dataFinalEvento = $_POST['data_final_evento'];
+            $horarioInicial = $_POST['horario_inicial'];
+            $horarioFinal = $_POST['horario_final'];
             $quantidade_ingressos = $_POST['quantidade_ingressos'];
             $preco_inteira = number_format($_POST['preco_inteira'], 2, '.', '');
 
             // Atualizar os dados do evento no banco de dados
-            $queryAtualizarEvento = "UPDATE eventos SET nome_evento = '$nomeEvento', endereco = '$endereco', descricao = '$descricao', data_evento = '$dataEvento', horario = '$horario', quantidade_ingressos = '$quantidade_ingressos' WHERE idevento = $idEvento";
-            $resultadoAtualizarEvento = mysqli_query($conexao, $queryAtualizarEvento);
+            $queryAtualizarEvento = "UPDATE eventos SET nome_evento = ?, endereco = ?, descricao = ?, data_inicio_evento = ?, data_final_evento = ?, horario_inicial = ?, horario_final = ? WHERE idevento = ?";
+            $stmtAtualizarEvento = $conexao->prepare($queryAtualizarEvento);
+            $stmtAtualizarEvento->bind_param('sssssisi', $nomeEvento, $endereco, $descricao, $dataInicioEvento, $dataFinalEvento, $horarioInicial, $horarioFinal, $idEvento);
+            $resultadoAtualizarEvento = $stmtAtualizarEvento->execute();
 
             // Verificar se a atualização foi bem-sucedida
             if ($resultadoAtualizarEvento) {
@@ -52,12 +56,15 @@
         }
 
         // Obter os dados do evento do banco de dados
-        $queryObterEvento = "SELECT * FROM eventos WHERE idevento = $idEvento";
-        $resultadoObterEvento = mysqli_query($conexao, $queryObterEvento);
+        $queryObterEvento = "SELECT * FROM eventos WHERE idevento = ?";
+        $stmtObterEvento = $conexao->prepare($queryObterEvento);
+        $stmtObterEvento->bind_param('i', $idEvento);
+        $stmtObterEvento->execute();
+        $resultadoObterEvento = $stmtObterEvento->get_result();
 
         // Verificar se o evento foi encontrado
-        if ($resultadoObterEvento && mysqli_num_rows($resultadoObterEvento) > 0) {
-            $evento = mysqli_fetch_assoc($resultadoObterEvento);
+        if ($resultadoObterEvento && $resultadoObterEvento->num_rows > 0) {
+            $evento = $resultadoObterEvento->fetch_assoc();
         } else {
             // Redirecionar para a página de eventos se o evento não for encontrado
             header('Location: eventos.php');
@@ -81,11 +88,17 @@
         <label for="descricao">Descrição:</label><br>
         <textarea id="descricao" name="descricao"><?php echo $evento['descricao']; ?></textarea><br><br>
 
-        <label for="data_evento">Data do Evento:</label>
-        <input type="date" id="data_evento" name="data_evento" value="<?php echo $evento['data_evento']; ?>"><br><br>
+        <label for="data_inicio_evento">Data de Início do Evento:</label>
+        <input type="date" id="data_inicio_evento" name="data_inicio_evento" value="<?php echo $evento['data_inicio_evento']; ?>"><br><br>
 
-        <label for="horario">Horário:</label>
-        <input type="time" id="horario" name="horario" value="<?php echo $evento['horario']; ?>"><br><br>
+        <label for="data_final_evento">Data de Término do Evento:</label>
+        <input type="date" id="data_final_evento" name="data_final_evento" value="<?php echo $evento['data_final_evento']; ?>"><br><br>
+
+        <label for="horario_inicial">Horário de Início:</label>
+        <input type="time" id="horario_inicial" name="horario_inicial" value="<?php echo $evento['horario_inicial']; ?>"><br><br>
+
+        <label for="horario_final">Horário de Término:</label>
+        <input type="time" id="horario_final" name="horario_final" value="<?php echo $evento['horario_final']; ?>"><br><br>
 
         <label for="quantidade_ingressos">Ingressos:</label>
         <input type="number" id="quantidade_ingressos" name="quantidade_ingressos" value="<?php echo $evento['quantidade_ingressos']; ?>"><br><br>

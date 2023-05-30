@@ -6,11 +6,6 @@ include('conexao.php');
 $email = isset($_POST['email']) ? $_POST['email'] : '';
 $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
 
-if ($email == '' && $senha == '') {
-    echo "<script>alert('Email e Senha com Sucesso')</script>";
-    echo "<script>window.location.href='eventos.php'</script>";
-}else{
-
 $query = "SELECT usuario.idusuario, usuario.tipo_user FROM login INNER JOIN usuario ON login.idusuario = usuario.idusuario WHERE login.email = '$email' AND login.senha = '$senha'";
 $resultado = mysqli_query($conexao, $query);
 
@@ -36,7 +31,5 @@ if (mysqli_num_rows($resultado) == 1) {
     $_SESSION['login_erro'] = "Email ou senha inválidos";
     header("Location: login.php");
     exit();
-
-    }
 }
-?>
+?> 

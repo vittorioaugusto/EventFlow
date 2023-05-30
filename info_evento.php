@@ -72,7 +72,15 @@
                         // Consultar o evento no banco de dados
                         $query_evento = "SELECT * FROM eventos WHERE idevento = $id_evento";
                         $resultado_evento = mysqli_query($conexao, $query_evento);
-                        $dados_evento = mysqli_fetch_assoc($resultado_evento);
+                        $data_inicio_evento = date('d/m/Y', strtotime($dados_evento['data_inicio_evento']));
+                        $data_final_evento = date('d/m/Y', strtotime($dados_evento['data_final_evento']));
+                        echo '<p>Data de Início do Evento: ' . $data_inicio_evento . '</p>';
+                        echo '<p>Data de Término do Evento: ' . $data_final_evento . '</p>';
+
+                        $horario_inicial = date('H:i', strtotime($dados_evento['horario_inicial']));
+                        $horario_final = date('H:i', strtotime($dados_evento['horario_final']));
+                        echo '<p>Horário de Início do Evento: ' . $horario_inicial . '</p>';
+                        echo '<p>Horário de Término do Evento: ' . $horario_final . '</p>';
                         
                         if ($dados_evento) {
                             echo '<h1>' . $dados_evento['nome_evento'] . '</h1>';
