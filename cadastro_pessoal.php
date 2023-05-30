@@ -22,7 +22,7 @@
                 <h2>Usuário pessoal</h2>
             </div>
         
-        <form class="form_pessoal" id="form" action="autenticar.php" method="POST">
+        <form class="form_pessoal" id="form" action="processa_cadastro.php" method="POST">
 
             <div class="form_control_pessoal">
 

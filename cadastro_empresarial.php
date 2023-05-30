@@ -22,7 +22,7 @@
                 <h2>Usuário Empresarial</h2>
             </div>
         
-        <form class="form_empresarial" id="form" action="autenticar.php" method="POST">
+        <form class="form_empresarial" id="form" action="processa_cadastro.php" method="POST">
 
             <div class="form_control_empresarial">
 
