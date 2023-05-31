@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/style2.css">
 </head>
 <body>
+    <div class="container_info_evento">
         <div class="cabecalho_info_evento">
 
             <div class="logo_info_evento">
@@ -57,10 +58,10 @@
             </nav>
 
             <center>
- 
-            <div class="container_info_evento">
+
+            <div class="container_info_evento_2">
                 <div class="info_evento">
-                    
+                    <div class="dados_info_evento">
                     <?php
                     // Verificar se foi fornecido o parâmetro de ID do evento
                     if (isset($_GET['id'])) {
@@ -121,9 +122,12 @@
                         echo '<p>ID do evento não fornecido.</p>';
                     }
                     ?>
+                    </div>
+                    
                 </div>
             </div>
         </div>
+    </div>
         
     </center>
 </body>

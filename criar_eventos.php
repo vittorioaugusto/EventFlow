@@ -21,7 +21,7 @@
             <a href="login.php">Logout</a>
         </nav>
 
-                <?php
+            <?php
             // Verificar se o usuário está logado e é um usuário empresarial
             session_start();
             if (!isset($_SESSION['idusuario'])) {
