@@ -10,7 +10,7 @@
 <body>
     <div class="cabecalho_criar_eventos">
 
-        <div class="logo_principal">
+        <div class="logo_criar_eventos">
             <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
         </div>
 
@@ -21,66 +21,6 @@
             <a href="login.php">Logout</a>
         </nav>
         
-        <?php
-        // Verificar se o usuário está logado e é um usuário empresarial
-        session_start();
-        if (!isset($_SESSION['idusuario'])) {
-            header("location: login.php");
-            exit();
-        }
-
-        $idusuario = $_SESSION['idusuario'];
-        require_once "conexao.php";
-
-        $query_usuario = "SELECT tipo_user FROM usuario WHERE idusuario = $idusuario";
-        $resultado_usuario = mysqli_query($conexao, $query_usuario);
-        $row_usuario = mysqli_fetch_assoc($resultado_usuario);
-        $tipo_usuario = $row_usuario['tipo_user'];
-
-        if ($tipo_usuario != 2) {
-            echo "Acesso negado. Esta página é restrita para usuários empresariais.";
-            exit();
-        }
-
-        // Verificar se o formulário foi submetido
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // Obter os dados do formulário
-            $nome_evento = $_POST['nome_evento'];
-            $endereco = $_POST['endereco'];
-            $descricao = $_POST['descricao'];
-            $data_inicio_evento = $_POST['data_inicio_evento'];
-            $data_final_evento = $_POST['data_final_evento'];
-            $horario_inicial = $_POST['horario_inicial'];
-            $horario_final = $_POST['horario_final'];
-            $quantidade_ingressos = $_POST['quantidade_ingressos'];
-            $preco_inteira = number_format($_POST['preco_inteira'], 2, '.', '');
-
-            // Inserir o evento no banco de dados
-            $inserir_evento = "INSERT INTO eventos (nome_evento, endereco, descricao, data_inicio_evento, data_final_evento, horario_inicial, horario_final, idusuario) VALUES ('$nome_evento', '$endereco', '$descricao', '$data_inicio_evento', '$data_final_evento', '$horario_inicial', '$horario_final', $idusuario)";
-
-            if (mysqli_query($conexao, $inserir_evento)) {
-                $id_evento = mysqli_insert_id($conexao);
-
-                // Inserir os ingressos disponíveis
-                $inserir_ingressos = "INSERT INTO ingresso (quantidade, valor, id_tipoingresso, idevento) VALUES ($quantidade_ingressos, $preco_inteira, 1, $id_evento)";
-                mysqli_query($conexao, $inserir_ingressos);
-
-                // Calcular e inserir o preço da entrada estudante (50% do preço da entrada inteira)
-                $preco_estudante = $preco_inteira * 0.5;
-                $inserir_ingresso_estudante = "INSERT INTO ingresso (quantidade, valor, id_tipoingresso, idevento) VALUES ($quantidade_ingressos, $preco_estudante, 2, $id_evento)";
-                mysqli_query($conexao, $inserir_ingresso_estudante);
-
-                echo "Evento criado com sucesso.";
-                echo "<br>";
-                echo '<a href="eventos.php">Voltar para a página de eventos</a>';
-            } else {
-                echo "Erro ao criar o evento: " . mysqli_error($conexao);
-            }
-
-            // Fechar a conexão com o banco de dados
-            mysqli_close($conexao);
-        }
-        ?>
         
         <div class="cabecalho_criar_eventos_2">
             <div class="caixa_criar_eventos">
