@@ -51,7 +51,7 @@
             <div class="container_eventos_2">
             <center>
                 <div id="nome_usuario_eventos">
-                    <h2>Bem-vindo(a) ao EventFlow, <?php echo $nome_usuario; ?>!</h2>  
+                    <h1>Bem-vindo(a) ao EventFlow, <?php echo $nome_usuario; ?>!</h1>  
                 </div>
 
                 <h1 id="todos_os_eventos">Todos os Eventos</h1>

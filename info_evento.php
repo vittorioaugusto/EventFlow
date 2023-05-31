@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="assets/css/style2.css">
 </head>
 <body>
-    <div class="container_info_evento">
         <div class="cabecalho_info_evento">
+
             <div class="logo_info_evento">
                 <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
             </div>
@@ -58,10 +58,8 @@
 
             <center>
  
-            <div class="container_info_evento_2">
+            <div class="container_info_evento">
                 <div class="info_evento">
-                    
-                        
                     
                     <?php
                     // Verificar se foi fornecido o parâmetro de ID do evento
@@ -126,7 +124,6 @@
                 </div>
             </div>
         </div>
-    </div>
         
     </center>
 </body>
