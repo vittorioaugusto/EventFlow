@@ -60,72 +60,75 @@
             <center>
 
             <div class="container_info_evento_2">
-                <div class="info_evento">
-                    <div class="dados_info_evento">
+                <div class="caixa_info_evento">
+                    
                     <?php
-                    // Verificar se foi fornecido o parâmetro de ID do evento
-                    if (isset($_GET['id'])) {
-                        // Obter o ID do evento a partir do parâmetro da URL
-                        $id_evento = $_GET['id'];
+            // Verificar se foi fornecido o parâmetro de ID do evento
+            if (isset($_GET['id'])) {
+                // Obter o ID do evento a partir do parâmetro da URL
+                $id_evento = $_GET['id'];
 
-                        // Consultar o evento no banco de dados
-                        $query_evento = "SELECT * FROM eventos WHERE idevento = $id_evento";
-                        $resultado_evento = mysqli_query($conexao, $query_evento);
-                        $data_inicio_evento = date('d/m/Y', strtotime($dados_evento['data_inicio_evento']));
-                        $data_final_evento = date('d/m/Y', strtotime($dados_evento['data_final_evento']));
-                        echo '<p>Data de Início do Evento: ' . $data_inicio_evento . '</p>';
-                        echo '<p>Data de Término do Evento: ' . $data_final_evento . '</p>';
+                // Consultar o evento no banco de dados
+                $query_evento = "SELECT * FROM eventos WHERE idevento = $id_evento";
+                $resultado_evento = mysqli_query($conexao, $query_evento);
+                $dados_evento = mysqli_fetch_assoc($resultado_evento);
 
-                        $horario_inicial = date('H:i', strtotime($dados_evento['horario_inicial']));
-                        $horario_final = date('H:i', strtotime($dados_evento['horario_final']));
-                        echo '<p>Horário de Início do Evento: ' . $horario_inicial . '</p>';
-                        echo '<p>Horário de Término do Evento: ' . $horario_final . '</p>';
-                        
-                        if ($dados_evento) {
-                            echo '<h1>' . $dados_evento['nome_evento'] . '</h1>';
+                if ($dados_evento) {
+                    echo '<h1>' . $dados_evento['nome_evento'] . '</h1>';
 
-                            // Formatando a data do evento para o padrão brasileiro
-                            $data_evento = date('d/m/Y', strtotime($dados_evento['data_evento']));
-                            echo '<p>Data do Evento: ' . $data_evento . '</p>';
+                    // Formatando a data do evento para o padrão brasileiro
+                    $data_inicio_evento = date('d/m/Y', strtotime($dados_evento['data_inicio_evento']));
+                    $data_final_evento = date('d/m/Y', strtotime($dados_evento['data_final_evento']));
+                    echo '<p>Data de Início do Evento: ' . $data_inicio_evento . '</p>';
+                    echo '<p>Data de Término do Evento: ' . $data_final_evento . '</p>';
 
-                            echo '<h2>Ingressos:</h2>';
+                    $horario_inicial = date('H:i', strtotime($dados_evento['horario_inicial']));
+                    $horario_final = date('H:i', strtotime($dados_evento['horario_final']));
+                    echo '<p>Horário de Início do Evento: ' . $horario_inicial . '</p>';
+                    echo '<p>Horário de Término do Evento: ' . $horario_final . '</p>';
 
-                            // Consultar os ingressos relacionados ao evento
-                            $query_ingressos = "SELECT i.*, t.descricao AS tipo_ingresso FROM ingresso i INNER JOIN tipo_ingresso t ON i.id_tipoingresso = t.id_tipoingresso WHERE idevento = $id_evento";
-                            $resultado_ingressos = mysqli_query($conexao, $query_ingressos);
+                    echo '<p>Descrição: ' . $dados_evento['descricao'] . '</p>';
+                    echo '<p>Local: ' . $dados_evento['endereco'] . '</p>';
 
-                            if (mysqli_num_rows($resultado_ingressos) > 0) {
-                                while ($dados_ingresso = mysqli_fetch_assoc($resultado_ingressos)) {
-                                    echo '<p>';
-                                    if ($dados_ingresso['tipo_ingresso'] == 'entrada inteira') {
-                                        echo 'Tipo: Entrada Inteira<br>';
-                                    } elseif ($dados_ingresso['tipo_ingresso'] == 'entrada estudante') {
-                                        echo 'Tipo: Entrada Estudante<br>';
-                                    }
-                                    echo 'Preço: R$ ' . $dados_ingresso['valor'] . '<br>';
-                                    echo 'Quantidade: ' . $dados_ingresso['quantidade'] . '<br>';
-                                    echo '</p>';
-                                }
-                            } else {
-                                echo '<p>Nenhum ingresso disponível para este evento.</p>';
+                    echo '<h2>Ingressos:</h2>';
+
+                    // Consultar os ingressos relacionados ao evento
+                    $query_ingressos = "SELECT i.*, t.descricao AS tipo_ingresso FROM ingresso i INNER JOIN tipo_ingresso t ON i.id_tipoingresso = t.id_tipoingresso WHERE idevento = $id_evento";
+                    $resultado_ingressos = mysqli_query($conexao, $query_ingressos);
+
+                    if (mysqli_num_rows($resultado_ingressos) > 0) {
+                        while ($dados_ingresso = mysqli_fetch_assoc($resultado_ingressos)) {
+                            echo '<p>';
+                            if ($dados_ingresso['tipo_ingresso'] == 'entrada inteira') {
+                                echo 'Tipo: Entrada Inteira<br>';
+                            } elseif ($dados_ingresso['tipo_ingresso'] == 'entrada estudante') {
+                                echo 'Tipo: Entrada Estudante<br>';
                             }
-                            
-                            if ($tipo_usuario == 2 && verificarCriadorEvento($id_evento, $idusuario, $conexao)) { // Cadastro Empresarial
-                                echo '<div class="editar_info_evento"><a href="editar_evento.php?id=' . $id_evento . '">Editar Evento</a></div>';
-                            }
-
-                            echo '<div class="editar_info_evento"><a href="eventos.php">Voltar para a lista de eventos</a></div>';
-                        } else {
-                            echo '<p>Evento não encontrado.</p>';
+                            echo 'Preço: R$ ' . $dados_ingresso['valor'] . '<br>';
+                            echo 'Quantidade: ' . $dados_ingresso['quantidade'] . '<br>';
+                            echo '</p>';
                         }
                     } else {
-                        echo '<p>ID do evento não fornecido.</p>';
+                        echo '<p>Nenhum ingresso disponível para este evento.</p>';
                     }
-                    ?>
-                    </div>
+
+                    if ($tipo_usuario == 2 && verificarCriadorEvento($id_evento, $idusuario, $conexao)) { // Cadastro Empresarial
+                        echo '<div class="editar_voltar_info_evento"><a href="editar_evento.php?id=' . $id_evento . '">Editar Evento</a></div>';
+                    }
+
+                    echo '<div class="editar_voltar_info_evento"><a href="eventos.php">Voltar para a lista de eventos</a></div>';
+                } else {
+                    echo '<p>Evento não encontrado.</p>';
+                }
+            } else {
+                echo '<p>ID do evento não fornecido.</p>';
+            }
+            ?>
                     
                 </div>
+
             </div>
+            </center>
         </div>
     </div>
         

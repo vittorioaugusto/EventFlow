@@ -2,20 +2,22 @@
 <html>
 <head>
     <title>Editar Evento</title>
+    <link rel="stylesheet" href="assets/css/style2.css">
 </head>
 <body>
     <div class="cabecalho_editar_evento">
-            <div class="logo_principal">
+
+            <div class="logo_editar_evento">
                 <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
             </div>
 
-            <a href="eventos.php">Eventos</a>
-            <a href="eventos_criados.php">Eventos Criados</a>
-            <a href="perfil.php">Perfil</a>
-            <a href="login.php">Logout</a>
-
-            <h1>Editar Evento</h1>
-
+            <nav class="botoes_editar_evento">
+                <a href="eventos.php">Eventos</a>
+                <a href="eventos_criados.php">Eventos Criados</a>
+                <a href="perfil.php">Perfil</a>
+                <a href="login.php">Logout</a>
+            </nav>
+            
                 <?php
                 // Incluir o arquivo de conexão com o banco de dados
                 require_once 'conexao.php';
@@ -111,51 +113,63 @@
                 }
                 ?>
 
-            <form method="POST">
-                <label for="nome_evento">Nome do Evento:</label>
-                <input type="text" id="nome_evento" name="nome_evento" value="<?php echo $evento['nome_evento']; ?>"><br><br>
+            <div class="cabecalho_editar_evento_2">
+                <div class="caixa_editar_evento">
+                    
+                    <form method="POST">
+                        <div class="informacoes_editar_evento">
+                        <center>
+                        <h1>Editar Evento</h1>
+                        </center>
+                        <label for="nome_evento">Nome do Evento:</label>
+                        <input type="text" id="nome_evento" name="nome_evento" value="<?php echo $evento['nome_evento']; ?>"><br>
 
-                <label for="endereco">Endereço:</label>
-                <input type="text" id="endereco" name="endereco" value="<?php echo $evento['endereco']; ?>"><br><br>
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" name="endereco" value="<?php echo $evento['endereco']; ?>"><br>
 
-                <label for="descricao">Descrição:</label><br>
-                <textarea id="descricao" name="descricao"><?php echo $evento['descricao']; ?></textarea><br><br>
+                        <label for="descricao">Descrição:</label><br>
+                        <textarea id="descricao" name="descricao"><?php echo $evento['descricao']; ?></textarea><br>
 
-                <label for="data_inicio_evento">Data de Início do Evento:</label>
-                <input type="date" id="data_inicio_evento" name="data_inicio_evento" value="<?php echo $evento['data_inicio_evento']; ?>"><br><br>
+                        <label for="data_inicio_evento">Data de Início do Evento:</label>
+                        <input type="date" id="data_inicio_evento" name="data_inicio_evento" value="<?php echo $evento['data_inicio_evento']; ?>"><br>
 
-                <label for="data_final_evento">Data de Término do Evento:</label>
-                <input type="date" id="data_final_evento" name="data_final_evento" value="<?php echo $evento['data_final_evento']; ?>"><br><br>
+                        <label for="data_final_evento">Data de Término do Evento:</label>
+                        <input type="date" id="data_final_evento" name="data_final_evento" value="<?php echo $evento['data_final_evento']; ?>"><br>
 
-                <label for="horario_inicial">Horário de Início:</label>
-                <input type="time" id="horario_inicial" name="horario_inicial" value="<?php echo $evento['horario_inicial']; ?>"><br><br>
+                        <label for="horario_inicial">Horário de Início:</label>
+                        <input type="time" id="horario_inicial" name="horario_inicial" value="<?php echo $evento['horario_inicial']; ?>"><br>
 
-                <label for="horario_final">Horário de Término:</label>
-                <input type="time" id="horario_final" name="horario_final" value="<?php echo $evento['horario_final']; ?>"><br><br>
+                        <label for="horario_final">Horário de Término:</label>
+                        <input type="time" id="horario_final" name="horario_final" value="<?php echo $evento['horario_final']; ?>"><br>
 
-                <h2>Ingressos</h2>
-                    <?php foreach ($ingressos as $ingresso): ?>
-                        <label for="quantidade_<?php echo $ingresso['id_ingresso']; ?>">Quantidade:</label>
-                        <input type="number" id="quantidade_<?php echo $ingresso['id_ingresso']; ?>" name="quantidade[<?php echo $ingresso['id_ingresso']; ?>]" value="<?php echo $ingresso['quantidade']; ?>"><br><br>
+                        <h2>Ingressos</h2>
+                            <?php foreach ($ingressos as $ingresso): ?>
+                                <label for="quantidade_<?php echo $ingresso['id_ingresso']; ?>">Quantidade:</label>
+                                <input type="number" id="quantidade_<?php echo $ingresso['id_ingresso']; ?>" name="quantidade[<?php echo $ingresso['id_ingresso']; ?>]" value="<?php echo $ingresso['quantidade']; ?>"><br>
 
-                        <label for="valor_<?php echo $ingresso['id_ingresso']; ?>">Valor:</label>
-                        <input type="text" id="valor_<?php echo $ingresso['id_ingresso']; ?>" name="valor[<?php echo $ingresso['id_ingresso']; ?>]" value="<?php echo $ingresso['valor']; ?>"><br><br>
-                        <label for="valor_estudante_<?php echo $ingresso['id_ingresso']; ?>">Valor Estudante:</label>
-                        <input type="text" id="valor_estudante_<?php echo $ingresso['id_ingresso']; ?>" name="valor_estudante[<?php echo $ingresso['id_ingresso']; ?>]" value="<?php echo $ingresso['valor']/2; ?>" readonly><br><br>
-                    <?php endforeach; ?>
-                
-                <input type="submit" value="Atualizar">
-            </form>
+                                <label for="valor_<?php echo $ingresso['id_ingresso']; ?>">Valor:</label>
+                                <input type="text" id="valor_<?php echo $ingresso['id_ingresso']; ?>" name="valor[<?php echo $ingresso['id_ingresso']; ?>]" value="<?php echo $ingresso['valor']; ?>"><br>
+                                <label for="valor_estudante_<?php echo $ingresso['id_ingresso']; ?>">Valor Estudante:</label>
+                                <input type="text" id="valor_estudante_<?php echo $ingresso['id_ingresso']; ?>" name="valor_estudante[<?php echo $ingresso['id_ingresso']; ?>]" value="<?php echo $ingresso['valor']/2; ?>" readonly><br>
+                            <?php endforeach; ?>
+                            </div>
+                            
+                        <div class="atualizar_editar_evento">
+                            <button type="submit" value="Atualizar">Atualizar</button>
+                        </div>
+                        
+                    </form>
 
-            <br>
-
-            <form method="POST">
-                <input type="submit" value="Excluir" onclick="return confirm('Tem certeza de que deseja excluir este evento?');">
-            </form>
+                    <form method="POST">
+                        <div class="excluir_editar_evento">
+                            <input type="submit" value="Excluir" onclick="return confirm('Tem certeza de que deseja excluir este evento?'); ">
+                        </div>
+                    </form>
+                    
+                </div>
+         
+            </div>      
     </div>
         
 </body>
 </html>
-
-
-

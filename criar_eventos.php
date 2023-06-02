@@ -21,7 +21,54 @@
             <a href="login.php">Logout</a>
         </nav>
 
-            <?php
+            
+        
+            
+
+        <div class="cabecalho_criar_eventos_2">
+            <div class="caixa_criar_eventos">
+            <center>
+                <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                    <div class="informacoes_criar_eventos">
+                    <h1 id="nome_criar_evento">Criar Evento</h1>
+                        <label for="nome_evento">Nome do Evento:</label>
+                        <input type="text" id="nome_evento" name="nome_evento" required><br>
+
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" name="endereco" required><br>
+
+                        <label for="descricao">Descrição:</label>
+                        <textarea id="descricao" name="descricao" required></textarea><br>
+
+                        <label for="data_inicio_evento">Data de Início do Evento:</label>
+                        <input type="date" id="data_inicio_evento" name="data_inicio_evento" required><br>
+
+                        <label for="data_final_evento">Data de Término do Evento:</label>
+                        <input type="date" id="data_final_evento" name="data_final_evento" required><br>
+
+                        <label for="horario_inicial">Horário de Início do Evento:</label>
+                        <input type="time" id="horario_inicial" name="horario_inicial" required><br>
+
+                        <label for="horario_final">Horário de Término do Evento:</label>
+                        <input type="time" id="horario_final" name="horario_final" required><br>
+
+                        <label for="quantidade_ingressos">Quantidade de Entradas Inteiras Disponíveis:</label>
+                        <input type="number" id="quantidade_ingressos" name="quantidade_ingressos" required><br>
+
+                        <label for="quantidade_ingressos_estudante">Quantidade de Entradas Estudantes Disponíveis:</label>
+                        <input type="number" id="quantidade_ingressos_estudante" name="quantidade_ingressos_estudante" required><br>
+
+                        <label for="preco_inteira">Preço da Entrada Inteira:</label>
+                        <input type="number" id="preco_inteira" name="preco_inteira" step="0.01" required><br>
+
+                    </div>
+                    
+                    <div class="botao_criar_evento">
+                        <button type="submit" value="Criar Evento">Criar Evento</button>
+                    </div>
+                </form>
+
+                <?php
             // Verificar se o usuário está logado e é um usuário empresarial
             session_start();
             if (!isset($_SESSION['idusuario'])) {
@@ -71,9 +118,9 @@
                     $inserir_ingresso_estudante = "INSERT INTO ingresso (quantidade, valor, id_tipoingresso, idevento) VALUES ($quantidade_ingressos_estudante, $preco_estudante, 2, $id_evento)";
                     mysqli_query($conexao, $inserir_ingresso_estudante);
 
-                    echo "Evento criado com sucesso.";
-                    echo "<br>";
-                    echo '<a href="eventos.php">Voltar para a página de eventos</a>';
+                    echo '<p id="nome_evento_criado">Evento criado com sucesso.</p>';
+                    
+                    echo '<div class="voltar_criar_eventos"><a href="eventos.php">Voltar para a página de eventos</a></div>';
                 } else {
                     echo "Erro ao criar o evento: " . mysqli_error($conexao);
                 }
@@ -82,53 +129,11 @@
                 mysqli_close($conexao);
             }
             ?>
-        
-        <div class="cabecalho_criar_eventos_2">
-            <div class="caixa_criar_eventos">
-            <center>
-                <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                    <div class="informacoes_criar_eventos">
-                    <h1 id="nome_criar_evento">Criar Evento</h1>
-                        <label for="nome_evento">Nome do Evento:</label>
-                        <input type="text" id="nome_evento" name="nome_evento" required><br>
 
-                        <label for="endereco">Endereço:</label>
-                        <input type="text" id="endereco" name="endereco" required><br>
-
-                        <label for="descricao">Descrição:</label>
-                        <textarea id="descricao" name="descricao" required></textarea><br>
-
-                        <label for="data_inicio_evento">Data de Início do Evento:</label>
-                        <input type="date" id="data_inicio_evento" name="data_inicio_evento" required><br>
-
-                        <label for="data_final_evento">Data de Término do Evento:</label>
-                        <input type="date" id="data_final_evento" name="data_final_evento" required><br>
-
-                        <label for="horario_inicial">Horário de Início do Evento:</label>
-                        <input type="time" id="horario_inicial" name="horario_inicial" required><br>
-
-                        <label for="horario_final">Horário de Término do Evento:</label>
-                        <input type="time" id="horario_final" name="horario_final" required><br>
-
-                        <label for="quantidade_ingressos">Quantidade de Entradas Inteiras Disponíveis:</label>
-                        <input type="number" id="quantidade_ingressos" name="quantidade_ingressos" required><br>
-
-                        <label for="quantidade_ingressos_estudante">Quantidade de Entradas Estudantes Disponíveis:</label>
-                        <input type="number" id="quantidade_ingressos_estudante" name="quantidade_ingressos_estudante" required><br>
-
-                        <label for="preco_inteira">Preço da Entrada Inteira:</label>
-                        <input type="number" id="preco_inteira" name="preco_inteira" step="0.01" required><br>
-
-                    </div>
-                    
-                    <div class="botao_criar_evento">
-                        <button type="submit" value="Criar Evento">Criar Evento</button>
-                    </div>
-                </form>
-            
+                </center>
             </div>
         </div>
-        </center>
+
     </div>
 </body>
 </html>

@@ -70,21 +70,25 @@ body {
     height: 100vh;
 }
 
-.caixa_eventos a{
-    color: white;
+.caixa_eventos{
     font-size: larger;
     background-color: #616363;
     padding: 20px;
     border-radius: 20px;
+    display: inline-block;
+    padding: 20px 70px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: sans-serif;
     box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
     -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
     -moz-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
-    display: inline-block;
-    padding: 20px 100px;
-    border-radius: 5px;
-    font-size: 20px;
+    all: unset;
+}
+
+.caixa_eventos a{  
+    color: white;
     text-decoration: none;
-    font-family: sans-serif;
 }
 
 .caixa_eventos a:hover {
@@ -101,6 +105,10 @@ body {
 #todos_os_eventos{
     color: white;
     padding: 20px;
+}
+
+#nome_nenhum_evento_encontrado{
+    color: white;
 }
 
 
@@ -254,25 +262,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
-    
+    height: 50vh;
 }
 
-.eventos_criados a{
-    color: white;
+.eventos_criados {
     font-size: larger;
     background-color: #616363;
     padding: 20px;
     border-radius: 20px;
+    display: inline-block;
+    padding: 20px 70px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: sans-serif;
     box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
     -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
     -moz-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
-    display: inline-block;
-    padding: 20px 100px;
-    border-radius: 5px;
-    font-size: 20px;
+    all: unset;
+}
+
+.eventos_criados a{  
+    color: white;
     text-decoration: none;
-    font-family: sans-serif;
 }
 
 .eventos_criados a:hover {
@@ -285,6 +296,7 @@ body {
     padding: 20px;
     
 }
+
 
 
 
@@ -340,7 +352,7 @@ body {
     align-items: center;
     height: 85vh;
     position: relative;
-    top: 130%; 
+    top: 140%; 
 }
 
 .caixa_criar_eventos{
@@ -377,7 +389,7 @@ body {
     display: inline-block;
     background-color: #50C7F6;
     color: white;
-    padding: 5px 20px;
+    padding: 10px 20px;
     border-radius: 5px;
     font-size: medium;
     text-decoration: none;
@@ -385,6 +397,31 @@ body {
 }
     
 .botao_criar_evento button:hover {
+    color: blue;
+    transition: color 0.5s;
+}
+
+#nome_evento_criado{
+    padding: 10px;
+}
+
+.voltar_criar_eventos{
+    text-align: center;
+    padding: 5px;
+}
+
+.voltar_criar_eventos a{
+    display: inline-block;
+    background-color: #50C7F6;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+    
+.voltar_criar_eventos a:hover {
     color: blue;
     transition: color 0.5s;
 }
@@ -535,13 +572,153 @@ body {
     transition: color 0.5s;
 }
 
-/* .salvar_voltar{
+.container_info_evento_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    position: relative;
+    margin-top: 80px;
+}
+
+.caixa_info_evento{
+    color: white;
+    font-size: large;
+    background-color: #4A4A4A;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    -moz-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+}
+
+.editar_voltar_info_evento{
+    padding: 5px;
+}
+
+.editar_voltar_info_evento a{
+    display: inline-block;
+    background-color: #50C7F6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+    
+.editar_voltar_info_evento a:hover {
+    color: blue;
+    transition: color 0.5s;
+}
+
+
+
+
+/* editar_evento.php */
+
+.cabecalho_editar_evento{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background-color: #4e4e4e;
+    border-radius: none;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #50C7F6;
+    top: -45%;
+    justify-content: space-between;
+}
+
+.logo_editar_evento{
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    display: flex;
+}
+
+.botoes_editar_evento{
+    position: absolute;
+    left: 35%;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 20px; 
+}
+
+.botoes_editar_evento a{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 150px;
+}
+
+.botoes_editar_evento a:hover {
+    color: #50C7F6;
+    transition: color 0.5s;
+}
+
+.cabecalho_editar_evento_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    margin-top: 100px;
+}
+
+.caixa_editar_evento{
+    color: white;
+    font-size: large;
+    background-color: #4A4A4A;
+    padding: 5px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    -moz-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+}
+
+.informacoes_editar_evento input{
+    width: 15rem;
+    margin: 0.3rem;
+    height: 1rem;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    border: none;
+}
+
+.atualizar_editar_evento{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     font-family: Helvetica, sans-serif;
 }
 
-.salvar_voltar button{
+.atualizar_editar_evento button{
+    display: inline-block;
+    background-color: #50C7F6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: medium;
+    text-decoration: none;
+    margin-top: 1px;
+}
+    
+.atualizar_editar_evento button:hover {
+    color: blue;
+    transition: color 0.5s;
+}
+
+.excluir_editar_evento{
+    text-align: center;
+    margin-top: 10px;
+    font-family: Helvetica, sans-serif;
+}
+
+.excluir_editar_evento input{
     display: inline-block;
     background-color: #50C7F6;
     color: white;
@@ -551,38 +728,7 @@ body {
     text-decoration: none;
 }
     
-.salvar_voltar button:hover {
+.excluir_editar_evento input:hover {
     color: blue;
     transition: color 0.5s;
-} */
-
-.container_info_evento_2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 95vh;
-}
-
-.info_evento{
-    color: white;
-    font-size: medium;
-    background-color: #4A4A4A;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
-    -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
-    -moz-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
-}
-
-/* #nome_editar_informacoes_perfil{
-    padding: 10px;
-} */
-
-.dados_info_evento input{
-    width: 10rem;
-    margin: 0.3rem;
-    height: 1.5rem;
-    border-radius: 1rem;
-    padding: 1rem;
-    border: none;
-}
+} 

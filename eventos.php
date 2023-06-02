@@ -55,8 +55,8 @@
                 </div>
 
                 <h1 id="todos_os_eventos">Todos os Eventos</h1>
-                <div class="caixa_eventos">
-                    <div class="dados_eventos">
+                    <div class="caixa_eventos">
+                        
                         <?php
                             // Consultar os eventos no banco de dados
                             $consulta = "SELECT * FROM eventos";
@@ -77,19 +77,17 @@
                                     echo '</a>';
                                 }
                             } else {
-                                echo '<p>Nenhum evento encontrado.</p>';
+                                echo '<p id="nome_nenhum_evento_encontrado">Nenhum evento encontrado.</p>';
                             }
 
                             // Fechar a conexão com o banco de dados
                             mysqli_close($conexao);
-                            ?>
+                            ?>   
+                        
                     </div>
-                    
-
-                </div>
-                
+                </center> 
             </div>
-            </center>        
+                   
     </div>
    
 </body>

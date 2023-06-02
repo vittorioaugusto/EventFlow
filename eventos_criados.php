@@ -63,7 +63,7 @@
                         echo '</a>';
                     }
                 } else {
-                    echo '<p>Nenhum evento criado.</p>';
+                    echo '<p id="nome_nenhum_evento_encontrado">Nenhum evento encontrado.</p>';
                 }
                 ?>
             </div>
