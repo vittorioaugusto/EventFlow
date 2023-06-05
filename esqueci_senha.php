@@ -46,7 +46,7 @@ session_start();
                 <input type="password" id="password" placeholder="Nova Senha" name="nova_senha" required>
                 <i class="img-success" ><img src="assets/imagens/success-icon.svg" alt=""></i>
                 <i class="img-error" ><img src="assets/imagens/error-icon.svg" alt=""></i>
-
+                
                 <small>Error Message</small>
 
             </div>
@@ -60,4 +60,5 @@ session_start();
     <script src="assets/js/index.js"></script>
     
 </body>
-</html>
+</html>                                 
+
