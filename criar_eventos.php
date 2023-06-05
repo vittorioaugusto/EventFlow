@@ -20,11 +20,7 @@
             <a href="perfil.php">Perfil</a>
             <a href="login.php">Logout</a>
         </nav>
-
-            
-        
-            
-
+  
         <div class="cabecalho_criar_eventos_2">
             <div class="caixa_criar_eventos">
             <center>
