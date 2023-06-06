@@ -41,7 +41,7 @@ body {
 
 .botoes_eventos{
     position: absolute;
-    left: 30%;
+    left: 25%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -55,7 +55,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 150px;
+    margin-right: 100px;
 }
 
 .botoes_eventos a:hover {
@@ -112,7 +112,6 @@ body {
 
 #todos_os_eventos{
     color: white;
-    padding: 20px;
 }
 
 #nome_nenhum_evento_encontrado{
@@ -146,7 +145,7 @@ body {
 
 .botoes_perfil{
     position: absolute;
-    left: 30%;
+    left: 25%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -161,7 +160,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 150px;
+    margin-right: 100px;
 }
 
 .botoes_perfil a:hover {
@@ -270,16 +269,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 90vh;
 }
 
-.eventos_criados {
+.informacoes_eventos_criados{
     font-size: larger;
+    background-color: #50C7F6;
+    width: 100%;
+    height: 50%;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: sans-serif;
+}
+
+.caixa_eventos_criados {
     background-color: #616363;
-    padding: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     display: inline-block;
-    padding: 20px 70px;
+    padding: 20px;
     border-radius: 5px;
     font-size: 20px;
     font-family: sans-serif;
@@ -289,9 +296,14 @@ body {
     all: unset;
 }
 
-.eventos_criados a{  
+.caixa_eventos_criados a{  
     color: white;
     text-decoration: none;
+}
+
+.caixa_eventos_criados a:hover {
+    color: black;
+    transition: color 0.5s;
 }
 
 .eventos_criados a:hover {
@@ -301,8 +313,7 @@ body {
 
 #nome_eventos_criados{
     color: white;
-    padding: 20px;
-    
+    align-items: center;
 }
 
 
@@ -332,7 +343,7 @@ body {
 
 .botoes_criar_evento{
     position: absolute;
-    left: 35%;
+    left: 30%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -346,7 +357,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 150px;
+    margin-right: 100px;
 }
 
 .botoes_criar_evento a:hover {
@@ -454,7 +465,7 @@ body {
 
 .botoes_editar_perfil{
     position: absolute;
-    left: 30%;
+    left: 25%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -468,7 +479,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 150px;
+    margin-right: 100px;
 }
 
 .botoes_editar_perfil a:hover {
@@ -763,4 +774,116 @@ body {
 .excluir_editar_evento input:hover {
     color: blue;
     transition: color 0.5s;
-} 
+}
+
+
+
+
+/* loja.php */
+
+.cabecalho_loja{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background-color: #4e4e4e;
+    border-radius: none;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #50C7F6;
+    top: -45%;
+    justify-content: space-between;
+}
+
+.logo_loja{
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    display: flex;
+}
+
+.botoes_loja{
+    position: absolute;
+    left: 20%;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;  
+}
+
+.botoes_loja a{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 85px;
+}
+
+.botoes_loja a:hover {
+    color: #50C7F6;
+    transition: color 0.5s;
+}
+
+.container_loja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.informacoes_loja{
+    font-size: larger;
+    background-color: #50C7F6;
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: sans-serif;
+}
+
+.caixa_loja{
+    background-color: #616363;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: sans-serif;
+    box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    -moz-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    all: unset;
+}
+
+.caixa_loja a{  
+    color: white;
+    text-decoration: none;  
+}
+
+.caixa_loja a:hover {
+    color: black;
+    transition: color 0.5s;
+}
+
+#nome_usuario_eventos{
+    color: white;
+    padding: 70px;
+    font-size: small;
+}
+
+#nome_loja{
+    color: white;
+    margin-top: 50%;
+}
+
+#nome_nenhum_produto_encontrado{
+    color: white;
+}
+
+
+
+
+
+
+

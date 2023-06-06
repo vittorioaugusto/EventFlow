@@ -41,10 +41,10 @@
         </nav>
 
         <center>
-
         <div class="container_eventos_criados">
-            <div class="eventos_criados">
-                <h1 id="nome_eventos_criados">Eventos Criados</h1>
+        
+            <div class="caixa_eventos_criados">
+            <h1 id="nome_eventos_criados">Eventos Criados</h1>
                 <?php
                 // Consultar os eventos criados pelo usuário
                 $query_eventos_criados = "SELECT * FROM eventos WHERE idusuario = $idusuario";
@@ -52,7 +52,7 @@
 
                 if (mysqli_num_rows($resultado_eventos_criados) > 0) {
                     while ($dados_evento = mysqli_fetch_assoc($resultado_eventos_criados)) {
-                        echo '<a href="info_evento.php?id=' . $dados_evento["idevento"] . '" class="caixa_evento">';
+                        echo '<div class="informacoes_eventos_criados"><a href="info_evento.php?id=' . $dados_evento["idevento"] . '" class="caixa_evento">';
                         echo '<div class="cartao">';
                         echo '<div class="cartao_esquerdo">';
                         echo '<span>' . $dados_evento["nome_evento"] . '</span>';
@@ -60,7 +60,7 @@
                         echo '<h3>' . $dados_evento["descricao"] . '</h3>';
                         echo '</div>';
                         echo '</div>';
-                        echo '</a>';
+                        echo '</a></div>';
                     }
                 } else {
                     echo '<p id="nome_nenhum_evento_encontrado">Nenhum evento encontrado.</p>';

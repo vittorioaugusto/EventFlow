@@ -56,11 +56,8 @@ session_start();
                 </div>
             </div>
 
-            <div class="">
-            <button type="submit">Concluir</button>
-            </div>
-            
-            
+            <button type="submit" name="concluir" value="Concluir">Concluir</button>
+         
         </form>
         
     </div>

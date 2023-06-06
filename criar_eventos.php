@@ -17,6 +17,7 @@
         <nav class="botoes_criar_evento">
             <a href="eventos.php">Eventos</a>
             <a href="eventos_criados.php">Eventos Criados</a>
+            <a href="carrinho.php">Carrinho</a>
             <a href="perfil.php">Perfil</a>
             <a href="login.php">Logout</a>
         </nav>

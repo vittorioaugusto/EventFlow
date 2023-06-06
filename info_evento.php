@@ -53,6 +53,7 @@
                     <a href="eventos.php"><label>Eventos</label></a>
                     <a href="meus_eventos.php"><label>Meus Eventos</label></a>
                 <?php endif; ?>
+                <a href="carrinho.php">Carrinho</a>
                 <a href="perfil.php"><label>Perfil</label></a>
                 <a href="login.php"><label>Logout</label></a>
             </nav>

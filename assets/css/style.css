@@ -153,6 +153,24 @@ body {
     position: relative;
 }
 
+.botao_entrar_login button {
+    background-color: #50C7F6;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+    font-size: larger;
+    width: 70%;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.botao_entrar_login button:hover {
+    background-color: grey;
+    transition: 0.3s;
+}
+
 
 
 
@@ -259,6 +277,25 @@ body {
     margin-top: 10px;
     margin-left: 10px;
 }
+
+.botao_concluir_esqueci_senha button {
+    background-color: #50C7F6;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+    font-size: larger;
+    width: 70%;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.botao_concluir_esqueci_senha button:hover {
+    background-color: grey;
+    transition: 0.3s;
+}
+
 
 
 
