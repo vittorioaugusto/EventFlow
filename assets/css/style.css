@@ -131,6 +131,27 @@ body {
     color: white;
 }
 
+.password-toggle {
+    position: relative;
+}
+
+.password-toggle input[type="password"] {
+    padding-right: 10px; 
+}
+
+.password-toggle .toggle-icon {
+    position: absolute;
+    top: 36%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 24px; /* Defina o tamanho desejado */
+    height: 24px; /* Defina o tamanho desejado */
+}
+
+.senha_olho{
+    position: relative;
+}
 
 
 
@@ -157,12 +178,13 @@ body {
     
 .form_senha {
     padding: 0 40px 20px;
+    align-items: center;
 }
     
 .form_control_senha {
     margin-bottom: 5px;
     padding-bottom: 10px;
-    position: relative;
+    position: relative; 
 }
     
 .form_control_senha input {
@@ -210,7 +232,7 @@ body {
     margin-top: 5px;
     font-size: 15px;   
 }
-    
+   
 .form_senha button {
     background-color: #50C7F6;
     border-radius: 5px;
@@ -237,6 +259,9 @@ body {
     margin-top: 10px;
     margin-left: 10px;
 }
+
+
+
       
 
 @media (max-width: 768px) {

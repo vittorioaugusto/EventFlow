@@ -56,7 +56,6 @@
 
                 <h1 id="todos_os_eventos">Todos os Eventos</h1>
                     <div class="caixa_eventos">
-                        
                         <?php
                             // Consultar os eventos no banco de dados
                             $consulta = "SELECT * FROM eventos";
@@ -66,7 +65,7 @@
                             if (mysqli_num_rows($resultado) > 0) {
                                 // Exibir os eventos
                                 while ($row = mysqli_fetch_assoc($resultado)) {
-                                    echo '<a href="info_evento.php?id=' . $row["idevento"] . '" class="caixa_evento">';
+                                    echo '<div class="informacoes_eventos"><a href="info_evento.php?id=' . $row["idevento"] . '" class="caixa_evento">';
                                     echo '<div class="cartao">';
                                     echo '<div class="cartao_esquerdo">';
                                     echo '<span>' . $row["nome_evento"] . '</span>';
@@ -74,7 +73,7 @@
                                     echo '<h3>' . $row["descricao"] . '</h3>';
                                     echo '</div>';
                                     echo '</div>';
-                                    echo '</a>';
+                                    echo '</a></div>';
                                 }
                             } else {
                                 echo '<p id="nome_nenhum_evento_encontrado">Nenhum evento encontrado.</p>';
@@ -82,8 +81,8 @@
 
                             // Fechar a conexão com o banco de dados
                             mysqli_close($conexao);
-                            ?>   
-                        
+                            ?>
+                           
                     </div>
                 </center> 
             </div>

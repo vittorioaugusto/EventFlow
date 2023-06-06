@@ -70,13 +70,21 @@ body {
     height: 100vh;
 }
 
-.caixa_eventos{
+.informacoes_eventos{
     font-size: larger;
+    background-color: #50C7F6;
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: sans-serif;
+}
+
+.caixa_eventos{
     background-color: #616363;
-    padding: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     display: inline-block;
-    padding: 20px 70px;
+    padding: 20px;
     border-radius: 5px;
     font-size: 20px;
     font-family: sans-serif;
@@ -88,7 +96,7 @@ body {
 
 .caixa_eventos a{  
     color: white;
-    text-decoration: none;
+    text-decoration: none;  
 }
 
 .caixa_eventos a:hover {

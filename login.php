@@ -36,14 +36,20 @@ session_start();
 
             </div>
 
-            <div class="form_control_login">
-
+            <div class="form_control_login password-toggle">   
+            <div class="senha_olho"> 
                 <input type="password" id="password" placeholder="Senha" name="senha" required>
+                
+                <span class="toggle-icon" onclick="togglePasswordVisibility()">
+                    <img src="assets/imagens/mostrar_senha.png" alt="Mostrar Senha" id="password-toggle-icon">
+                </span>
+                
+                
                 <i class="img-success" ><img src="assets/imagens/success-icon.svg" alt=""></i>
                 <i class="img-error" ><img src="assets/imagens/error-icon.svg" alt=""></i>
 
                 <small>Error Message</small>
-
+                </div>
             </div>
 
             <button type="submit" name="enviar" value="Entrar">Entrar</button>
