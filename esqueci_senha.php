@@ -56,8 +56,9 @@ session_start();
                 </div>
             </div>
 
+            <form action="nova_senha.php">
             <button type="submit" name="concluir" value="Concluir">Concluir</button>
-         
+            </form>
         </form>
         
     </div>
@@ -65,5 +66,4 @@ session_start();
     <script src="assets/js/index.js"></script>
     
 </body>
-</html>                                 
-
+</html>                                
