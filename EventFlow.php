@@ -25,11 +25,12 @@
             <img width="820" height="400" src="assets/imagens/evento_1.jpeg" alt="Imagem do Evento">
             <!-- width="1363" height="450" -->
         </div>
+        <h1 id="todos_os_eventos">Todos os Eventos:</h1>
         </center>
         
         <div class="container_eventflow">
-            <div class="caixa_eventflow">
-            <h1 id="todos_os_eventos">Todos os Eventos:</h1>
+            
+            
 
             <?php
             // Incluir o arquivo de conexão com o banco de dados
@@ -44,6 +45,7 @@
                 // Exibir os eventos
                 while ($row = mysqli_fetch_assoc($resultado)) {
                     // Obter a data de início e fim do evento
+                    echo '<div class="caixa_eventos">';
                     $dataInicio = date("d/m", strtotime($row["data_inicio_evento"]));
                     $dataFim = date("d/m", strtotime($row["data_final_evento"]));
                     echo '<div class="cartao">';
@@ -53,7 +55,7 @@
                     echo '<h3>' . $row["palavra_chave"] . '</h3>';
                     echo '</div>';
                     echo '</div>';
-                    echo '</a>';
+                    echo '</a></div>';
                 }
             } else {
                 echo '<p id="nome_nenhum_evento_encontrado">Nenhum evento encontrado.</p>';
@@ -62,7 +64,7 @@
             // Fechar a conexão com o banco de dados
             mysqli_close($conexao);
             ?>   
-            </div>
+            
             
 
         </div>

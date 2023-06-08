@@ -49,13 +49,15 @@
                 <?php } ?>
             </nav>
             
-            <div class="container_eventos_2">
-            <center>
-                <div id="nome_usuario_eventos">
+                <center>
+                <div class="nome_usuario_eventos">
                     <h1>Bem-vindo(a) ao EventFlow, <?php echo $nome_usuario; ?>!</h1> 
                 </div>
-                <h1 id="todos_os_eventos">Todos os Eventos</h1> 
-                
+                <h1 id="todos_os_eventos">Todos os Eventos</h1>
+                </center>
+
+            <div class="container_eventos_2">
+           
                         <?php
                             // Consultar os eventos no banco de dados
                             $consulta = "SELECT * FROM eventos";
@@ -85,7 +87,7 @@
                             // Fechar a conexão com o banco de dados
                             mysqli_close($conexao);
                             ?>
-                        </center>    
+                         
                 
             </div>
     </div>

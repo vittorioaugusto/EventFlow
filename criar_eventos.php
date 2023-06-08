@@ -68,56 +68,56 @@
                     </div>
                 </form>
 
-                <?php
-            // Verificar se o usuário está logado e é um usuário empresarial
-            session_start();
-            if (!isset($_SESSION['idusuario'])) {
-                header("location: login.php");
-                exit();
-            }
+                            <?php
+                // Verificar se o usuário está logado e é um usuário empresarial
+                session_start();
+                if (!isset($_SESSION['idusuario'])) {
+                    header("location: login.php");
+                    exit();
+                }
 
-            $idusuario = $_SESSION['idusuario'];
-            require_once "conexao.php";
+                $idusuario = $_SESSION['idusuario'];
+                require_once "conexao.php";
 
-            $query_usuario = "SELECT tipo_user FROM usuario WHERE idusuario = $idusuario";
-            $resultado_usuario = mysqli_query($conexao, $query_usuario);
-            $row_usuario = mysqli_fetch_assoc($resultado_usuario);
-            $tipo_usuario = $row_usuario['tipo_user'];
+                $query_usuario = "SELECT tipo_user FROM usuario WHERE idusuario = $idusuario";
+                $resultado_usuario = mysqli_query($conexao, $query_usuario);
+                $row_usuario = mysqli_fetch_assoc($resultado_usuario);
+                $tipo_usuario = $row_usuario['tipo_user'];
 
-            if ($tipo_usuario != 2) {
-                echo "Acesso negado. Esta página é restrita para usuários empresariais.";
-                exit();
-            }
+                if ($tipo_usuario != 2) {
+                    echo "Acesso negado. Esta página é restrita para usuários empresariais.";
+                    exit();
+                }
 
-            // Verificar se o formulário foi submetido
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                // Obter os dados do formulário
-                $nome_evento = $_POST['nome_evento'];
-                $endereco = $_POST['endereco'];
-                $palavra_chave = $_POST['palavra_chave'];
-                $descricao = $_POST['descricao'];
-                $data_inicio_evento = $_POST['data_inicio_evento'];
-                $data_final_evento = $_POST['data_final_evento'];
-                $horario_inicial = $_POST['horario_inicial'];
-                $horario_final = $_POST['horario_final'];
-                $quantidade_ingressos = $_POST['quantidade_ingressos'];
-                $preco_inteira = number_format($_POST['preco_inteira'], 2, '.', '');
-                $quantidade_ingressos_estudante = $_POST['quantidade_ingressos_estudante'];
+                // Verificar se o formulário foi submetido
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    // Obter os dados do formulário
+                    $nome_evento = $_POST['nome_evento'];
+                    $endereco = $_POST['endereco'];
+                    $palavra_chave = $_POST['palavra_chave'];
+                    $descricao = $_POST['descricao'];
+                    $data_inicio_evento = $_POST['data_inicio_evento'];
+                    $data_final_evento = $_POST['data_final_evento'];
+                    $horario_inicial = $_POST['horario_inicial'];
+                    $horario_final = $_POST['horario_final'];
+                    $quantidade_ingressos = $_POST['quantidade_ingressos'];
+                    $preco_inteira = number_format($_POST['preco_inteira'], 2, '.', '');
+                    $quantidade_ingressos_estudante = $_POST['quantidade_ingressos_estudante'];
 
-                // Inserir o evento no banco de dados
-                $inserir_evento = "INSERT INTO eventos (nome_evento, endereco, descricao, data_inicio_evento, data_final_evento, horario_inicial, horario_final, idusuario) VALUES ('$nome_evento', '$endereco', '$descricao', '$data_inicio_evento', '$data_final_evento', '$horario_inicial', '$horario_final', $idusuario)";
+                    // Inserir o evento no banco de dados
+                    $inserir_evento = "INSERT INTO eventos (nome_evento, endereco, palavra_chave, descricao, data_inicio_evento, data_final_evento, horario_inicial, horario_final, idusuario) VALUES ('$nome_evento', '$endereco', '$palavra_chave', '$descricao', '$data_inicio_evento', '$data_final_evento', '$horario_inicial', '$horario_final', $idusuario)";
 
-                if (mysqli_query($conexao, $inserir_evento)) {
-                    $id_evento = mysqli_insert_id($conexao);
+                    if (mysqli_query($conexao, $inserir_evento)) {
+                        $id_evento = mysqli_insert_id($conexao);
 
-                    // Inserir os ingressos disponíveis
-                    $inserir_ingressos = "INSERT INTO ingresso (quantidade, valor, id_tipoingresso, idevento) VALUES ($quantidade_ingressos, $preco_inteira, 1, $id_evento)";
-                    mysqli_query($conexao, $inserir_ingressos);
+                        // Inserir os ingressos disponíveis
+                        $inserir_ingressos = "INSERT INTO ingresso (quantidade, valor, id_tipoingresso, idevento) VALUES ($quantidade_ingressos, $preco_inteira, 1, $id_evento)";
+                        mysqli_query($conexao, $inserir_ingressos);
 
-                    // Calcular e inserir o preço e a quantidade de ingressos da entrada estudante
-                    $preco_estudante = $preco_inteira * 0.5;
-                    $inserir_ingresso_estudante = "INSERT INTO ingresso (quantidade, valor, id_tipoingresso, idevento) VALUES ($quantidade_ingressos_estudante, $preco_estudante, 2, $id_evento)";
-                    mysqli_query($conexao, $inserir_ingresso_estudante);
+            // Calcular e inserir o preço e a quantidade de ingressos da entrada estudante
+            $preco_estudante = $preco_inteira * 0.5;
+            $inserir_ingresso_estudante = "INSERT INTO ingresso (quantidade, valor, id_tipoingresso, idevento) VALUES ($quantidade_ingressos_estudante, $preco_estudante, 2, $id_evento)";
+            mysqli_query($conexao, $inserir_ingresso_estudante);
 
                     echo '<p id="nome_evento_criado">Evento criado com sucesso.</p>';
                     
