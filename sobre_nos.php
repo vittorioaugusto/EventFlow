@@ -27,7 +27,7 @@
                     <h1>Sobre Nós:</h1>
                     <p>EventFlow é um site dedicado à divulgação e gerenciamento de eventos de forma prática e eficiente. Nossa plataforma oferece a oportunidade de criar e participar de diversos tipos de eventos, proporcionando uma experiência única para os usuários.</p>
                     <p>Estamos comprometidos em fornecer uma interface intuitiva e funcional, facilitando a interação entre organizadores de eventos e participantes. Nosso objetivo é criar uma comunidade envolvida e entusiasmada com a diversidade de eventos disponíveis.</p>
-                    <h2>Entre em contato conosco:</h2>
+                    <h2 id="nome_contato">Entre em contato conosco:</h2>
                     <ul>
                         <li>
                             Kevin Souza: <a href="mailto:kevin.lucas284sz@gmail.com">kevin.lucas284sz@gmail.com</a>

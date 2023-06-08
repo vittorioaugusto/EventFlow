@@ -337,6 +337,11 @@ body {
 
 .dados_sobre_nos{
     padding: 10px;
+    position: relative;
+}
+
+.dados_sobre_nos li{
+    padding: 5px;
 }
 
 .conteudo_sobre_nos{
@@ -358,6 +363,10 @@ body {
 .conteudo_sobre_nos a:hover {
     color: blue;
     transition: color 0.5s;
+}
+
+#nome_contato{
+    font-size: 26px;
 }
 
 
