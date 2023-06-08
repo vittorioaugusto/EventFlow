@@ -92,3 +92,5 @@ INSERT INTO tipo_usuario (id_funcao, descricao) VALUES (2, 'cadastro Empresarial
 
 INSERT INTO tipo_ingresso (id_tipoingresso, descricao) VALUES (1, 'entrada inteira');
 INSERT INTO tipo_ingresso (id_tipoingresso, descricao) VALUES (2, 'entrada estudante');
+
+drop database eventflow;

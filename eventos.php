@@ -52,12 +52,10 @@
             <div class="container_eventos_2">
             <center>
                 <div id="nome_usuario_eventos">
-                    <h1>Bem-vindo(a) ao EventFlow, <?php echo $nome_usuario; ?>!</h1>  
+                    <h1>Bem-vindo(a) ao EventFlow, <?php echo $nome_usuario; ?>!</h1> 
                 </div>
-
-                <h1 id="todos_os_eventos">Todos os Eventos</h1>
-                    <div class="caixa_eventos">
-                    
+                <h1 id="todos_os_eventos">Todos os Eventos</h1> 
+                
                         <?php
                             // Consultar os eventos no banco de dados
                             $consulta = "SELECT * FROM eventos";
@@ -68,7 +66,7 @@
                                 // Exibir os eventos
                                 while ($row = mysqli_fetch_assoc($resultado)) {
                                     // Obter a data de início e fim do evento
-                                    echo '<div class="informacoes_eventos"><a href="info_evento.php?id=' . $row["idevento"] . '" class="caixa_evento">';
+                                    echo '<div class="caixa_eventos"><a href="info_evento.php?id=' . $row["idevento"] . '" class="caixa_evento">';
                                     $dataInicio = date("d/m", strtotime($row["data_inicio_evento"]));
                                     $dataFim = date("d/m", strtotime($row["data_final_evento"]));
                                     echo '<div class="cartao">';
@@ -87,9 +85,8 @@
                             // Fechar a conexão com o banco de dados
                             mysqli_close($conexao);
                             ?>
-                           
-                    </div>
-                </center> 
+                        </center>    
+                
             </div>
     </div>
    

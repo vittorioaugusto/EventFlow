@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho</title>
+    <link rel="stylesheet" href="assets/css/style2.css">
 </head>
 <body>
     <div class="cabecalho_carrinho">
@@ -32,16 +33,15 @@
         $tipo_usuario = $row_usuario['tipo_user'];
         ?>
 
-
         <nav class="botoes_carrinho">
             <?php if ($tipo_usuario == 1): ?>
-                <a href="eventos.php"><label>eventos</label></a>
+                <a href="eventos.php"><label>Eventos</label></a>
                 <a href="meus_eventos.php"><label>Meus Eventos</label></a>
                 <a href="carrinho.php"><label>Carrinho</label></a>
                 <a href="perfil.php"><label>Perfil</label></a>
                 <a href="login.php"><label>Logout</label></a>
             <?php elseif ($tipo_usuario == 2): ?>
-                <a href="eventos.php"><label>eventos</label></a>
+                <a href="eventos.php"><label>Eventos</label></a>
                 <a href="perfil.php"><label>Perfil</label></a>
                 <a href="eventos_criados.php"><label>Eventos Criados</label></a>
                 <a href="criar_eventos.php"><label>Criar Evento</label></a>
@@ -49,19 +49,19 @@
             <?php endif; ?>
         </nav>
 
-        <div class="nome_usuario">
-            <h2>Bem-vindo(a), <?php echo $nome_usuario; ?>!</h2>
+        <center>
+        <div class="container_carrinho">
+            <div class="conteudo_carrinho">
+                <?php if (empty($_SESSION['carrinho'])) : ?>
+                    <p>O carrinho está vazio.</p>
+                <?php else : ?>
+                    <?php foreach ($_SESSION['carrinho'] as $item) : ?>
+                        <p>ID do ingresso: <?php echo $item['id_ingresso']; ?>, Quantidade: <?php echo $item['quantidade']; ?></p>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </div>
         </div>
-    </div>
-
-    <div class="conteudo">
-        <?php if (empty($_SESSION['carrinho'])) : ?>
-            <p>O carrinho está vazio.</p>
-        <?php else : ?>
-            <?php foreach ($_SESSION['carrinho'] as $item) : ?>
-                <p>ID do ingresso: <?php echo $item['id_ingresso']; ?>, Quantidade: <?php echo $item['quantidade']; ?></p>
-            <?php endforeach; ?>
-        <?php endif; ?>
+        </center>
     </div>
 </body>
 </html>

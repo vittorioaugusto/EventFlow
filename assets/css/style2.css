@@ -71,27 +71,18 @@ body {
     height: 100vh;
 }
 
-.informacoes_eventos{
-    font-size: larger;
-    background-color: #50C7F6;
-    width: 50%;
-    height: 50%;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
 .caixa_eventos{
+    border-radius: 10px;
+    margin-top: 10px;
     background-color: #616363;
     border-radius: 10px;
-    display: inline-block;
-    padding: 20px;
+    width: 50%;
+    padding: 10px;
     border-radius: 5px;
-    font-size: 20px;
-    font-family: sans-serif;
+    font-size: large;
     box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
     -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
     -moz-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
-    all: unset;
 }
 
 .caixa_eventos a{  
@@ -151,8 +142,7 @@ body {
     display: flex;
     align-items: center;
     height: 100%;
-    font-size: 20px;
-    
+    font-size: 20px;  
 }
 
 .botoes_perfil a{
@@ -187,11 +177,10 @@ body {
 
 #nome_informacoes_do_perfil{
     padding: 10px;
-    
 }
 
 .dados_perfil{
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 .editar_informações{
@@ -366,9 +355,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     position: relative;
-    top: 140%; 
+    top: 130%; 
 }
 
 .caixa_criar_eventos{
@@ -848,6 +837,108 @@ body {
     border-radius: 5px;
     margin-top: 10px;
     font-family: sans-serif;
+}
+
+.caixa_loja{
+    background-color: #616363;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: sans-serif;
+    box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    -moz-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    all: unset;
+}
+
+.caixa_loja a{  
+    color: white;
+    text-decoration: none;  
+}
+
+.caixa_loja a:hover {
+    color: black;
+    transition: color 0.5s;
+}
+
+#nome_usuario_eventos{
+    color: white;
+    padding: 70px;
+    font-size: small;
+}
+
+#nome_loja{
+    color: white;
+    margin-top: 50%;
+}
+
+#nome_nenhum_produto_encontrado{
+    color: white;
+}
+
+
+
+
+/* carrinho.php */
+
+.cabecalho_carrinho{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background-color: #4e4e4e;
+    border-radius: none;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #50C7F6;
+    top: -45%;
+    justify-content: space-between;
+}
+
+.logo_carrinho{
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    display: flex;
+}
+
+.botoes_carrinho{
+    position: absolute;
+    left: 25%;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;  
+}
+
+.botoes_carrinho a{
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 100px;
+}
+
+.botoes_carrinho a:hover {
+    color: #50C7F6;
+    transition: color 0.5s;
+}
+
+.container_carrinho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.conteudo_carrinho{
+    font-size: larger;
+    background-color: #50C7F6;
+    width: 25%;
+    height: 20%;
+    border-radius: 5px;
 }
 
 .caixa_loja{

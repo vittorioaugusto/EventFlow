@@ -34,6 +34,9 @@
                         <label for="endereco">Endereço:</label>
                         <input type="text" id="endereco" name="endereco" required><br>
 
+                        <label for="palavra_chave">Palavra-chave:</label>
+                        <input type="text" id="palavra_chave" name="palavra_chave" required><br>
+
                         <label for="descricao">Descrição:</label>
                         <textarea id="descricao" name="descricao" required style="resize: none"></textarea><br>
 
@@ -91,6 +94,7 @@
                 // Obter os dados do formulário
                 $nome_evento = $_POST['nome_evento'];
                 $endereco = $_POST['endereco'];
+                $palavra_chave = $_POST['palavra_chave'];
                 $descricao = $_POST['descricao'];
                 $data_inicio_evento = $_POST['data_inicio_evento'];
                 $data_final_evento = $_POST['data_final_evento'];

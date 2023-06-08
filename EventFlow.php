@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="cabecalho_eventflow">
-    <h2 id="nome_eventflow">Bem-vindo(a) ao EventFlow!</h2>
+        <h2 id="nome_eventflow">Bem-vindo(a) ao EventFlow!</h2>
         <nav class="botoes_eventflow">
             <a href="login.php"><label>Login</label></a>
             <a href="tipo_de_usuario.php"><label>Cadastro</label></a>

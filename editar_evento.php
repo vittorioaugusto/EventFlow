@@ -157,14 +157,11 @@
                             
                         <div class="atualizar_editar_evento">
                             <button type="submit" value="Atualizar">Atualizar</button>
+                            <?php
+                            echo '<button value="voltar">Voltar</a></button>';
+                            ?> 
                         </div>
                         
-                    </form>
-
-                    <form method="POST">
-                        <div class="excluir_editar_evento">
-                            <input type="submit" value="Excluir" onclick="return confirm('Tem certeza de que deseja excluir este evento?'); ">
-                        </div>
                     </form>
                     
                 </div>
