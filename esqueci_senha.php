@@ -43,7 +43,7 @@ session_start();
 
             <div class="form_control_senha password-toggle">
                 <div class="senha_olho"> 
-                    <input type="password" id="password" placeholder="Senha" name="senha" required>
+                    <input type="password" id="password" placeholder="Senha" name="nova_senha" required>
                     
                     <span class="toggle-icon" onclick="togglePasswordVisibility()">
                         <img src="assets/imagens/mostrar_senha.png" alt="Mostrar Senha" id="password-toggle-icon">
@@ -56,9 +56,8 @@ session_start();
                 </div>
             </div>
 
-            <form action="nova_senha.php">
             <button type="submit" name="concluir" value="Concluir">Concluir</button>
-            </form>
+           
         </form>
         
     </div>

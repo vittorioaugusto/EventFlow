@@ -37,14 +37,14 @@
             <a href="eventos.php"><label>Eventos</label></a>
             <a href="criar_eventos.php"><label>Criar Evento</label></a>
             <a href="perfil.php"><label>Perfil</label></a>
-            <a href="login.php"><label>Logout</label></a>
+            <a href="EventFlow.php"><label>Logout</label></a>
         </nav>
 
         <center>
         <div class="container_eventos_criados">
         
             <div class="caixa_eventos_criados">
-            <h1 id="nome_eventos_criados">Eventos Criados</h1>
+            <h1 id="nome_eventos_criados">Eventos Criados:</h1>
                 <?php
                 // Consultar os eventos criados pelo usuário
                 $query_eventos_criados = "SELECT * FROM eventos WHERE idusuario = $idusuario";

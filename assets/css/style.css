@@ -20,6 +20,118 @@ body {
 
 
 
+
+/* EventFlow.php */
+
+.cabecalho_eventflow{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background-color: #4e4e4e;
+    border-radius: none;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #50C7F6;
+    top: -45%;
+    justify-content: space-between;
+}
+
+.logo_eventflow{
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    display: flex;
+}
+
+.botoes_eventflow{
+    position: absolute;
+    left: 55%;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;  
+}
+
+.botoes_eventflow a{
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 120px;
+}
+
+.botoes_eventflow a:hover {
+    color: #50C7F6;
+    transition: color 0.5s;
+}
+
+#nome_eventflow{
+    color: white;
+    font-size: x-large;
+    position: relative;
+    left: 20%;
+    margin-top: 10px;
+}
+
+.imagem_evento{
+   position: relative;
+   margin-top: 60px;
+   border-bottom: 2px solid #50C7F6;
+}
+
+.container_eventflow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.informacoes_eventos{
+    font-size: larger;
+    background-color: #50C7F6;
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: sans-serif;
+}
+
+.caixa_eventos{
+    background-color: #616363;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: sans-serif;
+    box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    -moz-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+    all: unset;
+}
+
+.caixa_eventos a{  
+    color: white;
+    text-decoration: none;  
+}
+
+.caixa_eventos a:hover {
+    color: black;
+    transition: color 0.5s;
+}
+
+#todos_os_eventos{
+    color: white;
+}
+
+#nome_nenhum_evento_encontrado{
+    color: white;
+}
+
+
+
+
 /* login.php */
 
 .container_login {
@@ -169,6 +281,92 @@ body {
 .botao_entrar_login button:hover {
     background-color: grey;
     transition: 0.3s;
+}
+
+
+
+
+/* sobre_nos.php */
+
+.cabecalho_sobre_nos{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background-color: #4e4e4e;
+    border-radius: none;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #50C7F6;
+    top: -45%;
+    justify-content: space-between;
+}
+
+.logo_sobre_nos{
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    display: flex;
+}
+
+.botoes_sobre_nos{
+    position: absolute;
+    left: 60%;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;  
+}
+
+.botoes_sobre_nos a{
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 100px;
+}
+
+.botoes_sobre_nos a:hover {
+    color: #50C7F6;
+    transition: color 0.5s;
+}
+
+#nome_eventflow{
+    color: white;
+    font-size: x-large;
+    position: absolute;
+}
+
+.container_sobre_nos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.dados_sobre_nos{
+    padding: 10px;
+}
+
+.conteudo_sobre_nos{
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: medium;
+    position: relative;
+    margin-top: 100px;
+}
+
+.conteudo_sobre_nos a{  
+    color: #50C7F6;
+    text-decoration: none;  
+}
+
+.conteudo_sobre_nos a:hover {
+    color: blue;
+    transition: color 0.5s;
 }
 
 

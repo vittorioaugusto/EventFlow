@@ -13,12 +13,12 @@ session_start();
     
 </head>
 <body>
-    
     <div class="container_login">
         <center>
             <div class="logo_login">
-                <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+                <a href="EventFlow.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow"></a>
             </div>
+
             <div class="nome_login">
                 <h2>Login</h2>
             </div>
@@ -59,7 +59,7 @@ session_start();
                         echo '<p class="erro">' . $_SESSION['login_erro'] . '</p>';
                         unset($_SESSION['login_erro']);
                     }
-                    echo '<a href="esqueci_senha.php"><h2>Esqueci a senha</h2></a>';
+                    echo '<a href="esqueci_senha.php"><h2>Esqueci a Senha</h2></a>';
                     echo '<a href="tipo_de_usuario.php"><h2>Criar Conta</h2></a>';
                 ?>
             </div>

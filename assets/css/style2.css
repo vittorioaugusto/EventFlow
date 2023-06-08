@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Poppins;
 }
 
 
@@ -52,7 +54,6 @@ body {
 
 .botoes_eventos a{
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
     margin-right: 100px;
@@ -77,7 +78,6 @@ body {
     height: 50%;
     border-radius: 5px;
     margin-top: 10px;
-    font-family: sans-serif;
 }
 
 .caixa_eventos{
@@ -96,7 +96,7 @@ body {
 
 .caixa_eventos a{  
     color: white;
-    text-decoration: none;  
+    text-decoration: none;
 }
 
 .caixa_eventos a:hover {
@@ -145,7 +145,7 @@ body {
 
 .botoes_perfil{
     position: absolute;
-    left: 25%;
+    left: 20%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -157,10 +157,9 @@ body {
 
 .botoes_perfil a{
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 100px;
+    margin-right: 110px;
 }
 
 .botoes_perfil a:hover {
@@ -243,7 +242,7 @@ body {
 
 .botoes_eventos_criados{
     position: absolute;
-    left: 30%;
+    left: 45%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -254,10 +253,9 @@ body {
 
 .botoes_eventos_criados a{
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 150px;
+    margin-right: 100px;
 }
 
 .botoes_eventos_criados a:hover {
@@ -343,7 +341,7 @@ body {
 
 .botoes_criar_evento{
     position: absolute;
-    left: 30%;
+    left: 25%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -354,7 +352,6 @@ body {
 
 .botoes_criar_evento a{
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
     margin-right: 100px;
@@ -369,7 +366,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 85vh;
+    height: 90vh;
     position: relative;
     top: 140%; 
 }
@@ -393,6 +390,10 @@ body {
     padding: 0.8rem;
     border: none;
 }
+
+.informacoes_criar_eventos {
+    text-align: start;
+ }
 
 #nome_criar_evento{
     padding: 5px;
@@ -465,7 +466,7 @@ body {
 
 .botoes_editar_perfil{
     position: absolute;
-    left: 25%;
+    left: 20%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -476,10 +477,9 @@ body {
 
 .botoes_editar_perfil a{
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 100px;
+    margin-right: 110px;
 }
 
 .botoes_editar_perfil a:hover {
@@ -569,7 +569,7 @@ body {
 
 .botoes_info_evento{
     position: absolute;
-    left: 30%;
+    left: 25%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -580,10 +580,9 @@ body {
 
 .botoes_info_evento a{
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 150px;
+    margin-right: 100px;
 }
 
 .botoes_info_evento a:hover {
@@ -597,10 +596,11 @@ body {
     align-items: center;
     height: 90vh;
     position: relative;
-    margin-top: 140px;
+    margin-top: 120px;
 }
 
 .caixa_info_evento{
+    width: 50%;
     color: white;
     font-size: large;
     background-color: #4A4A4A;
@@ -609,6 +609,10 @@ body {
     box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
     -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
     -moz-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+}
+
+.caixa_info_evento_2{
+     font-size: large;
 }
 
 .botoes_caixa_info_evento{
@@ -658,6 +662,8 @@ body {
 
 
 
+
+
 /* editar_evento.php */
 
 .cabecalho_editar_evento{
@@ -682,7 +688,7 @@ body {
 
 .botoes_editar_evento{
     position: absolute;
-    left: 35%;
+    left: 25%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -693,10 +699,9 @@ body {
 
 .botoes_editar_evento a{
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 150px;
+    margin-right: 110px;
 }
 
 .botoes_editar_evento a:hover {
@@ -710,7 +715,7 @@ body {
     align-items: center;
     height: 100vh;
     position: relative;
-    margin-top: 100px;
+    margin-top: 120px;
 }
 
 .caixa_editar_evento{
@@ -732,6 +737,10 @@ body {
     padding: 0.8rem;
     border: none;
 }
+
+.informacoes_editar_evento {
+    text-align: start;
+ }
 
 .atualizar_editar_evento{
     text-align: center;
@@ -814,7 +823,6 @@ body {
 
 .botoes_loja a{
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
     margin-right: 85px;
@@ -880,10 +888,3 @@ body {
 #nome_nenhum_produto_encontrado{
     color: white;
 }
-
-
-
-
-
-
-

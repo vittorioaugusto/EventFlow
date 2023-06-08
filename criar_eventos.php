@@ -19,7 +19,7 @@
             <a href="eventos_criados.php">Eventos Criados</a>
             <a href="carrinho.php">Carrinho</a>
             <a href="perfil.php">Perfil</a>
-            <a href="login.php">Logout</a>
+            <a href="EventFlow.php">Logout</a>
         </nav>
   
         <div class="cabecalho_criar_eventos_2">
@@ -35,7 +35,7 @@
                         <input type="text" id="endereco" name="endereco" required><br>
 
                         <label for="descricao">Descrição:</label>
-                        <textarea id="descricao" name="descricao" required></textarea><br>
+                        <textarea id="descricao" name="descricao" required style="resize: none"></textarea><br>
 
                         <label for="data_inicio_evento">Data de Início do Evento:</label>
                         <input type="date" id="data_inicio_evento" name="data_inicio_evento" required><br>

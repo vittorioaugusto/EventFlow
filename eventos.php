@@ -39,13 +39,13 @@
                     <a href="perfil.php"><label>Perfil</label></a>
                     <a href="meus_eventos.php"><label>Meus Eventos</label></a>
                     <a href="carrinho.php"><label>Carrinho</label></a>
-                    <a href="login.php"><label>Logout</label></a>
+                    <a href="EventFlow.php"><label>Logout</label></a>
                 <?php } elseif ($tipo_usuario == 2) { ?>
                     <a href="perfil.php"><label>Perfil</label></a>
                     <a href="eventos_criados.php"><label>Eventos Criados</label></a>
                     <a href="criar_eventos.php"><label>Criar Evento</label></a>
                     <a href="carrinho.php">Carrinho</a>
-                    <a href="login.php"><label>Logout</label></a>
+                    <a href="EventFlow.php"><label>Logout</label></a>
                 <?php } ?>
             </nav>
             
@@ -57,6 +57,7 @@
 
                 <h1 id="todos_os_eventos">Todos os Eventos</h1>
                     <div class="caixa_eventos">
+                    
                         <?php
                             // Consultar os eventos no banco de dados
                             $consulta = "SELECT * FROM eventos";
@@ -66,12 +67,15 @@
                             if (mysqli_num_rows($resultado) > 0) {
                                 // Exibir os eventos
                                 while ($row = mysqli_fetch_assoc($resultado)) {
+                                    // Obter a data de início e fim do evento
                                     echo '<div class="informacoes_eventos"><a href="info_evento.php?id=' . $row["idevento"] . '" class="caixa_evento">';
+                                    $dataInicio = date("d/m", strtotime($row["data_inicio_evento"]));
+                                    $dataFim = date("d/m", strtotime($row["data_final_evento"]));
                                     echo '<div class="cartao">';
                                     echo '<div class="cartao_esquerdo">';
-                                    echo '<span>' . $row["nome_evento"] . '</span>';
+                                    echo '<span>' . $dataInicio . ' - ' . $dataFim . '</span>';
                                     echo '<h1>' . $row["nome_evento"] . '</h1>';
-                                    echo '<h3>' . $row["descricao"] . '</h3>';
+                                    echo '<h3>' . $row["palavra_chave"] . '</h3>';
                                     echo '</div>';
                                     echo '</div>';
                                     echo '</a></div>';
@@ -87,7 +91,6 @@
                     </div>
                 </center> 
             </div>
-                   
     </div>
    
 </body>
