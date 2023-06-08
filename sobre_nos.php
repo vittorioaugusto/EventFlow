@@ -51,11 +51,11 @@
                             GitHub: <a href="https://github.com/github3" target="_blank">GitHub</a>
                         </li>
                         <li>
-                            Vittorio Augusto: <a href="mailto:email4@gmail.com">email4@gmail.com</a>
+                            Vittorio Augusto: <a href="mailto:email4@gmail.com">vi.aborges47@gmail.com</a>
                             <br>
-                            LinkedIn: <a href="https://www.linkedin.com/in/linkedin4" target="_blank">Perfil LinkedIn</a>
+                            LinkedIn: <a href="https://www.linkedin.com/in/vittorio-augusto/" target="_blank">Perfil LinkedIn</a>
                             <br>
-                            GitHub: <a href="https://github.com/github4" target="_blank">GitHub</a>
+                            GitHub: <a href="https://github.com/vittorioaugusto" target="_blank">GitHub</a>
                         </li>
                     </ul>
                 </div> 
