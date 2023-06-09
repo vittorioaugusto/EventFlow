@@ -1,67 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho</title>
     <link rel="stylesheet" href="assets/css/style2.css">
 </head>
 <body>
     <div class="cabecalho_carrinho">
+
         <div class="logo_carrinho">
             <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
         </div>
 
-        <?php
-        // Incluir o arquivo de conexão com o banco de dados
-        require_once "conexao.php";
-
-        // Verificar se o usuário está logado
-        session_start();
-        if (!isset($_SESSION['idusuario'])) {
-            header("location: login.php");
-            exit();
-        }
-
-        // Obter informações do usuário logado
-        $idusuario = $_SESSION['idusuario'];
-        $query_usuario = "SELECT nome, tipo_user FROM usuario WHERE idusuario = $idusuario";
-        $resultado_usuario = mysqli_query($conexao, $query_usuario);
-        $row_usuario = mysqli_fetch_assoc($resultado_usuario);
-        $nome_usuario = $row_usuario['nome'];
-        $tipo_usuario = $row_usuario['tipo_user'];
-        ?>
-
-        <nav class="botoes_carrinho">
-            <?php if ($tipo_usuario == 1): ?>
+            <nav class="botoes_carrinho">
                 <a href="eventos.php"><label>Eventos</label></a>
                 <a href="meus_eventos.php"><label>Meus Eventos</label></a>
                 <a href="carrinho.php"><label>Carrinho</label></a>
                 <a href="perfil.php"><label>Perfil</label></a>
                 <a href="login.php"><label>Logout</label></a>
-            <?php elseif ($tipo_usuario == 2): ?>
-                <a href="eventos.php"><label>Eventos</label></a>
-                <a href="perfil.php"><label>Perfil</label></a>
-                <a href="eventos_criados.php"><label>Eventos Criados</label></a>
-                <a href="criar_eventos.php"><label>Criar Evento</label></a>
-                <a href="login.php"><label>Logout</label></a>
-            <?php endif; ?>
-        </nav>
+            </nav>
 
-        <center>
-        <div class="container_carrinho">
-            <div class="conteudo_carrinho">
-                <?php if (empty($_SESSION['carrinho'])) : ?>
-                    <p>O carrinho está vazio.</p>
-                <?php else : ?>
-                    <?php foreach ($_SESSION['carrinho'] as $item) : ?>
-                        <p>ID do ingresso: <?php echo $item['id_ingresso']; ?>, Quantidade: <?php echo $item['quantidade']; ?></p>
-                    <?php endforeach; ?>
-                <?php endif; ?>
+            <center>
+            <div class="nome_carrinho">
+            <h1>Carrinho</h1>
             </div>
-        </div>
-        </center>
+            </center>
+            
+            
+            <?php
+            session_start();
+
+            // Incluir o arquivo de conexão com o banco de dados
+            include 'conexao.php';
+
+            // Armazenar o ID do carrinho em uma variável de sessão
+            $_SESSION['idcarrinho'] = mysqli_insert_id($conexao);
+
+            // Verificar se foi enviado o ID do item da loja
+            if (isset($_POST['iditem_loja'])) {
+                // Obter o ID do item da loja selecionado
+                $iditem_loja = $_POST['iditem_loja'];
+
+                // Verificar se o carrinho já existe para o usuário
+                $query_verificar_carrinho = "SELECT * FROM carrinho WHERE idusuario = 1"; 
+                // Substitua o valor 1 pelo ID do usuário atual
+                $result_verificar_carrinho = mysqli_query($conexao, $query_verificar_carrinho);
+
+                if (mysqli_num_rows($result_verificar_carrinho) > 0) {
+                    // Carrinho já existe, obter o ID do carrinho
+                    $row_carrinho = mysqli_fetch_assoc($result_verificar_carrinho);
+                    $idcarrinho = $row_carrinho['idcarrinho'];
+                } else {
+                    // Carrinho não existe, criar um novo carrinho
+                    $query_criar_carrinho = "INSERT INTO carrinho (idusuario) VALUES (1)"; 
+                    // Substitua o valor 1 pelo ID do usuário atual
+                    mysqli_query($conexao, $query_criar_carrinho);
+
+                    // Obter o ID do carrinho recém-criado
+                    $idcarrinho = mysqli_insert_id($conexao);
+                }
+
+                // Verificar se o item já está no carrinho
+                $query_verificar_item = "SELECT * FROM carrinho_ingresso WHERE idcarrinho = $idcarrinho AND id_ingresso = $iditem_loja";
+                $result_verificar_item = mysqli_query($conexao, $query_verificar_item);
+
+                if (mysqli_num_rows($result_verificar_item) > 0) {
+                    // O item já está no carrinho, atualizar a quantidade
+                    $row_item = mysqli_fetch_assoc($result_verificar_item);
+                    $quantidade = $row_item['quantidade'] + 1;
+                    $query_update = "UPDATE carrinho_ingresso SET quantidade = $quantidade WHERE idcarrinho = $idcarrinho AND id_ingresso = $iditem_loja";
+                    mysqli_query($conexao, $query_update);
+                } else {
+                    // O item não está no carrinho, inserir com quantidade 1
+                    $query_insert = "INSERT INTO carrinho_ingresso (idcarrinho, id_ingresso, quantidade) VALUES ($idcarrinho, $iditem_loja, 1)";
+                    mysqli_query($conexao, $query_insert);
+                }
+            }
+
+            // Verificar se foi enviado o ID do item para remover do carrinho
+            if (isset($_POST['remover_item'])) {
+                $iditem_loja_remover = $_POST['remover_item'];
+
+                // Remover o item do carrinho
+                $query_delete = "DELETE FROM carrinho_ingresso WHERE id_ingresso = $iditem_loja_remover";
+                mysqli_query($conexao, $query_delete);
+            }
+
+            // Consultar os itens do carrinho
+            $query_carrinho = "SELECT iten_loja.*, carrinho_ingresso.quantidade FROM iten_loja INNER JOIN carrinho_ingresso ON iten_loja.iditem_loja = carrinho_ingresso.id_ingresso";
+            $result_carrinho = mysqli_query($conexao, $query_carrinho);
+
+            echo '<div class="container_carrinho">';
+            // Verificar se há itens no carrinho
+            if (mysqli_num_rows($result_carrinho) > 0) {
+                // Exibir os itens do carrinho
+                $total_valor = 0;
+                echo ' <div class="conteudo_carrinho"><table>';
+                echo '<tr><th>Nome</th><th>Descrição</th><th>Quantidade</th><th>Valor</th><th>Ação</th></tr>';
+                while ($row_carrinho = mysqli_fetch_assoc($result_carrinho)) {
+                    echo '<tr>';
+                    echo '<td>' . $row_carrinho['nome'] . '</td>';
+                    echo '<td>' . $row_carrinho['descricao'] . '</td>';
+                    echo '<td>';
+                    echo '<form action="" method="POST">';
+                    echo '<input type="hidden" name="iditem_loja" value="' . $row_carrinho['iditem_loja'] . '">';
+                    echo '<input type="number" name="quantidade" value="' . $row_carrinho['quantidade'] . '">';
+                    echo '<input type="submit" value="Atualizar">';
+                    echo '</form>';
+                    echo '</td>';
+                    echo '<td>' . $row_carrinho['valor'] . '</td>';
+                    echo '<td>';
+                    echo '<form action="" method="POST">';
+                    echo '<input type="hidden" name="remover_item" value="' . $row_carrinho['iditem_loja'] . '">';
+                    echo '<input type="submit" value="Remover">';
+                    echo '</form>';
+                    echo '</td>';
+                    echo '</tr></div>';
+
+                    // Calcular o valor total da compra
+                    $total_valor += $row_carrinho['valor'] * $row_carrinho['quantidade'];
+                }
+                echo '</table>';
+
+                // Exibir o valor total da compra
+                echo '<p>Total: R$ ' . $total_valor . '</p>';
+                echo' <div class="botao_carrinho">';
+                // Botão de finalizar compra
+                echo '<form  action="tela_pagamento.php" method="POST">';
+                echo '<input type="hidden" name="total_valor" value="' . $total_valor . '">';
+                echo '<input type="submit" value="Finalizar Compra">';
+                echo '</form>';
+                // Botão para voltar à loja
+                echo '<button><a href="loja.php">Continuar Comprando</a></button>';
+                echo'</div>';
+                
+            } else {
+                echo '<p>O carrinho está vazio.</p>';
+                // Botão para voltar à loja
+                echo '<a href="loja.php">Continuar Comprando</a>';
+            }
+            
+            // Fechar a conexão com o banco de dados
+            mysqli_close($conexao);
+            
+            ?>
+            
     </div>
 </body>
 </html>

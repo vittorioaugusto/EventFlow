@@ -158,7 +158,7 @@
                         <div class="atualizar_editar_evento">
                             <button type="submit" value="Atualizar">Atualizar</button>
                             <?php
-                            echo '<button value="voltar">Voltar</a></button>';
+                            echo '<button value="voltar">Voltar</button>';
                             ?> 
                         </div>
                     </form>

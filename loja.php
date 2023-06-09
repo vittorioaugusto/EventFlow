@@ -58,23 +58,30 @@
                 <h1 id="nome_loja">Loja</h1>
 
                 <?php
-                // Consultar os produtos na loja
-                $consulta = "SELECT * FROM iten_loja";
-                $resultado = mysqli_query($conexao, $consulta);
+                // Incluir o arquivo de conexão com o banco de dados
+                include 'conexao.php';
 
-                // Verificar se existem produtos cadastrados
-                if (mysqli_num_rows($resultado) > 0) {
+                // Consultar os produtos da tabela iten_loja
+                $query = "SELECT * FROM iten_loja";
+                $result = mysqli_query($conexao, $query);
+
+                // Verificar se há produtos na tabela
+                if (mysqli_num_rows($result) > 0) {
                     // Exibir os produtos
-                    while ($row = mysqli_fetch_assoc($resultado)) {
-                        echo '<div class="produto">';
-                        echo '<h2>' . $row["nome_produto"] . '</h2>';
-                        echo '<p>' . $row["descricao"] . '</p>';
-                        echo '<p>R$' . $row["preco"] . '</p>';
-                        echo '<button class="adicionar_carrinho">Adicionar ao Carrinho</button>';
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo '<div>';
+                        echo '<h2>' . $row['nome'] . '</h2>';
+                        echo '<p>' . $row['descricao'] . '</p>';
+                        echo '<p>Quantidade: ' . $row['quantidade'] . '</p>';
+                        echo '<p>Valor: R$ ' . $row['valor'] . '</p>';
+                        echo '<form action="carrinho.php" method="POST">';
+                        echo '<input type="hidden" name="iditem_loja" value="' . $row['iditem_loja'] . '">';
+                        echo '<input type="submit" value="Adicionar ao carrinho">';
+                        echo '</form>';
                         echo '</div>';
                     }
                 } else {
-                    echo '<p id="nome_nenhum_produto_encontrado">Nenhum produto encontrado.</p>';
+                    echo '<p>Nenhum produto disponível na loja.</p>';
                 }
 
                 // Fechar a conexão com o banco de dados
