@@ -60,7 +60,7 @@ $empresaUsuario = $dadosUsuario['empresa'];
                     <a href="EventFlow.php"><label>Logout</label></a>
                 <?php } ?>
             </nav>
-        </div>
+        
 
         <center>
         <div class="container_perfil_2">

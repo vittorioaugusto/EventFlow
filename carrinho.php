@@ -21,12 +21,12 @@
             </nav>
 
             <center>
-            <div class="nome_carrinho">
-            <h1>Carrinho</h1>
-            </div>
+                <div class="nome_carrinho">
+                    <h1>Carrinho</h1>
+                </div>
             </center>
-            
-            
+
+
             <?php
             session_start();
 
@@ -95,7 +95,9 @@
             if (mysqli_num_rows($result_carrinho) > 0) {
                 // Exibir os itens do carrinho
                 $total_valor = 0;
+                
                 echo ' <div class="conteudo_carrinho"><table>';
+                
                 echo '<tr><th>Nome</th><th>Descrição</th><th>Quantidade</th><th>Valor</th><th>Ação</th></tr>';
                 while ($row_carrinho = mysqli_fetch_assoc($result_carrinho)) {
                     echo '<tr>';
@@ -134,17 +136,20 @@
                 echo '<button><a href="loja.php">Continuar Comprando</a></button>';
                 echo'</div>';
                 
+                
             } else {
-                echo '<p>O carrinho está vazio.</p>';
+                echo'<center>';
+                echo '<p id="nome_o_carrinho_esta_vazio">O carrinho está vazio.</p>';
                 // Botão para voltar à loja
-                echo '<a href="loja.php">Continuar Comprando</a>';
+                echo '<div class="botao_carrinho"><a href="loja.php">Continuar Comprando</a></div>';
+                echo'</center>';
             }
             
             // Fechar a conexão com o banco de dados
             mysqli_close($conexao);
             
             ?>
-            
+
     </div>
 </body>
 </html>

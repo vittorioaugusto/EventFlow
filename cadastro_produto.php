@@ -39,49 +39,73 @@ $eventos = obterListaEventos($conexao);
 <html>
 <head>
     <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="assets/css/style2.css">
 </head>
 <body>
-    <h1>Cadastro de Produtos</h1>
+    <div class="cabecalho_cadastro_produto">
+        
+            <div class="logo_cadastro_produto">
+                <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+            </div>
 
-    <?php if (!empty($errors)) : ?>
-        <div style="color: red;">
-            <ul>
-                <?php foreach ($errors as $error) : ?>
-                    <li><?php echo $error; ?></li>
-                <?php endforeach; ?>
-            </ul>
+            <nav class="botoes_cadastro_produto">
+                <a href="eventos.php"><label>Eventos</label></a>
+                <a href="meus_eventos.php"><label>Meus Eventos</label></a>
+                <a href="carrinho.php"><label>Carrinho</label></a>
+                <a href="perfil.php"><label>Perfil</label></a>
+                <a href="login.php"><label>Logout</label></a>
+            </nav>
+
+            <div class="container_cadastro_produto">
+                <div class="caixa_cadastro_produto">
+
+                <h1 id="nome_cadastro_de_produtos">Cadastro de Produtos</h1>
+
+                    <?php if (!empty($errors)) : ?>
+                        <div style="color: red;">
+                            <ul>
+                                <?php foreach ($errors as $error) : ?>
+                                    <li><?php echo $error; ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if ($successMessage !== '') : ?>
+                        <div style="color: rgb(0, 255, 0);"><?php echo $successMessage; ?></div>
+                    <?php endif; ?>
+
+                    <form class="dados_cadastro_produto" method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+
+                        <label for="nome">Nome do Produto:</label><br>
+                        <input type="text" id="nome" name="nome" required><br>
+
+                        <label for="descricao">Descrição:</label><br>
+                        <textarea id="descricao" name="descricao" required style="resize: none"></textarea><br>
+
+                        <label for="quantidade">Quantidade:</label><br>
+                        <input type="number" id="quantidade" name="quantidade" required><br>
+
+                        <label for="valor">Valor:</label><br>
+                        <input type="text" id="valor" name="valor" required><br>
+
+                        <label for="idevento">Evento:</label><br>
+                        <select id="idevento" name="idevento" required>
+                            <option value="">Selecione um evento</option>
+                            <?php foreach ($eventos as $evento) : ?>
+                                <option value="<?php echo $evento["idevento"]; ?>"><?php echo $evento["nome_evento"]; ?></option>
+                            <?php endforeach; ?>
+                        </select><br><br>
+
+                        <center>
+                            <button type="submit" value="Cadastrar Produto">Cadastrar Produto</button>
+                            <a href="info_produto.php"><button>Alterar Produtos</button></a>
+                        </center>
+                    </form>
+            </div>
         </div>
-    <?php endif; ?>
-
-    <?php if ($successMessage !== '') : ?>
-        <div style="color: green;"><?php echo $successMessage; ?></div>
-    <?php endif; ?>
-
-    <form method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
-        <label for="nome">Nome do Produto:</label><br>
-        <input type="text" id="nome" name="nome" required><br>
-
-        <label for="descricao">Descrição:</label><br>
-        <textarea id="descricao" name="descricao" required></textarea><br>
-
-        <label for="quantidade">Quantidade:</label><br>
-        <input type="number" id="quantidade" name="quantidade" required><br>
-
-        <label for="valor">Valor:</label><br>
-        <input type="text" id="valor" name="valor" required><br>
-
-        <label for="idevento">Evento:</label><br>
-        <select id="idevento" name="idevento" required>
-            <option value="">Selecione um evento</option>
-            <?php foreach ($eventos as $evento) : ?>
-                <option value="<?php echo $evento["idevento"]; ?>"><?php echo $evento["nome_evento"]; ?></option>
-            <?php endforeach; ?>
-        </select><br><br>
-
-        <input type="submit" value="Cadastrar Produto">
-        <a href="info_produto.php"><label>Alterar Produtos</label></a>
-
-    </form>
+    </div>
+    
 </body>
 </html>
 

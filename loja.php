@@ -14,6 +14,15 @@
             <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
         </div>
 
+        <center>
+            <div class="nome_loja">
+                <h1>Loja</h1>
+            </div>
+            <?php
+            echo'<div class="botao_cadastro_produto"><a href="cadastro_produto.php">Cadastro de Produto</a></div>';
+            ?>
+        </center>
+
         <?php
         // Incluir o arquivo de conexão com o banco de dados
         require_once "conexao.php";
@@ -34,7 +43,6 @@
         $tipo_usuario = $row_usuario['tipo_user'];
         ?>
 
-
         <nav class="botoes_loja">
             <?php if ($tipo_usuario == 1): ?>
                 <a href="eventos.php"><label>Eventos</label></a>
@@ -52,11 +60,8 @@
             <?php endif; ?>
         </nav>
 
-
         <div class="container_loja">
-            <div class="caixa_loja">
-                <h1 id="nome_loja">Loja</h1>
-
+            
                 <?php
                 // Incluir o arquivo de conexão com o banco de dados
                 include 'conexao.php';
@@ -69,7 +74,7 @@
                 if (mysqli_num_rows($result) > 0) {
                     // Exibir os produtos
                     while ($row = mysqli_fetch_assoc($result)) {
-                        echo '<div>';
+                        echo '<div class="caixa_loja">';
                         echo '<h2>' . $row['nome'] . '</h2>';
                         echo '<p>' . $row['descricao'] . '</p>';
                         echo '<p>Quantidade: ' . $row['quantidade'] . '</p>';
@@ -81,17 +86,14 @@
                         echo '</div>';
                     }
                 } else {
-                    echo '<p>Nenhum produto disponível na loja.</p>';
+                    echo '<p id="nenhum_produto_disponivel_na_loja">Nenhum produto disponível na loja.</p>';
                 }
 
                 // Fechar a conexão com o banco de dados
                 mysqli_close($conexao);
                 ?>
-            </div>
-        
+         <p></p>
         </div>
     </div>
 </body>
 </html>
-
-<div></div>
