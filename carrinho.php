@@ -143,9 +143,11 @@
     
             } else {
                 echo'<center>';
+                echo'<div class="botao_carrino">';
                 echo '<p id="nome_o_carrinho_esta_vazio">O carrinho está vazio.</p>';
                 // Botão para voltar à loja
                 echo '<button><a href="loja.php">Continuar Comprando</a></button>';
+                echo'</div>';
                 echo'</center>';
             }
             
