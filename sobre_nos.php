@@ -41,7 +41,7 @@
                             <br>
                             LinkedIn: <a href="https://www.linkedin.com/in/linkedin2" target="_blank">Perfil LinkedIn</a>
                             <br>
-                            GitHub: <a href="https://github.com/github2" target="_blank">GitHub</a>
+                            GitHub: <a href="https://github.com/BrunoBRMO" target="_blank">BrunoBRMO · he/him</a>
                         </li>
                         <li>
                             Caio Jorge: <a href="mailto:email3@gmail.com">email3@gmail.com</a>
@@ -53,9 +53,9 @@
                         <li>
                             Vittorio Augusto: <a href="mailto:email4@gmail.com">vi.aborges47@gmail.com</a>
                             <br>
-                            LinkedIn: <a href="https://www.linkedin.com/in/vittorio-augusto/" target="_blank">Perfil LinkedIn</a>
+                            LinkedIn: <a href="https://www.linkedin.com/in/vittorio-augusto/" target="_blank">Vittorio Augusto</a>
                             <br>
-                            GitHub: <a href="https://github.com/vittorioaugusto" target="_blank">GitHub</a>
+                            GitHub: <a href="https://github.com/vittorioaugusto" target="_blank">vittorioaugusto</a>
                         </li>
                     </ul>
                 </div> 

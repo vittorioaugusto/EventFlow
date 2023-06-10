@@ -74,7 +74,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </script>
 
 
-
 </head>
 <body>
     <h1>Tela de Pagamento</h1>

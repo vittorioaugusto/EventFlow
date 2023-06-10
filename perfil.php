@@ -49,7 +49,7 @@ $empresaUsuario = $dadosUsuario['empresa'];
             <nav class="botoes_perfil">
             <?php if ($tipoUsuario == 1) { ?>
                     <a href="eventos.php"><label>Eventos</label></a>
-                    <a href="meus_eventos.php"><label>Meus Eventos</label></a>
+                    <a href="eventos_criados.php"><label>Meus Eventos</label></a>
                     <a href="carrinho.php"><label>Carrinho</label></a>
                     <a href="EventFlow.php"><label>Logout</label></a>
                 <?php } elseif ($tipoUsuario == 2) { ?>

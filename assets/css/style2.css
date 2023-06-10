@@ -936,7 +936,7 @@ body {
     position: relative;
     margin-top: 5%;
     color: #fff;
-    padding: 10px;
+    padding: 20px;
 }
 
 .container_carrinho {
@@ -944,6 +944,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
 }
 
 .conteudo_carrinho{
@@ -955,6 +956,12 @@ body {
     box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
     -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
     -moz-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
+}
+
+.informacoes_carrinho {
+    background-color: dimgrey;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 #nome_usuario_eventos{
@@ -984,7 +991,7 @@ body {
 }
 
 .dados_carrinho input{
-    width: 7rem;
+    width: 5rem;
     margin: 0.3rem;
     height: 1rem;
     border-radius: 1rem;

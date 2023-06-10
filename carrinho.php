@@ -14,7 +14,7 @@
 
             <nav class="botoes_carrinho">
                 <a href="eventos.php"><label>Eventos</label></a>
-                <a href="meus_eventos.php"><label>Meus Eventos</label></a>
+                <a href="eventos_criados.php"><label>Meus Eventos</label></a>
                 <a href="carrinho.php"><label>Carrinho</label></a>
                 <a href="perfil.php"><label>Perfil</label></a>
                 <a href="login.php"><label>Logout</label></a>
@@ -96,7 +96,9 @@
                 // Exibir os itens do carrinho
                 $total_valor = 0;
                 
-                echo ' <div class="conteudo_carrinho"><table>';
+                echo '<div class="conteudo_carrinho">';
+                echo'<div class="informacoes_carrinho">';
+                echo'<table>';
                 echo '<tr><th>Nome</th><th>Descrição</th><th>Quantidade</th><th>Valor</th><th>Ação</th></tr>';
                 while ($row_carrinho = mysqli_fetch_assoc($result_carrinho)) {
                     echo '<tr>';
@@ -122,12 +124,13 @@
                     echo'</div>';
                     // Calcular o valor total da compra
                     $total_valor += $row_carrinho['valor'] * $row_carrinho['quantidade'];
+                    
                 }
-                echo '</table>';
+                echo '</table><hr>';
 
                 // Exibir o valor total da compra
                 echo '<p>Total: R$ ' . $total_valor . '</p>';
-                
+                echo'</div>';
                 
                 // Botão de finalizar compra
                 echo '<form class="form_carrinho" action="tela_pagamento.php" method="POST">';
