@@ -8,9 +8,9 @@
 <body>
     <div class="cabecalho_carrinho">
 
-        <div class="logo_carrinho">
-            <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
-        </div>
+            <div class="logo_carrinho">
+                <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+            </div>
 
             <nav class="botoes_carrinho">
                 <a href="eventos.php"><label>Eventos</label></a>
@@ -97,7 +97,6 @@
                 $total_valor = 0;
                 
                 echo ' <div class="conteudo_carrinho"><table>';
-                
                 echo '<tr><th>Nome</th><th>Descrição</th><th>Quantidade</th><th>Valor</th><th>Ação</th></tr>';
                 while ($row_carrinho = mysqli_fetch_assoc($result_carrinho)) {
                     echo '<tr>';
@@ -105,20 +104,22 @@
                     echo '<td>' . $row_carrinho['descricao'] . '</td>';
                     echo '<td>';
                     echo '<form action="" method="POST">';
+                    echo'<div class="dados_carrinho">';
                     echo '<input type="hidden" name="iditem_loja" value="' . $row_carrinho['iditem_loja'] . '">';
                     echo '<input type="number" name="quantidade" value="' . $row_carrinho['quantidade'] . '">';
-                    echo '<input type="submit" value="Atualizar">';
+                    echo '<button type="submit" value="Atualizar">Atualizar</button>';
                     echo '</form>';
                     echo '</td>';
                     echo '<td>' . $row_carrinho['valor'] . '</td>';
                     echo '<td>';
                     echo '<form action="" method="POST">';
+                    echo'<div class="dados_carrinho">';
                     echo '<input type="hidden" name="remover_item" value="' . $row_carrinho['iditem_loja'] . '">';
-                    echo '<input type="submit" value="Remover">';
+                    echo '<button type="submit" value="Remover">Remover</button>';
                     echo '</form>';
                     echo '</td>';
                     echo '</tr></div>';
-
+                    echo'</div>';
                     // Calcular o valor total da compra
                     $total_valor += $row_carrinho['valor'] * $row_carrinho['quantidade'];
                 }
@@ -126,22 +127,25 @@
 
                 // Exibir o valor total da compra
                 echo '<p>Total: R$ ' . $total_valor . '</p>';
-                echo' <div class="botao_carrinho">';
+                
+                
                 // Botão de finalizar compra
-                echo '<form  action="tela_pagamento.php" method="POST">';
+                echo '<form class="form_carrinho" action="tela_pagamento.php" method="POST">';
+                echo'<div class="botao_carrino">';
                 echo '<input type="hidden" name="total_valor" value="' . $total_valor . '">';
-                echo '<input type="submit" value="Finalizar Compra">';
+                echo '<button type="submit" value="Finalizar Compra">Finalizar Compra</button><br>';
                 echo '</form>';
                 // Botão para voltar à loja
                 echo '<button><a href="loja.php">Continuar Comprando</a></button>';
                 echo'</div>';
+                echo'</div>';
                 
-                
+    
             } else {
                 echo'<center>';
                 echo '<p id="nome_o_carrinho_esta_vazio">O carrinho está vazio.</p>';
                 // Botão para voltar à loja
-                echo '<div class="botao_carrinho"><a href="loja.php">Continuar Comprando</a></div>';
+                echo '<button><a href="loja.php">Continuar Comprando</a></button>';
                 echo'</center>';
             }
             
