@@ -50,7 +50,7 @@ $eventos = obterListaEventos($conexao);
 
             <nav class="botoes_cadastro_produto">
                 <a href="eventos.php"><label>Eventos</label></a>
-                <a href="meus_eventos.php"><label>Meus Eventos</label></a>
+                <a href="eventos_criados.php"><label>Meus Eventos</label></a>
                 <a href="carrinho.php"><label>Carrinho</label></a>
                 <a href="perfil.php"><label>Perfil</label></a>
                 <a href="login.php"><label>Logout</label></a>
@@ -59,7 +59,7 @@ $eventos = obterListaEventos($conexao);
             <div class="container_cadastro_produto">
                 <div class="caixa_cadastro_produto">
 
-                <h1 id="nome_cadastro_de_produtos">Cadastro de Produtos</h1>
+                    <h1 id="nome_cadastro_de_produtos">Cadastro de Produtos</h1>
 
                     <?php if (!empty($errors)) : ?>
                         <div style="color: red;">
@@ -99,10 +99,17 @@ $eventos = obterListaEventos($conexao);
 
                         <center>
                             <button type="submit" value="Cadastrar Produto">Cadastrar Produto</button>
-                            <a href="info_produto.php"><button>Alterar Produtos</button></a>
                         </center>
+
                     </form>
-            </div>
+
+                    <center>
+                    <div class="dados_cadastro_produto">
+                        <a href="info_produto.php"><button>Alterar Produtos</button></a><br>
+                        <a href="loja.php"><button>Loja</button></a>
+                    </div>
+                    </center>
+                </div>
         </div>
     </div>
     

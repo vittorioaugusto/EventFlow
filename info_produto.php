@@ -39,45 +39,93 @@ $produtos = obterListaProdutos($conexao);
 <html>
 <head>
     <title>Informações do Produto</title>
+    <link rel="stylesheet" href="assets/css/style2.css">
 </head>
 <body>
-    <h1>Informações do Produto</h1>
+    <div class="cabecalho_info_produto">
 
-    <?php if (!empty($errors)) : ?>
-        <div style="color: red;">
-            <ul>
-                <?php foreach ($errors as $error) : ?>
-                    <li><?php echo $error; ?></li>
+            <div class="logo_info_produto">
+                <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+            </div>
+
+            <?php
+        // Incluir o arquivo de conexão com o banco de dados
+        require_once "conexao.php";
+
+        // Obter informações do usuário logado
+        $idusuario = $_SESSION['idusuario'];
+        $query_usuario = "SELECT nome, tipo_user FROM usuario WHERE idusuario = $idusuario";
+        $resultado_usuario = mysqli_query($conexao, $query_usuario);
+        $row_usuario = mysqli_fetch_assoc($resultado_usuario);
+        $nome_usuario = $row_usuario['nome'];
+        $tipo_usuario = $row_usuario['tipo_user'];
+        ?>
+            
+            <nav class="botoes_eventos">
+                <?php if ($tipo_usuario == 1) { ?>
+                    <a href="perfil.php"><label>Perfil</label></a>
+                    <a href="eventos_criados.php"><label>Meus Eventos</label></a>
+                    <a href="carrinho.php"><label>Carrinho</label></a>
+                    <a href="EventFlow.php"><label>Logout</label></a>
+                <?php } elseif ($tipo_usuario == 2) { ?>
+                    <a href="perfil.php"><label>Perfil</label></a>
+                    <a href="eventos_criados.php"><label>Eventos Criados</label></a>
+                    <a href="criar_eventos.php"><label>Criar Evento</label></a>
+                    <a href="carrinho.php">Carrinho</a>
+                    <a href="EventFlow.php"><label>Logout</label></a>
+                <?php } ?>
+            </nav>
+
+            <center>   
+                <div class="nome_informações_do_produto">
+                <h1>Informações do Produto</h1>
+                </div>
+            </center>
+
+        <div class="container_info_produto">
+            <div class="caixa_info_produto">
+        
+                <?php if (!empty($errors)) : ?>
+                    <div style="color: red;">
+                        <ul>
+                            <?php foreach ($errors as $error) : ?>
+                                <li><?php echo $error; ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+
+                <?php if ($successMessage !== '') : ?>
+                    <div style="color: rgb(0, 255, 0);"><?php echo $successMessage; ?></div>
+                <?php endif; ?>
+
+                <?php foreach ($produtos as $produto) : ?>
+                    <form class="form_info_produto" method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+                        <input type="hidden" name="iditem_loja" value="<?php echo $produto["iditem_loja"]; ?>">
+
+                        <label for="nome">Nome do Produto:</label><br>
+                        <input type="text" id="nome" name="nome" value="<?php echo $produto["nome"]; ?>" required><br>
+
+                        <label for="descricao">Descrição:</label><br>
+                        <textarea id="descricao" name="descricao" required><?php echo $produto["descricao"]; ?></textarea><br>
+
+                        <label for="quantidade">Quantidade:</label><br>
+                        <input type="number" id="quantidade" name="quantidade" value="<?php echo $produto["quantidade"]; ?>" required><br>
+
+                        <label for="valor">Valor:</label><br>
+                        <input type="text" id="valor" name="valor" value="<?php echo $produto["valor"]; ?>" required><br><br>
+
+                        <button type="submit" value="Salvar">Salvar</button>
+                        <a href="?delete=<?php echo $produto["iditem_loja"]; ?>" onclick="return confirm('Tem certeza que deseja excluir o produto?')"><button>Excluir</button></a>
+
+                    </form>
+
+                    <hr>
+
                 <?php endforeach; ?>
-            </ul>
+            </div>
         </div>
-    <?php endif; ?>
-
-    <?php if ($successMessage !== '') : ?>
-        <div style="color: green;"><?php echo $successMessage; ?></div>
-    <?php endif; ?>
-
-    <?php foreach ($produtos as $produto) : ?>
-        <form method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
-            <input type="hidden" name="iditem_loja" value="<?php echo $produto["iditem_loja"]; ?>">
-
-            <label for="nome">Nome do Produto:</label><br>
-            <input type="text" id="nome" name="nome" value="<?php echo $produto["nome"]; ?>" required><br><br>
-
-            <label for="descricao">Descrição:</label><br>
-            <textarea id="descricao" name="descricao" required><?php echo $produto["descricao"]; ?></textarea><br><br>
-
-            <label for="quantidade">Quantidade:</label><br>
-            <input type="number" id="quantidade" name="quantidade" value="<?php echo $produto["quantidade"]; ?>" required><br><br>
-
-            <label for="valor">Valor:</label><br>
-            <input type="text" id="valor" name="valor" value="<?php echo $produto["valor"]; ?>" required><br><br>
-
-            <input type="submit" value="Salvar">
-            <a href="?delete=<?php echo $produto["iditem_loja"]; ?>" onclick="return confirm('Tem certeza que deseja excluir o produto?')">Excluir</a>
-        </form>
-        <hr>
-    <?php endforeach; ?>
+    </div>
 </body>
 </html>
 

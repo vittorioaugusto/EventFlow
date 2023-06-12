@@ -57,6 +57,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Tela de Pagamento</title>
+    <link rel="stylesheet" href="assets/css/style2.css">
+
     <script>
     function exibirFormularioCartao() {
         var metodoPagamento = document.querySelector('input[name="metodo_pagamento"]:checked').value;
@@ -73,62 +75,90 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 </script>
 
-
 </head>
 <body>
-    <h1>Tela de Pagamento</h1>
+    <div class="cabecalho_tela_pagamento">
 
-    <h2>Itens do Carrinho:</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Valor</th>
-                <th>Quantidade</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            // Exibir os produtos do carrinho
-            $result_produtos = mysqli_query($conexao, $query_produtos);
-            while ($row_produto = mysqli_fetch_assoc($result_produtos)) {
-                echo "<tr>";
-                echo "<td>" . $row_produto['nome'] . "</td>";
-                echo "<td>" . $row_produto['valor'] . "</td>";
-                echo "<td>" . $row_produto['quantidade'] . "</td>";
-                echo "</tr>";
-            }
-            ?>
-        </tbody>
-    </table>
+        <div class="logo_tela_pagamento">
+            <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+        </div>
 
-    <h2>Valor Total: <?php echo $valor_total; ?></h2>
+            <nav class="botoes_tela_pagamento">
+                <a href="eventos.php"><label>Eventos</label></a>
+                <a href="eventos_criados.php"><label>Meus Eventos</label></a>
+                <a href="carrinho.php"><label>Carrinho</label></a>
+                <a href="perfil.php"><label>Perfil</label></a>
+                <a href="login.php"><label>Logout</label></a>
+            </nav>
+                
+        <div class="container_tela_pagamento">
+            <div class="caixa_tela_pagamento">
 
-    <h2>Opções de Pagamento:</h2>
-<form method="POST" action="">
-    <input type="radio" name="metodo_pagamento" value="pix" onclick="exibirFormularioCartao()"> PIX<br>
-    <input type="radio" name="metodo_pagamento" value="cartao" onclick="exibirFormularioCartao()"> Cartão de Crédito<br>
+            <center>   
+                <h1 id="nome_tela_de_pagamento">Tela de Pagamento</h1>
+            </center>
 
-    <div id="formulario_cartao" style="display: none;">
-        <h3>Dados do Cartão de Crédito:</h3>
-        <label>Número do Cartão:</label>
-        <input type="text" name="numero_cartao"><br>
-        <label>Nome do Titular:</label>
-        <input type="text" name="nome_titular"><br>
-        <label>CVV:</label>
-        <input type="text" name="cvv"><br>
-        <label>Data de Validade:</label>
-        <input type="text" name="data_validade"><br>
+                <div class="informacoes_tela_pagamento">
+                    <h2>Itens do Carrinho:</h2>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Valor</th>
+                                <th>Quantidade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            // Exibir os produtos do carrinho
+                            $result_produtos = mysqli_query($conexao, $query_produtos);
+                            while ($row_produto = mysqli_fetch_assoc($result_produtos)) {
+                                echo "<tr>";
+                                echo "<td>" . $row_produto['nome'] . "</td>";
+                                echo "<td>" . $row_produto['valor'] . "</td>";
+                                echo "<td>" . $row_produto['quantidade'] . "</td>";
+                                echo "</tr>";
+                            }
+                            ?>
+                        </tbody>
+                    </table><hr>
+
+                    <h2>Valor Total: <?php echo $valor_total; ?></h2><hr>
+
+                    <h3 id="nome_opcoes_de_pagamento">Opções de Pagamento:</h3>
+                    <form method="POST" action="">
+                        <input type="radio" name="metodo_pagamento" value="pix" onclick="exibirFormularioCartao()">PIX<br>
+                        <input type="radio" name="metodo_pagamento" value="cartao" onclick="exibirFormularioCartao()">Cartão de Crédito<br>
+
+                        <div class="informacoes_tela_pagamento" id="formulario_cartao" style="display: none;">
+                            <h3 id="nome_dados_do_cartao_de_credito">Dados do Cartão de Crédito:</h3>
+                            <label>Número do Cartão:</label>
+                            <input type="number" name="numero_cartao"><br>
+                            <label>Nome do Titular:</label>
+                            <input type="number" name="nome_titular"><br>
+                            <label>CVV:</label>
+                            <input type="number" name="cvv"><br>
+                            <label>Data de Validade:</label>
+                            <input type="number" name="data_validade"><br>
+                        </div>
+
+                        <div id="chave_pix" style="display: none;">
+                            <h3 id="nome_chave_pix">Chave PIX:</h3>
+                            <p>1234567890</p>
+                        </div>
+
+                </div>
+                        <br>
+                    <center>
+                        <button type="submit" name="submit" value="Finalizar Compra">Finalizar Compra</button><br>
+                
+                    </form>
+                    <a href="carrinho.php"><button>Voltar ao Carrinho</button></a>
+                    </center>
+                    
+            </div>
+        </div>
     </div>
-
-    <div id="chave_pix" style="display: none;">
-        <h3>Chave PIX:</h3>
-        <p>1234567890</p>
-    </div>
-
-    <br>
-    <input type="submit" name="submit" value="Finalizar Compra"><br>
-    <a href="carrinho.php">Voltar ao Carrinho</a>
-</form>
 </body>
 </html>
