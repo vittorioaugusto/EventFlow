@@ -67,12 +67,13 @@
                 if (mysqli_num_rows($result_verificar_item) > 0) {
                     // O item já está no carrinho, atualizar a quantidade
                     $row_item = mysqli_fetch_assoc($result_verificar_item);
-                    $quantidade = $row_item['quantidade'] + 1;
+                    $quantidade = $_POST['quantidade'] ?? 0; // Obtém a nova quantidade do usuário
                     $query_update = "UPDATE carrinho_ingresso SET quantidade = $quantidade WHERE idcarrinho = $idcarrinho AND id_ingresso = $iditem_loja";
                     mysqli_query($conexao, $query_update);
                 } else {
-                    // O item não está no carrinho, inserir com quantidade 1
-                    $query_insert = "INSERT INTO carrinho_ingresso (idcarrinho, id_ingresso, quantidade) VALUES ($idcarrinho, $iditem_loja, 1)";
+                    // O item não está no carrinho, inserir com quantidade definida pelo usuário
+                    $quantidade = $_POST['quantidade'] ?? 0; // Obtém a quantidade do usuário
+                    $query_insert = "INSERT INTO carrinho_ingresso (idcarrinho, id_ingresso, quantidade) VALUES ($idcarrinho, $iditem_loja, $quantidade)";
                     mysqli_query($conexao, $query_insert);
                 }
             }

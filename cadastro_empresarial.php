@@ -31,7 +31,7 @@
                 <input type="number" placeholder="Telefone" name="telefone" required>
                 <input type="text" placeholder="Empresa" name="empresa" required>
                 <input type="email" placeholder="Email" name="email" required>
-                <input type="password" placeholder="Senha" name="senha" required>
+                <input type="text" placeholder="Senha" name="senha" required>
                 <input type="hidden" name="tipo_user" value="2"><br>
                 
             </div>

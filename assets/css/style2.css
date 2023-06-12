@@ -1277,16 +1277,17 @@ body {
     font-size: 20px;
 }
 
-.form_info_produto button{
+.form_info_produto a{
     display: inline-block;
     background-color: #50C7F6;
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: medium;
+    text-decoration: none;
 }
     
-.form_info_produto button:hover {
+.form_info_produto a:hover {
     color: blue;
     transition: color 0.5s;
 }

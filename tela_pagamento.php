@@ -3,22 +3,6 @@ include 'conexao.php';
 
 // Verificar se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Processar os dados do formulário de pagamento aqui
-
-    // Obter os produtos do carrinho
-    $query_produtos = "SELECT i.nome, i.valor, ci.quantidade FROM iten_loja i
-                       INNER JOIN carrinho_ingresso ci ON ci.id_ingresso = i.iditem_loja
-                       INNER JOIN carrinho c ON c.idcarrinho = ci.idcarrinho";
-    $result_produtos = mysqli_query($conexao, $query_produtos);
-
-    // Calcular o valor total da compra
-    $valor_total = 0;
-    while ($row_produto = mysqli_fetch_assoc($result_produtos)) {
-        $valor_produto = $row_produto['valor'];
-        $quantidade = $row_produto['quantidade'];
-        $valor_total += ($valor_produto * $quantidade);
-    }
-
     // Processar o método de pagamento selecionado
     if (isset($_POST['metodo_pagamento'])) {
         $metodo_pagamento = $_POST['metodo_pagamento'];
@@ -28,28 +12,55 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Processar o pagamento PIX
 
             // Exibir a chave PIX
-            $chave_pix = "1234567890"; // Substitua com a chave PIX correta
+            $chave_pix = "1234567890"; 
+            // Substitua com a chave PIX correta
             echo "Chave PIX: $chave_pix<br>";
-        } elseif ($metodo_pagamento == 'cartao') {
-            // Processar o pagamento com cartão de crédito
 
-            // Obter os dados do cartão de crédito do formulário
-            $numero_cartao = $_POST['numero_cartao'];
-            $nome_titular = $_POST['nome_titular'];
-            $cvv = $_POST['cvv'];
-            $data_validade = $_POST['data_validade'];
-
-            // Processar os dados do cartão de crédito e finalizar a compra
-            // ...
-
-            // Limpar os produtos do carrinho e exibir a mensagem de compra concluída
+            // Limpar os produtos do carrinho
             $query_limpar_carrinho = "DELETE FROM carrinho_ingresso";
             mysqli_query($conexao, $query_limpar_carrinho);
 
             echo "Compra concluída. Obrigado!";
             exit;
+        } elseif ($metodo_pagamento == 'cartao') {
+            // Processar o pagamento com cartão de crédito
+
+            // Verificar se todos os campos do formulário de cartão de crédito foram preenchidos
+            if (isset($_POST['numero_cartao']) && isset($_POST['nome_titular']) && isset($_POST['cvv']) && isset($_POST['data_validade'])) {
+                // Obter os dados do cartão de crédito do formulário
+                $numero_cartao = $_POST['numero_cartao'];
+                $nome_titular = $_POST['nome_titular'];
+                $cvv = $_POST['cvv'];
+                $data_validade = $_POST['data_validade'];
+
+                // Processar os dados do cartão de crédito e finalizar a compra
+                // ...
+
+                // Limpar os produtos do carrinho e exibir a mensagem de compra concluída
+                $query_limpar_carrinho = "DELETE FROM carrinho_ingresso";
+                mysqli_query($conexao, $query_limpar_carrinho);
+
+                echo "Compra concluída. Obrigado!";
+                exit;
+            } else {
+                echo "Por favor, preencha todos os campos do formulário de cartão de crédito.";
+            }
         }
     }
+}
+
+// Obter os produtos do carrinho
+$query_produtos = "SELECT i.nome, i.valor, ci.quantidade FROM iten_loja i
+                   INNER JOIN carrinho_ingresso ci ON ci.id_ingresso = i.iditem_loja
+                   INNER JOIN carrinho c ON c.idcarrinho = ci.idcarrinho";
+$result_produtos = mysqli_query($conexao, $query_produtos);
+
+// Calcular o valor total da compra
+$valor_total = 0;
+while ($row_produto = mysqli_fetch_assoc($result_produtos)) {
+    $valor_produto = $row_produto['valor'];
+    $quantidade = $row_produto['quantidade'];
+    $valor_total += ($valor_produto * $quantidade);
 }
 ?>
 

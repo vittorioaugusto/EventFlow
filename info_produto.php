@@ -115,8 +115,8 @@ $produtos = obterListaProdutos($conexao);
                         <label for="valor">Valor:</label><br>
                         <input type="text" id="valor" name="valor" value="<?php echo $produto["valor"]; ?>" required><br><br>
 
-                        <button type="submit" value="Salvar">Salvar</button>
-                        <a href="?delete=<?php echo $produto["iditem_loja"]; ?>" onclick="return confirm('Tem certeza que deseja excluir o produto?')"><button>Excluir</button></a>
+                        <a type="submit" value="Salvar">Salvar</a>
+                        <a href="?delete=<?php echo $produto["iditem_loja"]; ?>" onclick="return confirm('Tem certeza que deseja excluir o produto?')">Excluir</a>
 
                     </form>
 
