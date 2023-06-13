@@ -29,7 +29,7 @@
 
             <?php
             session_start();
-
+            $idusuario = $_SESSION['idusuario']; // Assumindo que você armazena o ID do usuário em $_SESSION['idusuario']
             // Incluir o arquivo de conexão com o banco de dados
             include 'conexao.php';
 
@@ -42,7 +42,8 @@
                 $iditem_loja = $_POST['iditem_loja'];
 
                 // Verificar se o carrinho já existe para o usuário
-                $query_verificar_carrinho = "SELECT * FROM carrinho WHERE idusuario = 1"; 
+                $query_verificar_carrinho = "SELECT * FROM carrinho WHERE idusuario = $idusuario";
+
                 // Substitua o valor 1 pelo ID do usuário atual
                 $result_verificar_carrinho = mysqli_query($conexao, $query_verificar_carrinho);
 
@@ -52,7 +53,7 @@
                     $idcarrinho = $row_carrinho['idcarrinho'];
                 } else {
                     // Carrinho não existe, criar um novo carrinho
-                    $query_criar_carrinho = "INSERT INTO carrinho (idusuario) VALUES (1)"; 
+                    $query_criar_carrinho = "INSERT INTO carrinho (idusuario) VALUES ($idusuario)";
                     // Substitua o valor 1 pelo ID do usuário atual
                     mysqli_query($conexao, $query_criar_carrinho);
 
@@ -62,6 +63,7 @@
 
                 // Verificar se o item já está no carrinho
                 $query_verificar_item = "SELECT * FROM carrinho_ingresso WHERE idcarrinho = $idcarrinho AND id_ingresso = $iditem_loja";
+
                 $result_verificar_item = mysqli_query($conexao, $query_verificar_item);
 
                 if (mysqli_num_rows($result_verificar_item) > 0) {
@@ -88,7 +90,7 @@
             }
 
             // Consultar os itens do carrinho
-            $query_carrinho = "SELECT iten_loja.*, carrinho_ingresso.quantidade FROM iten_loja INNER JOIN carrinho_ingresso ON iten_loja.iditem_loja = carrinho_ingresso.id_ingresso";
+            $query_carrinho = "SELECT iten_loja.*, carrinho_ingresso.quantidade FROM iten_loja INNER JOIN carrinho_ingresso ON iten_loja.iditem_loja = carrinho_ingresso.id_ingresso WHERE carrinho_ingresso.idcarrinho IN (SELECT idcarrinho FROM carrinho WHERE idusuario = $idusuario)";
             $result_carrinho = mysqli_query($conexao, $query_carrinho);
 
             echo '<div class="container_carrinho">';

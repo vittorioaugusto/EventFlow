@@ -77,10 +77,11 @@ body {
 .imagem_evento{
    position: relative;
    margin-top: 60px;
-   border-bottom: 2px solid #50C7F6;
+   border-bottom: 2px solid #50C7F6;  
 }
 
 .container_eventflow {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;

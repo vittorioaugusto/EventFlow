@@ -59,7 +59,7 @@ $eventos = obterListaEventos($conexao);
             <div class="container_cadastro_produto">
                 <div class="caixa_cadastro_produto">
 
-                    <h1 id="nome_cadastro_de_produtos">Cadastro de Produtos</h1>
+                    <h1 id="nome_cadastro_de_produtos">Cadastro de Produtos</h1><hr>
 
                     <?php if (!empty($errors)) : ?>
                         <div style="color: red;">

@@ -120,7 +120,7 @@
                     <form method="POST">
                         <div class="informacoes_editar_evento">
                         <center>
-                        <h1>Editar Evento</h1>
+                        <h1>Editar Evento</h1><hr>
                         </center>
                         <label for="nome_evento">Nome do Evento:</label>
                         <input type="text" id="nome_evento" name="nome_evento" value="<?php echo $evento['nome_evento']; ?>"><br>

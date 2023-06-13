@@ -15,26 +15,25 @@
                 <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
             </div>
 
-                <?php
-                // Incluir o arquivo de conexão com o banco de dados
-                require_once "conexao.php";
+            <?php
+            // Incluir o arquivo de conexão com o banco de dados
+            require_once "conexao.php";
 
+            // Função para verificar se o usuário é o criador do evento
+            function verificarCriadorEvento($id_evento, $idusuario, $conexao) {
+                // Consultar o banco de dados para verificar se o usuário é o criador do evento
+                $query = "SELECT idevento FROM eventos WHERE idevento = $id_evento AND idusuario = $idusuario";
+                $resultado = mysqli_query($conexao, $query);
 
-                // Função para verificar se o usuário é o criador do evento
-                function verificarCriadorEvento($id_evento, $idusuario, $conexao) {
-                    // Consultar o banco de dados para verificar se o usuário é o criador do evento
-                    $query = "SELECT idevento FROM eventos WHERE idevento = $id_evento AND idusuario = $idusuario";
-                    $resultado = mysqli_query($conexao, $query);
+                return (mysqli_num_rows($resultado) > 0);
+            }
 
-                    return (mysqli_num_rows($resultado) > 0);
-                }
-
-                // Verificar se o usuário está logado
-                session_start();
-                if (!isset($_SESSION['idusuario'])) {
-                    header("location: login.php");
-                    exit();
-                }
+            // Verificar se o usuário está logado
+            session_start();
+            if (!isset($_SESSION['idusuario'])) {
+                header("location: login.php");
+                exit();
+            }
 
             // Obter informações do usuário logado
             $idusuario = $_SESSION['idusuario'];
@@ -57,55 +56,60 @@
                 <a href="perfil.php"><label>Perfil</label></a>
                 <a href="EventFlow.php"><label>Logout</label></a>
             </nav>
+        </div>
 
-            <div class="container_info_evento_2">
-                <div class="caixa_info_evento">
-                    
-                        <?php
-                    // Verificar se foi fornecido o parâmetro de ID do evento
-                    if (isset($_GET['id'])) {
-                        // Obter o ID do evento a partir do parâmetro da URL
-                        $id_evento = $_GET['id'];
+        <div class="container_info_evento_2">
+            <div class="caixa_info_evento">
 
-                        // Consultar o evento no banco de dados
-                        $query_evento = "SELECT * FROM eventos WHERE idevento = $id_evento";
-                        $resultado_evento = mysqli_query($conexao, $query_evento);
-                        $dados_evento = mysqli_fetch_assoc($resultado_evento);
+                <?php
+                // Verificar se foi fornecido o parâmetro de ID do evento
+                if (isset($_GET['id'])) {
+                    // Obter o ID do evento a partir do parâmetro da URL
+                    $id_evento = $_GET['id'];
 
-                        if ($dados_evento) {
-                            echo '<h1>' . $dados_evento['nome_evento'] . '</h1>';
+                    // Consultar o evento no banco de dados
+                    $query_evento = "SELECT * FROM eventos WHERE idevento = $id_evento";
+                    $resultado_evento = mysqli_query($conexao, $query_evento);
+                    $dados_evento = mysqli_fetch_assoc($resultado_evento);
 
-                            // Formatando a data do evento para o padrão brasileiro
-                            $data_inicio_evento = date('d/m/Y', strtotime($dados_evento['data_inicio_evento']));
-                            $data_final_evento = date('d/m/Y', strtotime($dados_evento['data_final_evento']));
-                            echo '<p>Data de Início do Evento: ' . $data_inicio_evento . '</p>';
-                            echo '<p>Data de Término do Evento: ' . $data_final_evento . '</p>';
+                    if ($dados_evento) {
+                        echo '<h1>' . $dados_evento['nome_evento'] . '</h1><hr>';
 
-                            $horario_inicial = date('H:i', strtotime($dados_evento['horario_inicial']));
-                            $horario_final = date('H:i', strtotime($dados_evento['horario_final']));
-                            echo '<p>Horário de Início do Evento: ' . $horario_inicial . '</p>';
-                            echo '<p>Horário de Término do Evento: ' . $horario_final . '</p>';
+                        // Formatando a data do evento para o padrão brasileiro
+                        $data_inicio_evento = date('d/m/Y', strtotime($dados_evento['data_inicio_evento']));
+                        $data_final_evento = date('d/m/Y', strtotime($dados_evento['data_final_evento']));
+                        echo '<p>Data de Início do Evento: ' . $data_inicio_evento . '</p>';
+                        echo '<p>Data de Término do Evento: ' . $data_final_evento . '</p>';
 
-                            echo '<p>Descrição: ' . $dados_evento['descricao'] . '</p>';
-                            echo '<p>Local: ' . $dados_evento['endereco'] . '</p>';
+                        $horario_inicial = date('H:i', strtotime($dados_evento['horario_inicial']));
+                        $horario_final = date('H:i', strtotime($dados_evento['horario_final']));
+                        echo '<p>Horário de Início do Evento: ' . $horario_inicial . '</p>';
+                        echo '<p>Horário de Término do Evento: ' . $horario_final . '</p>';
 
-                            echo '<h2>Ingressos:</h2>';
+                        echo '<p>Descrição: ' . $dados_evento['descricao'] . '</p>';
+                        echo '<p>Local: ' . $dados_evento['endereco'] . '</p>';
 
-                            // Consultar os ingressos relacionados ao evento
-                            $query_ingressos = "SELECT i.*, t.descricao AS tipo_ingresso FROM ingresso i INNER JOIN tipo_ingresso t ON i.id_tipoingresso = t.id_tipoingresso WHERE idevento = $id_evento";
-                            $resultado_ingressos = mysqli_query($conexao, $query_ingressos);
+                        echo '<h2>Ingressos:</h2>';
 
-                            if (mysqli_num_rows($resultado_ingressos) > 0) {
-                                while ($dados_ingresso = mysqli_fetch_assoc($resultado_ingressos)) {
-                                    echo '<p>';
-                                    if ($dados_ingresso['tipo_ingresso'] == 'entrada inteira') {
-                                        echo 'Tipo: Entrada Inteira<br>';
-                                    } elseif ($dados_ingresso['tipo_ingresso'] == 'entrada estudante') {
-                                        echo 'Tipo: Entrada Estudante<br>';
-                                    }
-                                    echo 'Preço: R$ ' . $dados_ingresso['valor'] . '<br>';
-                                    echo 'Quantidade: ' . $dados_ingresso['quantidade'] . '<br>';
-                                    
+                        // Consultar os ingressos relacionados ao evento
+                        $query_ingressos = "SELECT i.*, t.descricao AS tipo_ingresso FROM ingresso i INNER JOIN tipo_ingresso t ON i.id_tipoingresso = t.id_tipoingresso WHERE idevento = $id_evento";
+                        $resultado_ingressos = mysqli_query($conexao, $query_ingressos);
+
+                        if (mysqli_num_rows($resultado_ingressos) > 0) {
+                            while ($dados_ingresso = mysqli_fetch_assoc($resultado_ingressos)) {
+                                echo '<p>';
+                                if ($dados_ingresso['tipo_ingresso'] == 'entrada inteira') {
+                                    echo 'Tipo: Entrada Inteira<br>';
+                                } elseif ($dados_ingresso['tipo_ingresso'] == 'entrada estudante') {
+                                    echo 'Tipo: Entrada Estudante<br>';
+                                }
+                                echo 'Preço: R$ ' . $dados_ingresso['valor'] . '<br>';
+                                echo 'Quantidade: ' . $dados_ingresso['quantidade'] . '<br>';
+
+                                // Verificar se o usuário é o criador do evento
+                                $isCriadorEvento = verificarCriadorEvento($id_evento, $idusuario, $conexao);
+
+                                if (!$isCriadorEvento) {
                                     echo '<form class="informacoes_info_evento" action="processar_acao.php" method="POST">';
                                     echo '<input type="hidden" name="id_ingresso" value="' . $dados_ingresso['id_ingresso'] . '">';
                                     echo '<input type="hidden" name="id_evento" value="' . $id_evento . '">';
@@ -114,36 +118,34 @@
                                     echo '<div class="botoes_caixa_info_evento"><button type="submit" name="acao" value="adicionar_carrinho">Adicionar ao Carrinho</button></div>';
                                     echo '<div class="botoes_caixa_info_evento"><button type="submit" name="acao" value="comprar">Comprar</button></div>';
                                     echo '</form>';
-                                    
-                                    echo '</p>';
                                 }
-                            } else {
-                                echo '<p>Nenhum ingresso disponível para este evento.</p>';
-                            }
-                            echo '</div>';
-                            
-                            echo '<center><div class="caixa_info_evento_2">';
-                            
-                            if ($tipo_usuario == 2 && verificarCriadorEvento($id_evento, $idusuario, $conexao)) { // Cadastro Empresarial
-                                echo '<div class="botoes_caixa_info_evento"><a href="editar_evento.php?id=' . $id_evento . '">Editar Evento</a></div>';
-                                echo '<div class="botoes_caixa_info_evento"><a href="remover_evento.php?id=' . $id_evento . '">Excluir Evento</a></div>';
-                            }
-                            echo '<div class="botoes_caixa_info_evento"><a href="loja.php">Loja</a></div>';
-                            echo '<div class="botoes_caixa_info_evento"><a href="eventos.php">Voltar para a lista de eventos</a></div>';
 
+                                echo '</p>';
+                            }
                         } else {
-                            echo '<p>Evento não encontrado.</p>';
+                            echo '<p>Nenhum ingresso disponível para este evento.</p>';
                         }
-                    } else {
-                        echo '<p>Evento não especificado.</p>';
-                    }
-                    echo '</div></center>';
-                    ?>        
+                        echo '</div>';
 
-            </div>
-            
+                        echo '<center><div class="caixa_info_evento_2">';
+
+                        if ($tipo_usuario == 2 && $isCriadorEvento) { // Cadastro Empresarial
+                            echo '<div class="botoes_caixa_info_evento"><a href="editar_evento.php?id=' . $id_evento . '">Editar Evento</a></div>';
+                            echo '<div class="botoes_caixa_info_evento"><a href="remover_evento.php?id=' . $id_evento . '">Excluir Evento</a></div>';
+                        }
+                        echo '<div class="botoes_caixa_info_evento"><a href="loja.php">Loja</a></div>';
+                        echo '<div class="botoes_caixa_info_evento"><a href="eventos.php">Voltar para a lista de eventos</a></div>';
+
+                    } else {
+                        echo '<p>Evento não encontrado.</p>';
+                    }
+                } else {
+                    echo '<p>Evento não especificado.</p>';
+                }
+                echo '</div></center>';
+                ?>        
+            </div>           
         </div>
     </div>
-        
 </body>
 </html>

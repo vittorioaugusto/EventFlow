@@ -65,7 +65,7 @@ $empresaUsuario = $dadosUsuario['empresa'];
         <center>
         <div class="container_perfil_2">
             <div class="informacoes_perfil">
-                <h2 id="nome_informacoes_do_perfil">Informações do Perfil</h2>
+                <h2 id="nome_informacoes_do_perfil">Informações do Perfil</h2><hr>
             
                 <div class="dados_perfil">
                     <label>Nome: </label>
