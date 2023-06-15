@@ -83,6 +83,7 @@
                         echo '<input type="hidden" name="iditem_loja" value="' . $row['iditem_loja'] . '">';
                         echo '<input type="submit" value="Adicionar ao carrinho">';
                         echo '</form>';
+                        echo '<a href="info_produto.php"><button>Alterar Informações do Produto</button></a>';
                         echo '</div>';
                     }
                 } else {

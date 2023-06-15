@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     
                         <div class="editar_informacoes_perfil">
 
-                            <h2 id="nome_editar_informacoes_perfil">Editar Informações do Perfil</h2>
+                            <h2 id="nome_editar_informacoes_perfil">Editar Informações do Perfil</h2><hr>
                             <label>Nome:</label>
                             <input type="text" name="nome" value="<?php echo $nomeUsuario; ?>" required><br>
                             <label>

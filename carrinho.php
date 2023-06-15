@@ -26,7 +26,6 @@
                 </div>
             </center>
 
-
             <?php
             session_start();
             $idusuario = $_SESSION['idusuario']; // Assumindo que você armazena o ID do usuário em $_SESSION['idusuario']
@@ -63,7 +62,6 @@
 
                 // Verificar se o item já está no carrinho
                 $query_verificar_item = "SELECT * FROM carrinho_ingresso WHERE idcarrinho = $idcarrinho AND id_ingresso = $iditem_loja";
-
                 $result_verificar_item = mysqli_query($conexao, $query_verificar_item);
 
                 if (mysqli_num_rows($result_verificar_item) > 0) {

@@ -167,7 +167,7 @@ body {
 .informacoes_perfil{
     color: white;
     font-size: x-large;
-    background-color: #4A4A4A;
+    background-color: #616363;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
@@ -353,8 +353,8 @@ body {
 .caixa_criar_eventos{
     color: white;
     font-size: medium;
-    background-color: #4A4A4A;
-    padding: 5px 20px;
+    background-color: #616363;
+    padding: 10px 20px;
     border-radius: 10px;
     box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
     -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
@@ -362,7 +362,6 @@ body {
 }
 
 .informacoes_criar_eventos input{
-    width: 13rem;
     margin: 0.3rem;
     height: 1rem;
     border-radius: 1rem;
@@ -499,17 +498,16 @@ body {
 .caixa_editar_perfil{
     color: white;
     font-size: x-large;
-    background-color: #4A4A4A;
-    padding: 20px;
+    background-color: #616363;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
     -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
     -moz-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
 }
 
-#nome_editar_informacoes_perfil{
-    padding: 10px;
-    
+.editar_informacoes_perfil{
+    padding: 10px 10px;
 }
 
 .editar_informacoes_perfil input{
@@ -582,7 +580,7 @@ body {
     width: 50%;
     color: white;
     font-size: large;
-    background-color: #4A4A4A;
+    background-color: #616363;
     padding: 10px 20px;
     border-radius: 10px;
     box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
@@ -641,8 +639,6 @@ body {
 
 
 
-
-
 /* editar_evento.php */
 
 .cabecalho_editar_evento{
@@ -694,14 +690,14 @@ body {
     align-items: center;
     height: 100vh;
     position: relative;
-    margin-top: 120px;
+    margin-top: 100px;
 }
 
 .caixa_editar_evento{
     color: white;
     font-size: large;
-    background-color: #4A4A4A;
-    padding: 5px 20px;
+    background-color: #616363;
+    padding: 10px 20px;
     border-radius: 10px;
     box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
     -webkit-box-shadow: 0px 2px 20px 10px rgba(80,199,246,0.75);
@@ -709,7 +705,6 @@ body {
 }
 
 .informacoes_editar_evento input{
-    width: 15rem;
     margin: 0.3rem;
     height: 1rem;
     border-radius: 1rem;
@@ -873,13 +868,29 @@ body {
     background-color: #50C7F6;
     color: white;
     padding: 10px 20px;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: medium;
     text-decoration: none;
     font-family: Poppins;
 }
     
 .caixa_loja input:hover {
+    color: blue;
+    transition: color 0.5s;
+}
+
+.caixa_loja button{
+    display: inline-block;
+    background-color: #50C7F6;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: medium;
+    text-decoration: none;
+    font-family: Poppins;
+}
+    
+.caixa_loja button:hover {
     color: blue;
     transition: color 0.5s;
 }
@@ -1154,7 +1165,7 @@ body {
 }
 
 .dados_cadastro_produto label{
-    color: black;
+    color: white;
 }
 
 .dados_cadastro_produto input{
@@ -1264,7 +1275,7 @@ body {
 }
 
 .form_info_produto input{
-    width: 10rem;
+    
     margin: 0.3rem;
     height: 1rem;
     border-radius: 1rem;
@@ -1292,6 +1303,15 @@ body {
     transition: color 0.5s;
 }
 
+.form_info_produto button{
+    display: inline-block;
+    background-color: #50C7F6;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: medium;
+    text-decoration: none;
+}
 
 #nome_cadastro_de_produtos{
     color: #fff;

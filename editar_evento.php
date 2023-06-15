@@ -123,22 +123,22 @@
                         <h1>Editar Evento</h1><hr>
                         </center>
                         <label for="nome_evento">Nome do Evento:</label>
-                        <input type="text" id="nome_evento" name="nome_evento" value="<?php echo $evento['nome_evento']; ?>"><br>
+                        <input type="text" id="nome_evento" name="nome_evento" value="<?php echo $evento['nome_evento']; ?>">
 
                         <label for="endereco">Endereço:</label>
                         <input type="text" id="endereco" name="endereco" value="<?php echo $evento['endereco']; ?>"><br>
 
                         <label for="descricao">Descrição:</label><br>
-                        <textarea id="descricao" name="descricao"><?php echo $evento['descricao']; ?></textarea><br>
+                        <textarea id="descricao" name="descricao" style="resize: none"><?php echo $evento['descricao']; ?></textarea><br>
 
                         <label for="data_inicio_evento">Data de Início do Evento:</label>
-                        <input type="date" id="data_inicio_evento" name="data_inicio_evento" value="<?php echo $evento['data_inicio_evento']; ?>"><br>
+                        <input type="date" id="data_inicio_evento" name="data_inicio_evento" value="<?php echo $evento['data_inicio_evento']; ?>">
 
                         <label for="data_final_evento">Data de Término do Evento:</label>
                         <input type="date" id="data_final_evento" name="data_final_evento" value="<?php echo $evento['data_final_evento']; ?>"><br>
 
                         <label for="horario_inicial">Horário de Início:</label>
-                        <input type="time" id="horario_inicial" name="horario_inicial" value="<?php echo $evento['horario_inicial']; ?>"><br>
+                        <input type="time" id="horario_inicial" name="horario_inicial" value="<?php echo $evento['horario_inicial']; ?>">
 
                         <label for="horario_final">Horário de Término:</label>
                         <input type="time" id="horario_final" name="horario_final" value="<?php echo $evento['horario_final']; ?>"><br>
@@ -147,9 +147,8 @@
                             <?php foreach ($ingressos as $ingresso): ?>
                                 <label for="quantidade_<?php echo $ingresso['id_ingresso']; ?>">Quantidade:</label>
                                 <input type="number" id="quantidade_<?php echo $ingresso['id_ingresso']; ?>" name="quantidade[<?php echo $ingresso['id_ingresso']; ?>]" value="<?php echo $ingresso['quantidade']; ?>"><br>
-
                                 <label for="valor_<?php echo $ingresso['id_ingresso']; ?>">Valor:</label>
-                                <input type="text" id="valor_<?php echo $ingresso['id_ingresso']; ?>" name="valor[<?php echo $ingresso['id_ingresso']; ?>]" value="<?php echo $ingresso['valor']; ?>"><br>
+                                <input type="text" id="valor_<?php echo $ingresso['id_ingresso']; ?>" name="valor[<?php echo $ingresso['id_ingresso']; ?>]" value="<?php echo $ingresso['valor']; ?>">
                                 <label for="valor_estudante_<?php echo $ingresso['id_ingresso']; ?>">Valor Estudante:</label>
                                 <input type="text" id="valor_estudante_<?php echo $ingresso['id_ingresso']; ?>" name="valor_estudante[<?php echo $ingresso['id_ingresso']; ?>]" value="<?php echo $ingresso['valor']/2; ?>" readonly><br>
                             <?php endforeach; ?>

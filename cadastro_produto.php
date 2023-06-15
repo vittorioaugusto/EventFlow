@@ -87,7 +87,7 @@ $eventos = obterListaEventos($conexao);
                         <input type="number" id="quantidade" name="quantidade" required><br>
 
                         <label for="valor">Valor:</label><br>
-                        <input type="text" id="valor" name="valor" required><br>
+                        <input type="number" id="valor" name="valor" required><br>
 
                         <label for="idevento">Evento:</label><br>
                         <select id="idevento" name="idevento" required>
