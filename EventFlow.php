@@ -19,7 +19,7 @@
         </nav>
 
         <div class="logo_eventflow">
-            <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+            <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" width="200">
         </div>
 
         <center>

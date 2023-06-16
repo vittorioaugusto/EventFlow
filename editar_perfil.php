@@ -69,8 +69,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="cabecalho">
 
             <div class="logo_perfil">
-                <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+            <a href="EventFlow.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Página Inicial" width="200"></a>
             </div>
+            
                 <nav class="botoes_editar_perfil">
                     <?php if ($tipoUsuario == 1) { ?>
                         <a href="eventos.php"><label>Eventos</label></a>

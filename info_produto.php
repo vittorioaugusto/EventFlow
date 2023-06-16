@@ -45,7 +45,7 @@ $produtos = obterListaProdutos($conexao);
     <div class="cabecalho_info_produto">
 
             <div class="logo_info_produto">
-                <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+            <a href="EventFlow.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Página Inicial" width="200"></a>
             </div>
 
             <?php

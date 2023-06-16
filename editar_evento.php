@@ -8,7 +8,7 @@
     <div class="cabecalho_editar_evento">
 
             <div class="logo_editar_evento">
-                <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+            <a href="EventFlow.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Página Inicial" width="200"></a>
             </div>
 
             <nav class="botoes_editar_evento">

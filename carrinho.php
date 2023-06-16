@@ -9,7 +9,7 @@
     <div class="cabecalho_carrinho">
 
             <div class="logo_carrinho">
-                <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+            <a href="EventFlow.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Página Inicial" width="200"></a>
             </div>
 
             <nav class="botoes_carrinho">
