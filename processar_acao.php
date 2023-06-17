@@ -1,70 +1,40 @@
 <?php
-// Incluir o arquivo de conexão com o banco de dados
-require_once "conexao.php";
-
-// Verificar se a ação foi enviada via POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verificar qual ação foi solicitada
-    $acao = $_POST['acao'];
-
-    if ($acao == 'adicionar_carrinho') {
-        // Obter os dados do formulário
-        $id_ingresso = $_POST['id_ingresso'];
-        $id_evento = $_POST['id_evento'];
-        $quantidade = $_POST['quantidade'];
-
-        // Validar os dados
-
-        // Adicionar ao carrinho (lógica de adicionar ao carrinho aqui)
-
-        // Iniciar a sessão, se ainda não estiver iniciada
-        session_start();
-
-        // Verificar se o carrinho já existe na sessão
-        if (!isset($_SESSION['carrinho'])) {
-            $_SESSION['carrinho'] = array();
-        }
-
-        // Verificar se o item já existe no carrinho
-        $item_existe = false;
-        foreach ($_SESSION['carrinho'] as $key => $item) {
-            if ($item['id_ingresso'] == $id_ingresso) {
-                // Atualizar a quantidade
-                $_SESSION['carrinho'][$key]['quantidade'] += $quantidade;
-                $item_existe = true;
-                break;
-            }
-        }
-
-        // Se o item não existe, adicionar ao carrinho
-        if (!$item_existe) {
-            $novo_item = array(
-                'id_ingresso' => $id_ingresso,
-                'quantidade' => $quantidade
-            );
-            $_SESSION['carrinho'][] = $novo_item;
-        }
-
-        // Redirecionar para o carrinho
-        header("Location: carrinho.php");
-        exit();
-    } elseif ($acao == 'comprar') {
-        // Obter os dados do formulário
-        $id_ingresso = $_POST['id_ingresso'];
-        $id_evento = $_POST['id_evento'];
-        $quantidade = $_POST['quantidade'];
-
-        // Validar os dados
-
-        // Processar a compra (lógica de processar compra aqui)
-
-        // Redirecionar para a página de confirmação de compra
-        header("Location: pagamentos.php");
-        exit();
-    }
+include('conexao.php');
+session_start();
+if (!isset($_SESSION['idusuario'])) {
+    header("location: login.php");
+    exit();
 }
 
-// Redirecionar para a página de eventos caso nenhum POST seja recebido
-header("Location: eventos.php");
-exit();
+// Obter informações do usuário logado
+$idusuario = $_SESSION['idusuario'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verifique se a ação é adicionar ao carrinho
+    if ($_POST["acao"] == "adicionar_carrinho") {
+        // Obtenha os valores do formulário
+        $id_ingresso = $_POST["id_ingresso"];
+        $id_evento = $_POST["id_evento"];
+
+        // Verifique se o ingresso existe
+        $query = "SELECT id_ingresso FROM ingresso WHERE id_ingresso = '$id_ingresso'";
+        $result = mysqli_query($conexao, $query);
+        if (mysqli_num_rows($result) > 0) {
+            // Insira os dados no carrinho
+            $sql = "INSERT INTO carrinho (id_ingresso, idusuario) 
+                    VALUES ('$id_ingresso', '$idusuario')";
+            if (mysqli_query($conexao, $sql)) {
+                echo "Item adicionado ao carrinho com sucesso!","<br>";
+                echo "<a href='eventos.php'><label>Eventos</label></a>";
+            } else {
+                echo "Erro ao adicionar item ao carrinho: " . mysqli_error($conexao),"<br>";;
+                echo "<a href='eventos.php'><label>Eventos</label></a>";
+            }
+        } else {
+            echo "O ingresso não existe.","<br>";;
+            echo "<a href='eventos.php'><label>Eventos</label></a>";
+        }
+
+        mysqli_close($conexao);
+    }
+}
 ?>

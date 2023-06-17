@@ -12,7 +12,7 @@
         <div class="cabecalho_info_evento">
 
             <div class="logo_info_evento">
-            <a href="EventFlow.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Página Inicial" width="200"></a>
+                <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
             </div>
 
             <?php
@@ -73,7 +73,7 @@
                     $dados_evento = mysqli_fetch_assoc($resultado_evento);
 
                     if ($dados_evento) {
-                        echo '<h1>' . $dados_evento['nome_evento'] . '</h1><hr>';
+                        echo '<h1>' . $dados_evento['nome_evento'] . '</h1>';
 
                         // Formatando a data do evento para o padrão brasileiro
                         $data_inicio_evento = date('d/m/Y', strtotime($dados_evento['data_inicio_evento']));
@@ -113,11 +113,8 @@
                                     echo '<form class="informacoes_info_evento" action="processar_acao.php" method="POST">';
                                     echo '<input type="hidden" name="id_ingresso" value="' . $dados_ingresso['id_ingresso'] . '">';
                                     echo '<input type="hidden" name="id_evento" value="' . $id_evento . '">';
-                                    echo '<label for="quantidade">Quantidade:</label>';
-                                    echo '<input type="number" name="quantidade" min="1" max="' . $dados_ingresso['quantidade'] . '" value="1">';
                                     echo '<div class="botoes_caixa_info_evento"><button type="submit" name="acao" value="adicionar_carrinho">Adicionar ao Carrinho</button></div>';
-                                    echo '<div class="botoes_caixa_info_evento"><button type="submit" name="acao" value="comprar">Comprar</button></div>';
-                                    echo '</form>';
+                                    echo '</form>';                                    
                                 }
 
                                 echo '</p>';
@@ -133,9 +130,9 @@
                             echo '<div class="botoes_caixa_info_evento"><a href="editar_evento.php?id=' . $id_evento . '">Editar Evento</a></div>';
                             echo '<div class="botoes_caixa_info_evento"><a href="remover_evento.php?id=' . $id_evento . '">Excluir Evento</a></div>';
                         }
-                        echo '<div class="botoes_caixa_info_evento"><a href="loja.php">Loja</a></div>';
+                        echo '<div class="botoes_caixa_info_evento"><a href="loja.php?id=' . $id_evento . '">Loja</a></div>';
                         echo '<div class="botoes_caixa_info_evento"><a href="eventos.php">Voltar para a lista de eventos</a></div>';
-
+                        
                     } else {
                         echo '<p>Evento não encontrado.</p>';
                     }

@@ -786,7 +786,7 @@ body {
 
 .botoes_loja{
     position: absolute;
-    left: 20%;
+    left: 25%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -799,7 +799,7 @@ body {
     color: #fff;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 85px;
+    margin-right: 100px;
 }
 
 .botoes_loja a:hover {
@@ -807,9 +807,7 @@ body {
     transition: color 0.5s;
 }
 
-.nome_loja{
-    position: relative;
-    margin-top: 5%;
+#nome_loja{
     color: #fff;
 }
 
@@ -836,45 +834,43 @@ body {
     align-items: center;
     flex-wrap: wrap;
     height: 100vh;
+    position: relative;
+    margin-top: 80px;
 }
 
 .caixa_loja{
-    border-radius: 10px;
+    color: #fff;
+    border-radius: 5px;
     margin: 10px;
     background-color: #616363;
-    width: calc(30% - 100px); /* Adjust the width as needed */
-    padding: 10px;
-    border-radius: 5px;
+    width: calc(30% - 75px); /* Adjust the width as needed */
+    padding: 10px 20px;
     font-size: large;
     box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
     -webkit-box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
     -moz-box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
 }
 
-.caixa_loja h2{
-    color: #fff;
-}
-
-.caixa_loja p{
-    color: #fff;
+.itens_loja{
+    color: navy;
 }
 
 #nenhum_produto_disponivel_na_loja{
     color: white;
 }
 
-.caixa_loja input{
+.caixa_loja a{
     display: inline-block;
     background-color: #50C7F6;
     color: white;
-    padding: 10px 20px;
+    padding: 5px 10px;
     border-radius: 5px;
     font-size: medium;
     text-decoration: none;
     font-family: Poppins;
 }
     
-.caixa_loja input:hover {
+.caixa_loja a:hover {
     color: blue;
     transition: color 0.5s;
 }
@@ -888,6 +884,8 @@ body {
     font-size: medium;
     text-decoration: none;
     font-family: Poppins;
+    left: 5px;
+    position: relative;
 }
     
 .caixa_loja button:hover {
@@ -1191,6 +1189,254 @@ body {
 }
     
 .dados_cadastro_produto button:hover {
+    color: blue;
+    transition: color 0.5s;
+}
+
+
+
+
+/* cadastrar_produto.php */
+
+.cabecalho_cadastrar_produto{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background-color: #4e4e4e;
+    border-radius: none;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #50C7F6;
+    top: -45%;
+    justify-content: space-between;
+}
+
+.logo_cadastrar_produto{
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    display: flex;
+}
+
+.botoes_cadastrar_produto{
+    position: absolute;
+    left: 25%;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;  
+}
+
+.botoes_cadastrar_produto a{
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 100px;
+}
+
+.botoes_cadastrar_produto a:hover {
+    color: #50C7F6;
+    transition: color 0.5s;
+}
+
+#nome_cadastrar_produto{
+    font-size: 160%;
+}
+
+.container_cadastrar_produto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    position: relative;
+    margin-top: 7%;
+}
+
+.caixa_cadastrar_produto{
+    color: #fff;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #616363;
+    width: calc(30% - 90px); /* Adjust the width as needed */
+    padding: 20px;
+    border-radius: 5px;
+    font-size: large;
+    box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
+    -webkit-box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
+    -moz-box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
+}
+
+.caixa_cadastrar_produto input{
+    margin: 0.3rem;
+    height: 1rem;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    border: none;
+}
+
+.itens_loja{
+    color: navy;
+}
+
+#nenhum_produto_disponivel_na_loja{
+    color: white;
+}
+
+.caixa_cadastrar_produto a{
+    display: inline-block;
+    background-color: #50C7F6;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: medium;
+    text-decoration: none;
+    font-family: Poppins;
+}
+    
+.caixa_cadastrar_produto a:hover {
+    color: blue;
+    transition: color 0.5s;
+}
+
+.caixa_cadastrar_produto button{
+    display: inline-block;
+    background-color: #50C7F6;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: medium;
+    text-decoration: none;
+    font-family: Poppins;
+}
+    
+.caixa_cadastrar_produto button:hover {
+    color: blue;
+    transition: color 0.5s;
+}
+
+
+
+
+/* editar_item.php */
+
+.cabecalho_editar_item{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background-color: #4e4e4e;
+    border-radius: none;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #50C7F6;
+    top: -45%;
+    justify-content: space-between;
+}
+
+.logo_editar_item{
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    display: flex;
+}
+
+.botoes_editar_item{
+    position: absolute;
+    left: 25%;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;  
+}
+
+.botoes_editar_item a{
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 100px;
+}
+
+.botoes_editar_item a:hover {
+    color: #50C7F6;
+    transition: color 0.5s;
+}
+
+#nome_loja{
+    color: #fff;
+}
+
+.container_editar_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    position: relative;
+    margin-top: 7%;
+}
+
+.caixa_editar_item{
+    color: #fff;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #616363;
+    width: calc(30% - 100px); /* Adjust the width as needed */
+    padding: 20px 20px;
+    border-radius: 5px;
+    font-size: large;
+    box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
+    -webkit-box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
+    -moz-box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
+}
+
+.caixa_editar_item input{
+    margin: 0.3rem;
+    height: 1rem;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    border: none;
+}
+
+.itens_loja{
+    color: navy;
+}
+
+#nenhum_produto_disponivel_na_loja{
+    color: white;
+}
+
+.caixa_editar_item a{
+    display: inline-block;
+    background-color: #50C7F6;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: medium;
+    text-decoration: none;
+    font-family: Poppins;
+}
+    
+.caixa_editar_item a:hover {
+    color: blue;
+    transition: color 0.5s;
+}
+
+.caixa_editar_item button{
+    display: inline-block;
+    background-color: #50C7F6;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: medium;
+    text-decoration: none;
+    font-family: Poppins;
+}
+    
+.caixa_editar_item button:hover {
     color: blue;
     transition: color 0.5s;
 }
