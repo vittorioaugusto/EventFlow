@@ -45,7 +45,7 @@ $eventos = obterListaEventos($conexao);
     <div class="cabecalho_cadastro_produto">
         
             <div class="logo_cadastro_produto">
-            <a href="EventFlow.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Página Inicial" width="200"></a>
+            <a href="eventos.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Inicio" width="200"></a>
             </div>
 
             <nav class="botoes_cadastro_produto">

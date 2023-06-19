@@ -11,8 +11,9 @@
     <div class="cabecalho_loja">
         
             <div class="logo_loja">
-                <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+            <a href="eventos.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Inicio" width="200"></a>
             </div>
+            
             <?php
             // Incluir o arquivo de conexão com o banco de dados
             require_once "conexao.php";
@@ -161,5 +162,6 @@
             }
         }
     </script>
+
 </body>
 </html> 

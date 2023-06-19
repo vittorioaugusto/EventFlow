@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="cabecalho_editar_item">
     <!-- Logo -->
     <div class="logo_editar_item">
-        <img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow">
+    <a href="eventos.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Inicio" width="200"></a>
     </div>
 
     <!-- Botões de Navegação -->

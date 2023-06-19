@@ -43,7 +43,7 @@ $empresaUsuario = $dadosUsuario['empresa'];
         <div class="cabecalho">
 
         <div class="logo_perfil">
-        <a href="EventFlow.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Página Inicial" width="200"></a>
+        <a href="eventos.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Inicio" width="200"></a>
         </div>
             
             <nav class="botoes_perfil">
