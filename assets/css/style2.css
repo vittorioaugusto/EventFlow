@@ -1598,3 +1598,74 @@ body {
     color: blue;
     transition: color 0.5s;
 }
+
+
+
+
+/* historico_ingressos.php */
+
+.caixa_historico_ingressos{
+    color: #fff;
+}
+
+.caixa_historico_ingressos a{
+    display: inline-block;
+    background-color: #50C7F6;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: large;
+    text-decoration: none;
+}
+    
+.caixa_historico_ingressos a:hover {
+    color: blue;
+    transition: color 0.5s;
+}
+
+
+
+/* historico.php */
+
+.caixa_historio{
+    color: #fff;
+}
+
+.caixa_historio a{
+    display: inline-block;
+    background-color: #50C7F6;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: large;
+    text-decoration: none;
+}
+    
+.caixa_historio a:hover {
+    color: blue;
+    transition: color 0.5s;
+}
+
+
+
+
+/* adicionar_carrinho.php */
+
+.caixa_adicionar_carrinho{
+    color: #fff;
+}
+
+.caixa_adicionar_carrinho a{
+    display: inline-block;
+    background-color: #50C7F6;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: large;
+    text-decoration: none;
+}
+    
+.caixa_adicionar_carrinho a:hover {
+    color: blue;
+    transition: color 0.5s;
+}

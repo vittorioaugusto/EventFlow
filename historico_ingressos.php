@@ -39,22 +39,24 @@
 
                 // Executa a query
                 $resultado = mysqli_query($conexao, $query);
-
+                echo'<div class="caixa_historico_ingressos">';
                 // Verifique se a consulta retornou resultados
                 if (mysqli_num_rows($resultado) > 0) {
                     // Loop pelos resultados e exibição das informações
                     while ($row = mysqli_fetch_assoc($resultado)) {
                         echo "Nome do evento: " . $row['nome_evento'] . "<br>";
-                        echo "Código do ingresso: " . $row['cod_ingressos'] . "<br>";
+                        echo "Código do ingresso: " . $row['cod_ingressos'] . "<br>","<hr>";
                         echo "<br>";
                     }
                 } else {
                     echo "Nenhuma compra de ingresso encontrada.";
+                    echo'<a href="eventos.php">Voltar para Eventos</a>';
                 }
-
+                echo'<a href="eventos.php">Voltar para Eventos</a>';
+                echo'</div>';
                 // Feche a conexão com o banco de dados
                 mysqli_close($conexao);
                 ?>
     </div>
 </body>
-</html>
+</html> 

@@ -94,6 +94,7 @@ $empresaUsuario = $dadosUsuario['empresa'];
 
                     <div class="editar_informações">
                         <a href="editar_perfil.php">Editar Informações</a>
+                        <a href="historico.php">Histórico</a>
                     </div>
 
                 </div>
