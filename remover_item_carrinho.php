@@ -14,6 +14,9 @@ if (isset($_POST['idcarrinho'])) {
     // Obter o ID do carrinho enviado
     $idcarrinho = $_POST['idcarrinho'];
 
+    $query_FK = "SET FOREIGN_KEY_CHECKS=0";
+    mysqli_query($conexao, $query_FK);
+    
     // Remover o item do carrinho com base no ID do carrinho
     $query_remover_item = "DELETE FROM carrinho WHERE idcarrinho = $idcarrinho";
 

@@ -11,7 +11,7 @@
     <div class="cabecalho_loja">
         
             <div class="logo_loja">
-            <a href="eventos.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Inicio" width="200"></a>
+            <a href="eventos.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Início" width="200"></a>
             </div>
             
             <?php
@@ -104,7 +104,7 @@
 
                         if ($num_itens_loja > 0) {
                             // Exibir os itens da loja
-                            echo "<h3>Itens disponíveis na loja do evento:</h3>";
+                            echo "<h3>Itens disponíveis na loja do evento:</h3>","<br>";
                             echo "<div class='itens_loja'>";
                             while ($row_item = mysqli_fetch_assoc($resultado_itens_loja)) {
                                 $id_item = $row_item['iditem_loja'];
@@ -126,7 +126,7 @@
                                 // Exibir botão "Excluir" apenas para o criador do evento
                                 if ($eh_criador_evento) {
                                     echo "<a href='editar_item.php?id=$id_item'>Editar</a>";
-                                    echo "<span onclick=\"excluirItem($id_item, $id_evento)\"><button>Excluir</button></span>";
+                                    echo "<span onclick=\"excluirItem($id_item, $id_evento)\"><button>Excluir</button></span>","<hr>";
                                 }
 
                                 echo "</div>";

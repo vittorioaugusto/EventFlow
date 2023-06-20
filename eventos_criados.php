@@ -11,7 +11,7 @@
     <div class="cabecalho_eventos_criados">
 
         <div class="logo_eventos_criados">
-        <a href="eventos.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Inicio" width="200"></a>
+        <a href="eventos.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Início" width="200"></a>
         </div>
 
         <?php
@@ -31,11 +31,24 @@
         $resultado_usuario = mysqli_query($conexao, $query_usuario);
         $row_usuario = mysqli_fetch_assoc($resultado_usuario);
         $nome_usuario = $row_usuario['nome'];
+
+                // Obter informações do usuário logado
+        $idusuario = $_SESSION['idusuario'];
+        $query_usuario = "SELECT tipo_user FROM usuario WHERE idusuario = $idusuario";
+        $resultado_usuario = mysqli_query($conexao, $query_usuario);
+        $row_usuario = mysqli_fetch_assoc($resultado_usuario);
+
+        $tipo_usuario = $row_usuario['tipo_user'];
+
         ?>
 
         <nav class="botoes_eventos_criados">
             <a href="eventos.php"><label>Eventos</label></a>
-            <a href="criar_eventos.php"><label>Criar Evento</label></a>
+            <?php
+             if ($tipo_usuario == 2){
+                echo "<a href='criar_eventos.php'><label>Criar Evento</label></a>";
+             }
+            ?>
             <a href="carrinho.php"><label>Carrinho</label></a>
             <a href="perfil.php"><label>Perfil</label></a>
             <a href="EventFlow.php"><label>Logout</label></a>
@@ -43,13 +56,21 @@
 
         <center>
             <div class="nome_usuario_eventos">
-                <h1 id="nome_eventos_criados">Eventos Criados:</h1>
+                <?php
+                if ($tipo_usuario == 1) {
+                    echo "<h1 id='nome_eventos_criados'>Ingressos Comprados:</h1>";
+                }elseif ($tipo_usuario == 2) {
+                    echo "<h1 id='nome_eventos_criados'>Eventos Criados:</h1>";
+                }
+                    
+                ?>
             </div>
         </center>
         
         <div class="container_eventos_criados">
         
                 <?php
+                 if ($tipo_usuario == 2){
                 // Consultar os eventos criados pelo usuário
                 $query_eventos_criados = "SELECT * FROM eventos WHERE idusuario = $idusuario";
                 $resultado_eventos_criados = mysqli_query($conexao, $query_eventos_criados);
@@ -69,6 +90,9 @@
                 } else {
                     echo '<p id="nome_nenhum_evento_encontrado">Nenhum evento encontrado.</p>';
                 }
+            }elseif ($tipo_usuario == 1){
+                echo '<p id="nome_nenhum_evento_encontrado">Nenhum ingresso comprado</p>';
+            }
                 ?>
             
         </div>

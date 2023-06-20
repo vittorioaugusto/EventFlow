@@ -69,13 +69,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="cabecalho">
 
             <div class="logo_perfil">
-            <a href="eventos.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Inicio" width="200"></a>
+            <a href="eventos.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Início" width="200"></a>
             </div>
             
                 <nav class="botoes_editar_perfil">
                     <?php if ($tipoUsuario == 1) { ?>
                         <a href="eventos.php"><label>Eventos</label></a>
-                        <a href="eventos_criados.php"><label>Meus Eventos</label></a>
+                        <a href="eventos_criados.php"><label>Meus Ingressos</label></a>
                         <a href="carrinho.php"><label>Carrinho</label></a>
                         <a href="EventFlow.php"><label>Logout</label></a>
                     <?php } elseif ($tipoUsuario == 2) { ?>

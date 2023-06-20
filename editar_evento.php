@@ -8,7 +8,7 @@
     <div class="cabecalho_editar_evento">
 
             <div class="logo_editar_evento">
-            <a href="EventFlow.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Página Inicial" width="200"></a>
+            <a href="eventos.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Início" width="200"></a>
             </div>
 
             <nav class="botoes_editar_evento">
@@ -157,13 +157,11 @@
                         <div class="atualizar_editar_evento">
                             <button type="submit" value="Atualizar">Atualizar</button>
                             <?php
-                            echo '<button value="voltar">Voltar</button>';
+                            echo '<a href="info_evento.php?id="><button>Voltar</button></a>';
                             ?> 
                         </div>
-                    </form>
-                    
+                    </form>       
                 </div>
-         
             </div>      
     </div>
         
