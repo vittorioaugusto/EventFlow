@@ -9,6 +9,10 @@
 <body>
     <div class="cabecalho_compra_concluida">
 
+        <div class="logo_compra_concluida">
+        <a href="eventos.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Início" width="200"></a>
+        </div>
+
         <div class="container_compra_concluida"> 
             <div class="informacoes_compra_concluida">
 
@@ -102,10 +106,24 @@
                         echo "<h1>Compra Concluída</h1>";
                         echo "<p>Obrigado por sua compra, $nome_usuario!</p>";
                         echo "<p>Preço Total: R$ $preco_total</p>";
-                        echo "<a href='eventos.php'>Eventos</a>";
+
+                        // Exibir formulário de avaliação
+                        echo '<div class="avaliacao">';
+                        echo '<h2>Avaliar o Evento</h2>';
+                        echo '<form action="processar_avaliacao.php" method="post">';
+                        echo '<label for="nota">Nota:</label>';
+                        echo '<input type="radio" name="nota" value="5"> 5';
+                        echo '<input type="radio" name="nota" value="4"> 4';
+                        echo '<input type="radio" name="nota" value="3"> 3';
+                        echo '<input type="radio" name="nota" value="2"> 2';
+                        echo '<input type="radio" name="nota" value="1"> 1';
+                        echo '</form>';
+                        echo '</div>',"<br>";
+
+                        echo "<a href='eventos.php'>Voltar para os Eventos</a>";
                     } else {
                         echo "Não foi possível obter o nome do usuário";
-                        echo "<a href='eventos.php'>Eventos</a>";
+                        echo "<a href='eventos.php'>Voltar para os Eventos</a>";
                         echo'</div>';
                         echo'</center>';
                     }
@@ -114,6 +132,7 @@
                     exit();
                 }
                 ?>
+
             </div>
         </div>
     </div>  

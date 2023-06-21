@@ -9,6 +9,10 @@
 <body>
     <div class="cabecalho_concluir_compra">
 
+        <div class="logo_concluir_compra">
+        <a href="eventos.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Início" width="200"></a>
+        </div>
+
         <div class="container_concluir_compra">
             <div class="informacoes_concluir_compra">
 

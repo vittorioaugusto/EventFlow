@@ -53,11 +53,11 @@
                             echo "<a href='eventos.php'><label>Eventos</label></a>";
                             echo'</center>';
                         }
-
                         mysqli_close($conexao);
                     }
                 }
                 ?>
+                
             </div> 
         </div>
     </div>
