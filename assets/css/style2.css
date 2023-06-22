@@ -43,7 +43,7 @@ body {
 
 .botoes_eventos{
     position: absolute;
-    left: 25%;
+    left: 20%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -148,7 +148,7 @@ body {
     color: #fff;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 110px;
+    margin-right: 100px;
 }
 
 .botoes_perfil a:hover {
@@ -230,7 +230,7 @@ body {
 
 .botoes_eventos_criados{
     position: absolute;
-    left: 30%;
+    left: 25%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -319,7 +319,7 @@ body {
 
 .botoes_criar_evento{
     position: absolute;
-    left: 25%;
+    left: 20%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -456,7 +456,7 @@ body {
     color: #fff;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 110px;
+    margin-right: 100px;
 }
 
 .botoes_editar_perfil a:hover {
@@ -545,7 +545,7 @@ body {
 
 .botoes_info_evento{
     position: absolute;
-    left: 25%;
+    left: 20%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -675,7 +675,7 @@ body {
     color: #fff;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 110px;
+    margin-right: 100px;
 }
 
 .botoes_editar_evento a:hover {
@@ -785,7 +785,7 @@ body {
 
 .botoes_loja{
     position: absolute;
-    left: 25%;
+    left: 20%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -918,7 +918,7 @@ body {
 
 .botoes_cadastrar_produto{
     position: absolute;
-    left: 25%;
+    left: 20%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -1043,7 +1043,7 @@ body {
 
 .botoes_editar_item{
     position: absolute;
-    left: 25%;
+    left: 20%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -1075,7 +1075,7 @@ body {
     flex-wrap: wrap;
     height: 100vh;
     position: relative;
-    margin-top: 7%;
+    margin-top: 6%;
 }
 
 .caixa_editar_item{
@@ -1084,7 +1084,7 @@ body {
     margin: 10px;
     background-color: #616363;
     width: calc(30% - 100px); /* Adjust the width as needed */
-    padding: 20px 20px;
+    padding: 10px 20px;
     border-radius: 5px;
     font-size: large;
     box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
@@ -1295,7 +1295,7 @@ body {
 
 .botoes_carrinho{
     position: absolute;
-    left: 30%;
+    left: 40%;
     flex-direction: row;
     justify-content: center;
     display: flex;
@@ -1895,3 +1895,97 @@ body {
     }
   }
   
+  /* Copyright - 2023 SelfMadeSystem  
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  
+  THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. */
+
+
+
+
+  .Btn {
+    --black: #50C7F6;
+    --ch-black: #50C7F6;
+    --eer-black: #50C7F6;
+    --night-rider: #50C7F6;
+    --white: var(--stroke);
+    --af-white: var(--stroke);
+    --ch-white: var(--stroke);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: var(--night-rider);
+  }
+  
+  /* plus sign */
+  .sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sign svg {
+    width: 17px;
+  }
+  
+  .sign svg path {
+    fill: var(--af-white);
+  }
+  /* text */
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: var(--af-white);
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  /* hover effect on button width */
+  .Btn:hover {
+    width: 125px;
+    border-radius: 5px;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's text */
+  .Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+  }
+  /* button click effect*/
+  .Btn:active {
+    transform: translate(2px ,2px);
+  }
+
+
+  /* Copyright - 2023 vinodjangid07 
+  Copyright - 2023 kennyotsu-monochromia (kennyotsu monochromia) 
+  
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  
+  THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. */
