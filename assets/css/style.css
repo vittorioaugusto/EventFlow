@@ -77,7 +77,7 @@ body {
 .imagem_evento{
    position: relative;
    margin-top: 60px;
-   border-bottom: 2px solid #50C7F6;  
+   border-bottom: 4px solid #50C7F6;
 }
 
 .container_eventflow {
@@ -320,14 +320,20 @@ body {
 }
 
 .senha_e_conta a {
+    border-radius: 5px;
+    outline: 0;
+    display: block;
+    font-size: medium;
+    width: 70%;
+    padding: 1px 10px;
     text-decoration: none;
-    color: #50C7F6;
-    text-align: center;
-    transition: color 0.5s;  
+    color: white;
+    margin-top: 10px; 
 }
 
 .senha_e_conta a:hover {
-    color: white;
+    color: #50C7F6;
+    transition: color 0.5s;
 }
 
 .password-toggle {
@@ -583,29 +589,36 @@ body {
     outline: 0;
     display: block;
     font-size: 15px;
-    width: 90%;
+    width: 80%;
     padding: 15px;
     border-radius: 10px;
     text-decoration: none;
     background-color: #50C7F6;
     color: white;
     padding-bottom: 10px;
-    margin-top: 30px; 
+    margin-top: 20px; 
 }
 
 .control_usuario a:hover {
     color: grey;
     transition: color 0.5s;
 }
-     
+
 .voltar_usuario a {
+    border-radius: 5px;
+    outline: 0;
+    display: block;
+    font-size: large;
+    width: 20%;
+    padding: 1px 10px;
     text-decoration: none;
-    color: #50C7F6;
-    padding: 5px;
-}
-    
-.voltar_usuario a:hover {
     color: white;
+    margin-top: 10px;
+    margin-bottom: 30px; 
+}
+
+.voltar_usuario a:hover {
+    color: #50C7F6;
     transition: color 0.5s;
 }
 

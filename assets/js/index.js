@@ -14,8 +14,19 @@ function checkEmail() {
         setErrorFor(email, 'Preencha esse campo');
     } else if (!isEmail(emailValue)) {
         setErrorFor(email, 'Email inválido');
+    } else if (emailValue === emailValue.toUpperCase()) {
+        setSuccessFor(email, true); // Passando true como argumento para indicar que o texto está em maiúsculas
     } else {
-        setSuccessFor(email);
+        setSuccessFor(email, false); // Passando false como argumento para indicar que o texto não está em maiúsculas
+    }
+}
+
+function setSuccessFor(input, isUppercase) {
+    const formControl = input.parentElement;
+    if (isUppercase) {
+        formControl.className = 'form_control_login success uppercase';
+    } else {
+        formControl.className = 'form_control_login success';
     }
 }
 
@@ -31,13 +42,13 @@ function checkPassword() {
     }
 }
 
-function setErrorFor(input, message) {
-    const formControl = input.parentElement;
-    const small = formControl.querySelector('small');
+// function setErrorFor(input, message) {
+//     const formControl = input.parentElement;
+//     const small = formControl.querySelector('small');
 
-    small.innerText = message;
-    formControl.className = 'form_control_login error';
-}
+//     small.innerText = message;
+//     formControl.className = 'form_control_login error';
+// }
 
 function setSuccessFor(input) {
     const formControl = input.parentElement;
