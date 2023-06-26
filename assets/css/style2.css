@@ -76,9 +76,9 @@ body {
     border-radius: 5px;
     margin: 10px;
     background-color: #616363;
-    width: calc(30% - 100px); /* Adjust the width as needed */
+    width: 50%; /* Adjust the width as needed */
     padding: 10px 20px;
-    font-size: large;
+    font-size: medium;
     box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
     -webkit-box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
     -moz-box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
@@ -96,7 +96,8 @@ body {
 
 .nome_usuario_eventos{
     color: white;
-    padding: 60px;
+    padding: 30px;
+    margin-top: 30px;
     font-size: small;
 }
 
@@ -108,8 +109,69 @@ body {
     color: white;
 }
 
+/* barra de pesquisa */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+  }
+  
+  .input {
+    max-width: 190px;
+    height: 100%;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #53535f;
+    caret-color: #f7f7f8;
+    color: #fff;
+    padding: 7px 10px;
+    border: 2px solid transparent;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    margin-right: 1px;
+    transition: all .2s ease;
+  }
+  
+  .input:hover {
+    border: 2px solid #50C7F6;
+  }
+  
+  .input:focus {
+    border: 2px solid #50C7F6;
+    background-color: #0e0e10;
+  }
+  
+  .search__btn {
+    border: none;
+    cursor: pointer;
+    background-color: rgba(42, 42, 45, 1);
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    height: 100%;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search__btn:hover {
+    background-color: #616363;
+  }
+
+  /* Copyright - 2023 benjimich (Benjamin) 
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  
+  THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. */
 
 
+
+  
 
 /* perfil.php */
 
@@ -263,10 +325,9 @@ body {
     border-radius: 10px;
     margin: 10px;
     background-color: #616363;
-    width: calc(30% - 100px); /* Adjust the width as needed */
-    padding: 10px;
-    border-radius: 5px;
-    font-size: large;
+    width: 50%; /* Adjust the width as needed */
+    padding: 10px 20px;
+    font-size: medium;
     box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
     -webkit-box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
     -moz-box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
@@ -278,7 +339,7 @@ body {
 }
 
 .caixa_eventos_criados a:hover {
-    color: black;
+    color: #50C7F6;
     transition: color 0.5s;
 }
 

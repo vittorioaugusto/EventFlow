@@ -93,10 +93,10 @@ body {
     border-radius: 10px;
     margin: 10px;
     background-color: #616363;
-    width: calc(30% - 100px); /* Adjust the width as needed */
+    width: 50%; /* Adjust the width as needed */
     padding: 10px;
     border-radius: 5px;
-    font-size: large;
+    font-size: medium;
     box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
     -webkit-box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
     -moz-box-shadow: 0px 2px 20px 10px rgba(80, 199, 246, 0.75);
