@@ -1,5 +1,5 @@
 <?php
-include 'conexao.php';
+include('../SQL/conexao.php');
 
 session_start();
 if (!isset($_SESSION['idusuario'])) {
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <head>
     <title>Editar Perfil</title>
-    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="../assets/css/style2.css">
 </head>
 
 <body>

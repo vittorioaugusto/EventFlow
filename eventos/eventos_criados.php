@@ -6,19 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos Criados</title>
-    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="../assets/css/style2.css">
 </head>
 
 <body>
     <div class="cabecalho_eventos_criados">
 
         <div class="logo_eventos_criados">
-            <a href="eventos.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Início" width="200"></a>
+            <a href="eventos.php"><img src="../assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Início" width="200"></a>
         </div>
 
         <?php
         // Incluir o arquivo de conexão com o banco de dados
-        require_once "conexao.php";
+        require_once "../SQL/conexao.php";
 
         // Verificar se o usuário está logado
         session_start();
@@ -51,12 +51,12 @@
                 echo "<a href='criar_eventos.php'><label>Criar Evento</label></a>";
             }
             ?>
-            <a href="perfil.php">
+            <a href="../perfil/perfil.php">
                 <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
                 <lord-icon src="https://cdn.lordicon.com/dxjqoygy.json" trigger="hover" colors="primary:white,secondary:white" style="width:65px;height:65px;top:5px;">
                 </lord-icon>
             </a>
-            <a href="carrinho.php">
+            <a href="../carrinho/carrinho.php">
                 <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
                 <lord-icon src="https://cdn.lordicon.com/slkvcfos.json" trigger="hover" colors="primary:white,secondary:white" style="width:65px;height:65px;top:5px;">
                 </lord-icon>

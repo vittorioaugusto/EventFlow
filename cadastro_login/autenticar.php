@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include('conexao.php');
+include('../SQL/conexao.php');
 
 $email = isset($_POST['email']) ? $_POST['email'] : '';
 $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
@@ -20,10 +20,10 @@ if (mysqli_num_rows($resultado) == 1) {
 
     // Redirecionar para a página correta de acordo com o tipo de usuário
     if ($tipo_user == 1) {
-        header("Location: eventos.php");
+        header("Location: ../eventos/eventos.php");
         exit();
     } elseif ($tipo_user == 2) {
-        header("Location: eventos.php");
+        header("Location:  ../eventos/eventos.php");
         exit();
     }
 } else {

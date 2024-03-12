@@ -19,7 +19,7 @@
             <div class="caixa_relatorio_evento">
 
                 <?php
-                require_once "conexao.php";
+                require_once "../SQL/conexao.php";
 
                 // Verificar se o ID do evento foi passado via parâmetro
                 if (!isset($_GET["idevento"])) {
@@ -37,7 +37,7 @@
         GROUP BY tipo_ingresso.descricao, ingresso.valor";
                 $result = $conexao->query($sql);
 
-                echo"<h2>Relatório de Ingressos Vendidos:</h2>";
+                echo "<h2>Relatório de Ingressos Vendidos:</h2>";
                 while ($row = $result->fetch_assoc()) {
                     $tipo_ingresso = $row["descricao"];
                     $total = $row["total"];
@@ -45,7 +45,7 @@
                     $valor_total = $total * $valor_unitario;
                     echo "Tipo de Ingresso: $tipo_ingresso - Quantidade: $total - Valor Unitário: $valor_unitario - Valor Total: $valor_total<br>";
                 }
-                echo'<hr>';
+                echo '<hr>';
                 // Obter os produtos da loja, a quantidade vendida de cada um e o valor total
                 $sql = "SELECT iten_loja.nome, iten_loja.valor, IFNULL(SUM(venda.quantidade), 0) AS total, IFNULL(SUM(venda.quantidade * iten_loja.valor), 0) AS total_valor
         FROM iten_loja

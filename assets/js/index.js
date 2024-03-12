@@ -67,9 +67,9 @@ function togglePasswordVisibility() {
     
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
-        passwordToggleIcon.src = "assets/imagens/mostrar_senha.png";
+        passwordToggleIcon.src = "../assets/imagens/mostrar_senha.png";
     } else {
         passwordInput.type = "password";
-        passwordToggleIcon.src = "assets/imagens/mostrar_senha.png";
+        passwordToggleIcon.src = "../assets/imagens/mostrar_senha.png";
     }
 }

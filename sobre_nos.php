@@ -15,8 +15,8 @@
         </div>
         
         <nav class="botoes_sobre_nos">
-            <a href="login.php"><label>Login</label></a>
-            <a href="tipo_de_usuario.php"><label>Cadastro</label></a>
+            <a href="cadastro_login/login.php"><label>Login</label></a>
+            <a href="cadastro_login/tipo_de_usuario.php"><label>Cadastro</label></a>
             <a href="EventFlow.php"><label>Início</label></a>
         </nav>
 

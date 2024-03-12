@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho</title>
-    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="../assets/css/style2.css">
 </head>
 
 <body>
     <div class="cabecalho_carrinho">
 
         <div class="logo_carrinho">
-            <a href="eventos.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Início" width="200"></a>
+            <a href="../eventos/eventos.php"><img src="../assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Início" width="200"></a>
         </div>
 
         <?php
         // Incluir o arquivo de conexão com o banco de dados
-        require_once "conexao.php";
+        require_once "../SQL/conexao.php";
 
         // Verificar se o usuário está logado
         session_start();
@@ -121,7 +121,7 @@
                 echo '<div class="itens_carrinho">';
                 echo '<center>';
                 echo "<p>O carrinho está vazio.</p>";
-                echo "<a href='eventos.php'><label>Eventos</label></a>";
+                echo "<a href='../eventos/eventos.php'><label>Eventos</label></a>";
                 echo '</center>';
                 echo '</div>';
             }

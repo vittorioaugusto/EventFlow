@@ -18,7 +18,7 @@
 
         <?php
         // Incluir o arquivo de conexão com o banco de dados
-        require_once "conexao.php";
+        require_once "../SQL/conexao.php";
 
         // Função para verificar se o usuário é o criador do evento
         function verificarCriadorEvento($id_evento, $idusuario, $conexao)

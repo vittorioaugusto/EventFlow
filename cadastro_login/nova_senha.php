@@ -2,7 +2,7 @@
 
 session_start();
 
-include('conexao.php');
+include('../SQL/conexao.php');
 
 $idusuario = $_SESSION['idusuario'];
 

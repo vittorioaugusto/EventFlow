@@ -1,6 +1,6 @@
 <?php
 // Incluir o arquivo de conexão com o banco de dados
-require_once "conexao.php";
+require_once "../SQL/conexao.php";
 
 // Verificar se o ID do item foi fornecido
 if (isset($_GET['id'])) {

@@ -1,5 +1,5 @@
 <?php
-require_once "conexao.php";
+require_once "../SQL/conexao.php";
 
 session_start();
 if (!isset($_SESSION['idusuario'])) {

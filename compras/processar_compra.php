@@ -27,7 +27,7 @@
                     $chave = bin2hex(random_bytes($tamanho));
                     return substr($chave, 0, $tamanho);
                 }
-                require_once "conexao.php";
+                require_once "../SQL/conexao.php";
 
                 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // Obter o ID do usuário logado

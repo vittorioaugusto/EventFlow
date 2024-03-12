@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histórico</title>
-    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="../assets/css/style2.css">
 </head>
+
 <body>
     <div class="cabecalho_historico">
         <div class="logo_historico">
-            <a href="eventos.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Início" width="200"></a>
+            <a href="../eventos/eventos.php"><img src="../assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Início" width="200"></a>
         </div>
 
         <div class="container_historico">
@@ -17,7 +19,7 @@
 
                 <?php
                 // Inclua o arquivo de conexão com o banco de dados
-                require_once 'conexao.php';
+                require_once "../SQL/conexao.php";
 
                 // Inicie a sessão
                 session_start();
@@ -40,7 +42,7 @@
 
                 // Verifique se a consulta retornou resultados
                 if (mysqli_num_rows($resultado) > 0) {
-                    echo'<div class="caixa_historio">';
+                    echo '<div class="caixa_historio">';
                     // Variável para verificar se ocorreu duplicação de ingressos
                     $ingressosDuplicados = false;
                     $codigosIngresso = array();
@@ -79,12 +81,13 @@
                 echo '<center>';
                 echo '<a href="eventos.php">Voltar para Eventos</a>';
                 echo '</center>';
-                echo'</div>';
+                echo '</div>';
                 // Feche a conexão com o banco de dados
                 mysqli_close($conexao);
                 ?>
             </div>
         </div>
-    </div> 
+    </div>
 </body>
+
 </html>

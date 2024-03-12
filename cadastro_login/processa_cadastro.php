@@ -1,5 +1,5 @@
 <?php
-include('conexao.php');
+include('../SQL/conexao.php');
 
 $nome = isset($_POST['nome']) ? $_POST['nome'] : '';
 $cpf_cnpj = isset($_POST['cpf_cnpj']) ? $_POST['cpf_cnpj'] : '';

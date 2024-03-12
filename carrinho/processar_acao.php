@@ -17,7 +17,7 @@
             <div class="caixa_processar_acao">
 
                 <?php
-                include('conexao.php');
+                include('../SQL/conexao.php');
                 session_start();
                 if (!isset($_SESSION['idusuario'])) {
                     header("location: login.php");

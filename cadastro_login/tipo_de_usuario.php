@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tipo de Usuário</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 
 </head>
 
@@ -15,7 +15,7 @@
     <div class="container_usuario">
         <center>
             <div class="logo_usuario">
-                <a href="EventFlow.php"><img src="assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Página Inicial" width="300"></a>
+                <a href="../EventFlow.php"><img src="../assets/imagens/logo_fundo_removido.png" alt="Logo EventFlow" title="Página Inicial" width="300"></a>
             </div>
             <div class="nome_usuario">
                 <h2>Selecione o Tipo de Usuário</h2>

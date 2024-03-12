@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,15 @@
     <title>EventFlow</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <div class="cabecalho_eventflow">
 
         <h2 id="nome_eventflow">Bem-vindo(a) ao EventFlow!</h2>
-        
+
         <nav class="botoes_eventflow">
-            <a href="login.php"><label>Login</label></a>
-            <a href="tipo_de_usuario.php"><label>Cadastro</label></a>
+            <a href="cadastro_login/login.php"><label>Login</label></a>
+            <a href="cadastro_login/tipo_de_usuario.php"><label>Cadastro</label></a>
             <a href="sobre_nos.php"><label>Sobre Nós</label></a>
         </nav>
 
@@ -23,17 +25,17 @@
         </div>
 
         <center>
-        <div class="imagem_evento">
-            <img width="820" height="400" src="assets/imagens/evento_1.jpeg" alt="Imagem do Evento">
-        </div>
-        <h1 id="todos_os_eventos">Todos os Eventos:</h1>
+            <div class="imagem_evento">
+                <img width="820" height="400" src="assets/imagens/evento_1.jpeg" alt="Imagem do Evento">
+            </div>
+            <h1 id="todos_os_eventos">Todos os Eventos:</h1>
         </center>
-        
+
         <div class="container_eventflow">
-        
+
             <?php
             // Incluir o arquivo de conexão com o banco de dados
-            require_once "conexao.php";
+            require_once "SQL/conexao.php";
 
             // Consultar os eventos no banco de dados
             $consulta = "SELECT * FROM eventos";
@@ -62,9 +64,10 @@
 
             // Fechar a conexão com o banco de dados
             mysqli_close($conexao);
-            ?>   
-            
+            ?>
+
         </div>
     </div>
 </body>
+
 </html>

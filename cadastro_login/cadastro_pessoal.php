@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Pessoal</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     
 </head>
 <body>
@@ -13,7 +13,7 @@
     <div class="container_pessoal">
         <div class="voltar_pessoal">
             <?php
-            echo '<a href="tipo_de_usuario.php"><img src="assets/imagens/seta-voltar.png"></a>';
+            echo '<a href="tipo_de_usuario.php"><img src="../assets/imagens/seta-voltar.png"></a>';
             ?>
         </div>
         <center>

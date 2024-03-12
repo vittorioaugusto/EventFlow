@@ -19,7 +19,7 @@
             <div class="caixa_relatorio">
 
                 <?php
-                require_once "conexao.php";
+                require_once "../SQL/conexao.php";
 
                 // Identificar o ID do usuário
                 session_start();
